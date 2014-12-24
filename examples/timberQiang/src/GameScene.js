@@ -27,7 +27,7 @@ var MainGame = flax.MovieClip.extend({
         this.scoreTxt.gap = -2;
         this.scoreTxt.setString(0);
         flax.inputManager.addListener(null, this.onTouch,null, this)
-        this.treeBatch = cc.SpriteBatchNode.create(res.assets, 8);
+        this.treeBatch = cc.SpriteBatchNode.create(cc.path.changeBasename(res.assets, ".png"), 8);
         this.addChild(this.treeBatch, 2);
         this.initTree();
 
