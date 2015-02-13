@@ -1,0 +1,581 @@
+/**
+ * Created by long on 14-2-2.
+ */
+var flax = flax || {};
+ALL_DIRECTONS  = ["UP","DOWN","LEFT","RIGHT","LEFT_UP","RIGHT_UP","RIGHT_DOWN","LEFT_DOWN"];
+ALL_DIRECTONS0 = ["UP","DOWN","LEFT","RIGHT","LEFT_UP","LEFT_DOWN"];
+ALL_DIRECTONS1 = ["UP","DOWN","LEFT","RIGHT","RIGHT_UP","RIGHT_DOWN"];
+EIGHT_DIRECTIONS_VALUE  = {UP:[0,1],DOWN:[0,-1],LEFT:[-1,0],RIGHT:[1,0],LEFT_UP:[-1,1],RIGHT_UP:[1,1],RIGHT_DOWN:[1,-1],LEFT_DOWN:[-1,-1]};
+MAX_IN_TILE = 10;
+
+flax.TileMap = cc.Class.extend({
+    id:"default",
+    offsetX:0,
+    offsetY:0,
+    isHexagon:false,//if true, the tiles will layout like the bubble safari
+    autoLayout:false,
+    _tileWidth:0,
+    _tileHeight:0,
+    _mapWidth:0,
+    _mapHeight:0,
+    _objectsMap:null,
+    _objectsArr:null,
+    _inUpdate:false,
+
+    //fix the tile update bug when in JSB
+    update:function(delta){
+        var i = this._objectsArr ? this._objectsArr.length : 0;
+        while(i--){
+            var obj = this._objectsArr[i];
+            if(obj.autoUpdateTileWhenMove) obj.updateTile();
+        }
+    },
+    setTileSize:function(tw, th)
+    {
+        if(this._tileWidth == tw && this._tileHeight == th) return;
+        this._tileWidth = tw;
+        this._tileHeight = th;
+    },
+    getTileSize:function(){
+        return {width: this._tileWidth, height: this._tileHeight};
+    },
+    setMapSizePixel:function(w, h)
+    {
+        if(w == null) w = cc.visibleRect.width;
+        if(h == null) h = cc.visibleRect.height;
+        return this.setMapSize(Math.ceil(w/this._tileWidth), Math.ceil(h/this._tileHeight));
+    },
+    setMapSize:function(w, h)
+    {
+        var result = [];
+        //the objects in the tiles would be removed from the data
+        result[0] = [];
+        //the new tiles added
+        result[1] = [];
+
+        if(this._mapWidth == w && this._mapHeight == h) return result;
+        if(this._objectsArr == null) this._objectsArr = [];
+        if(this._objectsMap == null) this._objectsMap = [];
+        var oldW = this._mapWidth;
+        var oldH = this._mapHeight;
+
+        var i = -1;
+        var j = -1;
+        var maxW = Math.max(w, oldW);
+        var maxH = Math.max(h, oldH);
+        while(++i < maxW)
+        {
+            if(this._objectsMap[i] == null) this._objectsMap[i] = [];
+            j = -1;
+            while(++j < maxH)
+            {
+                if(i >= w || j >= h){
+                    result[0] = result[0].concat(this._objectsMap[i][j]);
+                    this.removeObjects(i, j);
+                    delete this._objectsMap[i][j];
+                    continue;
+                }else if(i < oldW && j < oldH) {
+                    continue;
+                }
+                this._objectsMap[i][j] = [];
+                result[1].push([i, j]);
+            }
+            if(this._objectsMap[i].length == 0) delete  this._objectsMap[i];
+        }
+        this._mapWidth = w;
+        this._mapHeight = h;
+        return result;
+    },
+    getMapSize:function(){
+        return {width:this._mapWidth, height:this._mapHeight};
+    },
+    showDebugGrid:function(){
+        if(flax.currentScene == null) return;
+        if(flax.tileMapCanvas) flax.tileMapCanvas.clear();
+        else{
+            flax.tileMapCanvas = cc.DrawNode.create();
+            flax.currentScene.addChild(flax.tileMapCanvas, 100000);
+        }
+        flax.tileMapCanvas.setPosition(this.offsetX, this.offsetY);
+        for(var i = 0; i <= this._mapWidth; i++){
+            flax.tileMapCanvas.drawSegment(cc.p(i*this._tileWidth, 0), cc.p(i*this._tileWidth, this._tileHeight*this._mapHeight), 1, cc.color(255,0,0,255));
+        }
+        for(var j = 0; j <= this._mapHeight; j++){
+            flax.tileMapCanvas.drawSegment(cc.p(0, j*this._tileHeight), cc.p(this._tileWidth*this._mapWidth, j*this._tileHeight), 1, cc.color(255,0,0,255));
+        }
+    },
+    showDebugTile:function(tx, ty, color){
+        var pos = this.getTiledPosition(tx, ty);
+        if(color == null) color = cc.color(0, 255, 0, 128);
+        flax.drawRect(cc.rect(pos.x - this._tileWidth/2, pos.y - this._tileHeight/2, this._tileWidth, this._tileHeight),1, color, color);
+    },
+    clear:function(removeChildren)
+    {
+        if(this._objectsArr.length == 0) return;
+        if(removeChildren === undefined) removeChildren = true;
+        var children;
+        for(var i = 0; i < this._mapWidth; i++)
+        {
+            for(var j = 0; j < this._mapHeight; j++)
+            {
+                if(removeChildren) {
+                    children = this._objectsMap[i][j];
+                    for(var k in children)
+                    {
+                        var child = children[k];
+                        if(child instanceof cc.Node){
+                            child.destroy();
+                        }
+                    }
+                }
+                this._objectsMap[i][j] = [];
+            }
+        }
+        this._objectsArr.length = 0;
+    },
+    getPixelSize:function()
+    {
+        var s = cc.size(this._tileWidth*this._mapWidth, this._tileHeight*this._mapHeight);
+        if(this.isHexagon) s.width += this._tileWidth*0.5;
+        return s;
+    },
+    /**
+     * Note: Must be the global position
+     * */
+    getTileIndex:function(pos){
+        var tx = Math.floor((pos.x - this.offsetX)/this._tileWidth);
+        var ty = Math.floor((pos.y - this.offsetY)/this._tileHeight);
+        if(this.isHexagon && ty%2 != 0) tx = Math.floor((pos.x - this.offsetX - this._tileWidth*0.5)/this._tileWidth);
+        return cc.p(tx, ty);
+    },
+    getTiledPosition:function(tx, ty){
+        var x = (tx + 0.5)*this._tileWidth + this.offsetX;
+        var y = (ty + 0.5)*this._tileHeight + this.offsetY;
+        if(this.isHexagon && ty%2 != 0) x += 0.5*this._tileWidth;
+        return cc.p(x, y);
+    },
+    /**
+     * All the tiles/objects occupied by the sprite bounds, if returnObjects == true, then return all the objects in these tiles
+     * */
+    getCoveredTiles:function(sprite, returnObjects)
+    {
+        var rect = flax.getRect(sprite, true);
+        return this.getCoveredTiles1(rect, returnObjects);
+    },
+    /**
+     * All the tiles/objects occupied by the rect bounds, if returnObjects == true, then return all the objects in these tiles
+     * */
+    getCoveredTiles1:function(rect, returnObjects)
+    {
+        returnObjects = (returnObjects === true);
+        var t = this.getTileIndex(cc.p(rect.x, rect.y));
+        var leftX = t.x;
+        var leftY = t.y;
+        t = this.getTileIndex(cc.p(rect.x + rect.width, rect.y + rect.height));
+        var rightX = t.x;
+        var rightY = t.y;
+        var tiles = [];
+        var i = leftX - 1;
+        var j = 0;
+        while(++i <= rightX) {
+            j = leftY - 1;
+            while(++j <= rightY) {
+                if(returnObjects) {
+                    tiles = tiles.concat(this.getObjects(i, j));
+                }else {
+                    tiles.push(cc.p(i, j));
+                }
+            }
+        }
+        return tiles;
+    },
+    isValideTile:function(tx, ty)
+    {
+        return tx >= 0 && tx < this._mapWidth && ty >= 0 && ty < this._mapHeight;
+    },
+    snapToTile:function(sprite, tx, ty, autoAdd)
+    {
+        if(!(sprite instanceof cc.Node)) return;
+        var pos = null;
+        if(tx == null || ty == null) {
+            pos = sprite.getPosition();
+            if(sprite.parent) pos = sprite.parent.convertToWorldSpace(pos);
+            var t = this.getTileIndex(pos);
+            tx = t.x;
+            ty = t.y;
+        }
+        pos = this.getTiledPosition(tx, ty);
+        if(sprite.parent) pos = sprite.parent.convertToNodeSpace(pos);
+        sprite.setPosition(pos);
+        if(autoAdd === true) {
+            sprite.setTileMap(this);
+        }
+    },
+    snapAll:function()
+    {
+        var n = this._objectsArr.length;
+        var i = -1;
+        var obj = null;
+        while(++i < n)
+        {
+            obj = this._objectsArr[i];
+            this.snapToTile(obj)
+        }
+    },
+    addObject:function(object, tx, ty)
+    {
+        if(tx === undefined) tx = object.tx;
+        if(ty === undefined) ty = object.ty;
+        object.tx = tx;
+        object.ty = ty;
+        if(!this.isValideTile(tx, ty)) return;
+        if(this._objectsArr.indexOf(object) > -1) return;
+        this._objectsArr.push(object);
+        var objs = this._objectsMap[tx][ty];
+
+        //fix the update tile bug when in JSB
+        if(!this._inUpdate && cc.sys.isNative) {
+            this._inUpdate = true;
+            cc.director.getScheduler().scheduleUpdateForTarget(this);
+        }
+
+        if(!(object instanceof cc.Node)|| !this.autoLayout) {
+            objs.push(object);
+            return;
+        }
+        var zIndex0 = (tx + (this._mapHeight - 1 - ty)*this._mapWidth)*MAX_IN_TILE;
+        var child = null;
+        var childCount = 0;
+        var inserted = false;
+        for(var i = 0; i < objs.length; i++)
+        {
+            child = objs[i];
+            if(child instanceof cc.Node)
+            {
+                if(!inserted && child.y <= object.y)
+                {
+                    objs.splice(i, 0, object);
+                    object.zIndex = Math.min(childCount, MAX_IN_TILE) + zIndex0;
+                    inserted = true;
+                    childCount++;
+                    i++;
+                }
+                child.zIndex = Math.min(childCount, MAX_IN_TILE) + zIndex0;
+                childCount++;
+            }
+        }
+        if(!inserted)
+        {
+            objs.push(object);
+            object.zOrder = Math.min(childCount, MAX_IN_TILE) + zIndex0;
+        }
+    },
+    updateLayout:function(tx, ty)
+    {
+        if(!this.isValideTile(tx, ty)) return;
+        var objs = this._objectsMap[tx][ty];
+        if(objs.length == 0) return;
+        objs.sort(this._sortByY);
+        var zOrder0 = (tx + (this._mapHeight - 1 - ty)*this._mapWidth)*MAX_IN_TILE;
+        var child = null;
+        var childCount = 0;
+        for(var i = 0; i < objs.length; i++)
+        {
+            child = objs[i];
+            if(child instanceof cc.Node)
+            {
+                child.zIndex = Math.min(childCount, MAX_IN_TILE) + zIndex0;
+                childCount++;
+            }
+        }
+    },
+    removeObject:function(object, tx, ty)
+    {
+        if(tx === undefined) tx = object.tx;
+        if(ty === undefined) ty = object.ty;
+        if(this.isValideTile(tx, ty))
+        {
+            var objs = this._objectsMap[tx][ty];
+            var i = objs.indexOf(object);
+            if(i > -1)
+            {
+                objs.splice(i, 1);
+            }
+            i = this._objectsArr.indexOf(object);
+            if(i > -1){
+                this._objectsArr.splice(i, 1);
+            }
+        }
+        //fix the update tile bug when in JSB
+        if(this._inUpdate && cc.sys.isNative && this._objectsArr.length == 0) {
+            this._inUpdate = false;
+            cc.director.getScheduler().unscheduleUpdateForTarget(this);
+        }
+    },
+    removeObjects:function(tx, ty)
+    {
+        if(!this.isValideTile(tx, ty)) return;
+        var objs = this._objectsMap[tx][ty];
+        var obj = null;
+        var i = -1;
+        while(objs.length)
+        {
+            obj = objs[0];
+            obj.tx = obj.ty = -1;
+            i = this._objectsArr.indexOf(obj);
+            if(i > -1) this._objectsArr.splice(i, 1);
+            objs.splice(0, 1);
+        }
+    },
+    /**
+     * Get all the objects in the tile tx & ty
+     * */
+    getObjects:function(tx, ty)
+    {
+        if(this.isValideTile(tx, ty))
+        {
+            return this._objectsMap[tx][ty];
+        }
+        return [];
+    },
+    /**
+     * Get all the objects in the tile of the position
+     * Note: Must be the global x and y
+     * */
+    getObjects1:function(x, y)
+    {
+        var t = this.getTileIndex(cc.p(x, y));
+        return this.getObjects(t.x, t.y);
+    },
+    getAllObjects:function()
+    {
+        return this._objectsArr;
+    },
+    getTiles:function(filterFunc)
+    {
+        var tiles = [];
+        var i = -1;
+        var j = -1;
+        while(++i < this._mapWidth){
+            j = -1;
+            while(++j < this._mapHeight){
+                if(filterFunc == null || filterFunc(this, i, j) !== false){
+                    tiles.push(cc.p(i, j));
+                }
+            }
+        }
+        return tiles;
+    },
+    /**
+     * Return all the tiles on the row , if returnObjects == true, then return all the objects in these tiles
+     * */
+    getRow:function(row, returnObject)
+    {
+        var i = -1;
+        var result = [];
+        while(++i < this._mapHeight){
+            if(returnObject === true) result = result.concat(this.getObjects(row, i));
+            else result = result.push(cc.p(row, i));
+        }
+        return result;
+    },
+    /**
+     * Return all the tiles on the col column, if returnObjects == true, then return all the objects in these tiles
+     * */
+    getCol:function(col, returnObject)
+    {
+        var i = -1;
+        var result = [];
+        while(++i < this._mapWidth){
+            if(returnObject === true) result = result.concat(this.getObjects(i, col));
+            else result = result.push(cc.p(i, col));
+        }
+        return result;
+    },
+    __tilesSearched:null,
+    __nonRecursive:false,
+    /**
+     * Find all the objects connected with each other in the tileMap with same property if set
+     * @param {sprite|{tx,ty}} sprite sprite or {tx,ty} pair to search
+     * @param {string} property if set property, only find the targets with the same property
+     * @param {bool} diagonally only valid for none-hexagon tileMap
+     * */
+     findConnectedObjects:function(sprite, property, diagonally){
+        this.__tilesSearched = {};
+        var arr = this.findNeighbors(sprite, property, diagonally, null, false);
+        var i = arr.indexOf(sprite);
+        if(i > -1) arr.splice(i, 1);
+        this.__tilesSearched = null;
+        return arr;
+    },
+    /**
+     * Find the neighbors around the sprite
+     * @param {sprite|{tx,ty}} sprite sprite or {tx,ty} pair to search
+     * @param {string} property if set property, only find the targets with the same property
+     * @param {bool} diagonally only valid for none-hexagon tileMap
+     * @param {string} direction "UP","DOWN","LEFT","RIGHT", if null, return all directions
+     * @returnTile {bool} if return tiles instead of objects
+     * */
+    findNeighbors:function(sprite, property, diagonally, direction, returnTile){
+        var directions = this._getAllDirections(sprite, diagonally, direction);
+        var recursive = !this.__nonRecursive && (this.__tilesSearched != null);
+        var result = [];
+        var i = directions.length;
+        while(i--){
+            var d = EIGHT_DIRECTIONS_VALUE[directions[i]];
+            var tx = sprite.tx + d[0];
+            var ty = sprite.ty + d[1];
+            if(this.__tilesSearched){
+                var k = tx+"-"+ty;
+                if(this.__tilesSearched[k] === true) continue;
+                this.__tilesSearched[k] = true;
+            }
+            if(!returnTile){
+                var arr = this.getObjects(tx, ty);
+                var obj = null;
+                var searched = false;
+                for(var j = 0; j < arr.length; j++){
+                    obj = arr[j];
+                    if(property == null || property.length == 0 || obj[property] === sprite[property]){
+                        result.push(obj);
+                        if(!searched && recursive) {
+                            result = result.concat(this.findNeighbors(obj, property, diagonally, direction, returnTile));
+                            searched = true;
+                        }
+                    }
+                }
+            }else{
+                //if returnTile = true, recursive have no sense
+                result.push({x: tx, y: ty});
+            }
+        }
+        return result;
+    },
+    /**
+     * Find all the separated object groups in the map, some blank tiles will cause such separated groups
+     * */
+    findSeparatedGroups:function(){
+        var groups = [];
+        var arr = null;
+        this.__tilesSearched = {};
+        var hintObjs = this.getAllObjects();
+        var all = [];
+        var n = hintObjs.length;
+        for(i = 0; i < n; i++){
+            nb = hintObjs[i];
+            if(all.indexOf(nb) > -1) continue;
+            arr = this.findNeighbors(nb);
+            if(!arr.length && this.__tilesSearched[nb.tx+"-"+nb.ty] !== true) {
+                arr= [nb];
+                this.__tilesSearched[nb.tx+"-"+nb.ty] = true;
+            }
+            groups.push(arr);
+            all = all.concat(arr);
+        }
+        this.__tilesSearched = null;
+        return groups;
+    },
+    /**
+     * Find the neighbors around the sprite, num meant to how many layers to search
+     * @param {sprite|{tx,ty}} sprite  sprite or {tx,ty} pair to start search
+     * @param {int} num the layer count to search
+     * @param {bool} returnObjects default return tiles, if true, return objects
+     * @param {bool} onlyConnected if returnObjects is true, ignore these objects don't connected togethor
+     * return an Array contains all layers
+     * */
+    findSurroundings:function(sprite, num, returnObjects, onlyConnected){
+        if(num == null || num < 1) num = 1;
+        var circle = [sprite];
+        var result = [];
+        this.__tilesSearched = {};
+        this.__nonRecursive = true;
+        while(num--){
+            var arr = [];
+            for(var i = 0; i < circle.length; i++){
+                var t = circle[i];
+                if(t.tx === undefined) t = {tx: t.x, ty: t.y};
+                arr = arr.concat(this.findNeighbors(t, null, true, null, returnObjects&&onlyConnected ? !returnObjects : true));
+            }
+            circle = arr;
+            if(returnObjects && !onlyConnected){
+                var objs = [];
+                for(i = 0; i < arr.length; i++){
+                    var t = arr[i];
+                    objs = objs.concat(this.getObjects(t.x, t.y));
+                }
+                result.push(objs);
+            }else{
+                result.push(arr);
+            }
+        }
+        this.__tilesSearched = null;
+        this.__nonRecursive = false;
+        return result;
+    },
+    _getAllDirections:function(sprite, diagonally, direction){
+        var directions = ALL_DIRECTONS;
+        if(this.isHexagon) {
+            if(sprite.ty%2 == 0) directions = ALL_DIRECTONS0;
+            else directions = ALL_DIRECTONS1;
+        }else if(!diagonally){
+            directions = directions.slice(0, 4);
+        }
+        var i = ALL_DIRECTONS.indexOf(direction);
+        if(i == -1 || i > 3) return directions;
+
+        var arr = [];
+        var d = null;
+        for(i = 0; i < directions.length; i++){
+            d = directions[i];
+           if(d.indexOf(direction) > -1){
+                arr.push(d);
+           }
+        }
+        //handle the left and right for hexgon type
+        if(this.isHexagon && arr.length == 1) arr.push("UP","DOWN");
+        return arr;
+    },
+    isEmptyTile:function(tx, ty)
+    {
+        if(!this.isValideTile(tx, ty)) return false;
+        var objs = this.getObjects(tx, ty);
+        if(objs)
+        {
+            return objs.length == 0;
+        }
+        return false;
+    },
+    _sortByY:function(a, b)
+    {
+        if(a.y > b.y)
+            return -1;
+        if(a.y < b.y)
+            return 1;
+    }
+});
+
+flax.TileMap.create = function(id)
+{
+    var map = new flax.TileMap();
+    map.id = id;
+    return map;
+};
+
+window._p = flax.TileMap.prototype;
+_p.tileSize;
+cc.defineGetterSetter(_p, "tileSize", _p.getTileSize);
+_p.mapSize;
+cc.defineGetterSetter(_p, "mapSize", _p.getMapSize);
+delete window._p;
+
+flax._tileMaps = {};
+flax.getTileMap = function(id)
+{
+    if(typeof flax._tileMaps[id] !== "undefined") return flax._tileMaps[id];
+    cc.log("The tileMap: "+id+" hasn't been defined, pls use flax.registerTileMap to define it firstly!");
+    return null;
+}
+flax.registerTileMap = function(tileMap)
+{
+    flax._tileMaps[tileMap.id] = tileMap;
+}
