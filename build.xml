@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<project name="Javascript compress project" basedir="" default="compile">
+
+    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
+             classpath="/Users/long/Documents/www/cocos2d-js-v3.1/tools/cocos2d-console/bin/../plugins/project_compile/build_web/bin/compiler-1.7.jar"/>
+
+    <target name="compile">
+        <jscomp compilationLevel="simple" 
+                warning="quiet"
+                debug="false" 
+                output="./publish/game.min.js"
+                languagein="ECMASCRIPT5"
+                >
+            <!--core -->
+            <sources dir="${basedir}">
+                <file name="libs/cocos2d-js-v3.3.js"/>
+                <file name="src/flax/Flax.js"/>
+                <file name="src/flax/signal/SignalBinding.js"/>
+                <file name="src/flax/signal/Signal.js"/>
+                <file name="src/flax/signal/wrapper.js"/>
+                <file name="src/flax/core/DebugDraw.js"/>
+                <file name="src/flax/core/InputManager.js"/>
+                <file name="src/flax/core/FlaxLoader.js"/>
+                <file name="src/flax/core/AssetsManager.js"/>
+                <file name="src/flax/core/Physics.js"/>
+                <file name="src/flax/core/FlaxSprite.js"/>
+                <file name="src/flax/core/Animator.js"/>
+                <file name="src/flax/core/Image.js"/>
+                <file name="src/flax/core/MovieClip.js"/>
+                <file name="src/flax/core/ProgressBar.js"/>
+                <file name="src/flax/core/Label.js"/>
+                <file name="src/flax/core/Button.js"/>
+                <file name="src/flax/game/Preloader.js"/>
+                <file name="src/flax/game/TileMap.js"/>
+                <file name="src/flax/game/UserData.js"/>
+                <file name="src/flax/game/ObjectPool.js"/>
+            </sources>
+            <!--others-->
+            <sources dir="${basedir}">
+                <file name="src/flax/module/HealthModule.js"/>
+                <file name="src/flax/module/EnemyWaveModule.js"/>
+                <file name="src/flax/game/Gun.js"/>
+                <file name="src/flax/game/Gunner.js"/>
+                <file name="src/flax/game/ScrollingBG.js"/>
+                <file name="src/flax/game/ScrollPane.js"/>
+                <file name="src/flax/game/TiledImage.js"/>
+                <file name="src/flax/game/LinkFinder.js"/>
+            </sources>
+            <!--game-->
+            <sources dir="${basedir}">
+                <file name="src/resource.js"/>
+                <file name="src/BaseScene.js"/>
+                <file name="src/AnimationAndAnchor.js"/>
+                <file name="src/SkeletonAndControl.js"/>
+                <file name="src/UIButton.js"/>
+                <file name="src/UIProgress.js"/>
+                <file name="src/UIBMFont.js"/>
+                <file name="src/UIPanel.js"/>
+                <file name="src/EffectAndPool.js"/>
+                <file name="src/ScrollingBGTest.js"/>
+                <file name="src/TiledImageTest.js"/>
+                <file name="src/GamePopStars.js"/>
+                <file name="src/GameBubbles.js"/>
+                <file name="src/GameFruitsLink.js"/>
+                <file name="src/GameShooters.js"/>
+                <file name="src/GameTimberQiang.js"/>
+                <file name="src/Config.js"/>
+                <file name="main.js"/>
+            </sources>
+        </jscomp>
+    </target>
+</project>

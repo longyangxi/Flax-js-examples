@@ -19,7 +19,8 @@ var TileValue = TileValue || {
 
 var flax = flax || {};
 
-flax.version = 1.6;
+flax.version = 1.7;
+flax.minToolVersion = 2.0;
 flax.language = null;
 flax.languageIndex = -1;
 flax.languages = ["en","zh","de","fr","it","es","tr","pt","ru"];
@@ -164,6 +165,9 @@ flax._getLanguagePath = function(lan){
  * pls call flax.callModuleOnEnter(this) within onEnter and call flax.callModuleOnExit(this) within onExit
  * */
 flax.addModule = function(cls, module, override){
+    if(module == null){
+        throw "Module can not be null!"
+    }
     for(var k in module){
         if(k === "onEnter"){
             if(cls.prototype.__onEnterNum === undefined) cls.prototype.__onEnterNum = 0;
@@ -218,6 +222,12 @@ flax.registerScene = function(name, scene, resources)
     if(!(resources instanceof Array)) resources = [resources];
     flax._scenesDict[name] = {scene:scene, res:resources};
 }
+/**
+ * Replace the current scene
+ * @param {String} sceneName the scene name registered
+ * @param {cc.TransitionXXX} transition the transition effect for this scene switch
+ * @param {Number} duration the duration for the transition
+ * */
 flax.replaceScene = function(sceneName, transition, duration)
 {
     if(!flax.isDomainAllowed()) return;
@@ -237,8 +247,7 @@ flax.replaceScene = function(sceneName, transition, duration)
         }
     }
     if(flax.ObjectPool) flax.ObjectPool.release();
-    if(flax.BulletCanvas) flax.BulletCanvas.reset();
-    if(flax.Button) flax.Button.reset();
+    if(flax.BulletCanvas) flax.BulletCanvas.release();
     cc.director.resume();
     flax.currentSceneName = sceneName;
     if(flax.stopPhysicsWorld) flax.stopPhysicsWorld();
