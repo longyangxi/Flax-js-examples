@@ -51,7 +51,7 @@ var PlayerGunParam = {
     bulletID:"Bullet0",//the id of the bullet asset
     targetMap:null,//the TileMap name of the target to shoot
     damage:10,//the damage of the bullet, if it's Array with two elements, set a random value between them
-    interval:0.3,//the interval time between two launch
+    interval:0.5,//the interval time between two launch
     fireSound:null,//music.gun0,//the sound when fire
     fireEffectID:"FireEffect",//the id of fire effect, it must be packed with the bullet asset id together
     hitEffectID:"HitEffect"//the id of hit effect, it must be packed with the bullet assets id together
@@ -62,7 +62,7 @@ var EnemyGunParam = {
     bulletID:"EnemyBullet",//the id of the bullet asset
     targetMap:null,//the TileMap name of the target to shoot
     damage:1,//the damage of the bullet, if it's Array with two elements, set a random value between them
-    interval:0.3,//the interval time between two launch
+    interval:0.5,//the interval time between two launch
     fireSound:null,//music.gun1,//the sound when fire
     fireEffectID:"FireEffect",//the id of fire effect, it must be packed with the bullet asset id together
     hitEffectID:"HitEffect"//the id of hit effect, it must be packed with the bullet assets id together
@@ -148,7 +148,7 @@ var Enemy = flax.MCGunner.extend({
         dieAnim.autoDestroyWhenOver = true;
         dieAnim.onAnimationOver.add(function(anim){
             //New born enemy
-            var newEnemy = flax.assetsManager.createDisplay(res.shooters, "Enemy", {parent: anim.parent, x: anim.x, y: anim.y, zIndex: anim.zIndex});
+            var newEnemy = flax.assetsManager.createDisplay(res.shooters, "Enemy", {parent: anim.parent, x: anim.x, y: anim.y, zIndex: anim.zIndex}, true);
             targets.push(newEnemy);
         }, this);
         dieAnim.play();
