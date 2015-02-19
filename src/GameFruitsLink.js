@@ -26,9 +26,9 @@ var GameFruitsLink = BaseScene.extend({
         this.schedule(this.countDown, 1, cc.REPEAT_FOREVER, 1);
 
         fruitsMap = new flax.TileMap();
-        fruitsMap.setTileSize(49.2, 49.4);
-        fruitsMap.setMapSize(13,11);
-        fruitsMap.offsetY = 3*49.4;
+        fruitsMap.setTileSize(64, 64);
+        fruitsMap.setMapSize(10,10);
+        fruitsMap.offsetY = 64;
 //        fruitsMap.showDebugGrid();
         this.newLevel();
     },

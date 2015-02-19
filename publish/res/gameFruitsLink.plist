@@ -82,7 +82,7 @@
       <key>gameFruitsLink_000007</key>
       <dict>
         <key>frame</key>
-        <string>{{416,98},{50,45}}</string>
+        <string>{{155,239},{50,45}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -115,84 +115,84 @@
       <key>gameFruitsLink_000010</key>
       <dict>
         <key>frame</key>
-        <string>{{308,239},{51,50}}</string>
+        <string>{{490,165},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000011</key>
       <dict>
         <key>frame</key>
-        <string>{{155,239},{51,50}}</string>
+        <string>{{365,98},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000012</key>
       <dict>
         <key>frame</key>
-        <string>{{206,239},{51,50}}</string>
+        <string>{{432,98},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000013</key>
       <dict>
         <key>frame</key>
-        <string>{{257,239},{51,50}}</string>
+        <string>{{423,165},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000014</key>
       <dict>
         <key>frame</key>
-        <string>{{359,239},{51,50}}</string>
+        <string>{{566,98},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000015</key>
       <dict>
         <key>frame</key>
-        <string>{{365,98},{51,50}}</string>
+        <string>{{499,98},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000016</key>
       <dict>
         <key>frame</key>
-        <string>{{410,239},{51,50}}</string>
+        <string>{{557,165},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{49,48}</string>
+        <string>{65,65}</string>
       </dict>
       <key>gameFruitsLink_000017</key>
       <dict>
         <key>frame</key>
-        <string>{{357,148},{19,23}}</string>
+        <string>{{205,239},{19,23}}</string>
         <key>offset</key>
         <string>{0.00,-0.50}</string>
         <key>rotated</key>
@@ -203,7 +203,7 @@
       <key>gameFruitsLink_000018</key>
       <dict>
         <key>frame</key>
-        <string>{{440,211},{15,22}}</string>
+        <string>{{276,261},{15,22}}</string>
         <key>offset</key>
         <string>{-2.00,0.00}</string>
         <key>rotated</key>
@@ -214,7 +214,7 @@
       <key>gameFruitsLink_000019</key>
       <dict>
         <key>frame</key>
-        <string>{{440,189},{16,22}}</string>
+        <string>{{276,239},{16,22}}</string>
         <key>offset</key>
         <string>{-1.50,0.00}</string>
         <key>rotated</key>
@@ -225,7 +225,7 @@
       <key>gameFruitsLink_000020</key>
       <dict>
         <key>frame</key>
-        <string>{{434,143},{17,23}}</string>
+        <string>{{259,262},{17,23}}</string>
         <key>offset</key>
         <string>{-1.00,-0.50}</string>
         <key>rotated</key>
@@ -236,7 +236,7 @@
       <key>gameFruitsLink_000021</key>
       <dict>
         <key>frame</key>
-        <string>{{423,167},{18,22}}</string>
+        <string>{{241,258},{18,22}}</string>
         <key>offset</key>
         <string>{-0.50,0.00}</string>
         <key>rotated</key>
@@ -247,7 +247,7 @@
       <key>gameFruitsLink_000022</key>
       <dict>
         <key>frame</key>
-        <string>{{423,189},{17,23}}</string>
+        <string>{{242,234},{17,23}}</string>
         <key>offset</key>
         <string>{-1.00,-0.50}</string>
         <key>rotated</key>
@@ -258,7 +258,7 @@
       <key>gameFruitsLink_000023</key>
       <dict>
         <key>frame</key>
-        <string>{{416,143},{18,24}}</string>
+        <string>{{224,234},{18,24}}</string>
         <key>offset</key>
         <string>{-0.50,0.00}</string>
         <key>rotated</key>
@@ -269,7 +269,7 @@
       <key>gameFruitsLink_000024</key>
       <dict>
         <key>frame</key>
-        <string>{{423,212},{17,23}}</string>
+        <string>{{259,239},{17,23}}</string>
         <key>offset</key>
         <string>{-1.00,-0.50}</string>
         <key>rotated</key>
@@ -280,7 +280,7 @@
       <key>gameFruitsLink_000025</key>
       <dict>
         <key>frame</key>
-        <string>{{376,148},{18,23}}</string>
+        <string>{{205,262},{18,23}}</string>
         <key>offset</key>
         <string>{-0.50,-0.50}</string>
         <key>rotated</key>
@@ -291,7 +291,7 @@
       <key>gameFruitsLink_000026</key>
       <dict>
         <key>frame</key>
-        <string>{{394,148},{18,23}}</string>
+        <string>{{223,262},{18,23}}</string>
         <key>offset</key>
         <string>{-0.50,-0.50}</string>
         <key>rotated</key>
@@ -447,27 +447,27 @@
         <key>end</key>
         <integer>9</integer>
       </dict>
-      <key>asset7</key>
+      <key>fruit0</key>
       <dict>
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>10</integer>
         <key>end</key>
         <integer>10</integer>
       </dict>
-      <key>asset8</key>
+      <key>fruit1</key>
       <dict>
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>11</integer>
         <key>end</key>
@@ -478,9 +478,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>12</integer>
         <key>end</key>
@@ -491,9 +491,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>13</integer>
         <key>end</key>
@@ -504,9 +504,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>14</integer>
         <key>end</key>
@@ -517,9 +517,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>15</integer>
         <key>end</key>
@@ -530,9 +530,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4755102040816327</real>
+        <real>0.5030769230769231</real>
         <key>anchorY</key>
-        <real>0.48333333333333334</real>
+        <real>0.49692307692307686</real>
         <key>start</key>
         <integer>16</integer>
         <key>end</key>
@@ -545,7 +545,7 @@
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0</real>
+        <real>0.0011350737797956867</real>
         <key>url</key>
         <string>gameFruitsLink.bg.jpg</string>
       </dict>
@@ -559,48 +559,48 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,396.60,493.00</string>
+        <string>0,0,384.10,510.25</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.002028397565922921</real>
+        <real>0.0019598236158745713</real>
         <key>children</key>
         <dict>
-          <key>instance1970131</key>
+          <key>instance238718</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>271.40,417.55,0.00,1,1,1.00,2,0,0</string>
-          </dict>
-          <key>instance1970112</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>271.40,468.20,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>instance1970139</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>3</integer>
             <key>frames</key>
-            <string>371.40,418.80,0.00,1,1,1.00,3,0,0</string>
+            <string>351.40,348.55,0.00,1,1,1.00,3,0,0</string>
           </dict>
-          <key>instance1970123</key>
+          <key>instance238702</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>371.40,369.70,0.00,1,1,1.00,1,0,0</string>
+            <string>351.40,414.55,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>instance238710</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>285.40,411.55,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>instance238691</key>
+          <dict>
+            <key>class</key>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>285.40,477.55,0.00,1,1,1.00,0,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -611,102 +611,102 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,494.25,590.65</string>
+        <string>0,0,512.70,638.55</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.0016930500296283757</real>
+        <real>0.0015660480776759848</real>
         <key>children</key>
         <dict>
-          <key>instance1970222</key>
+          <key>instance238801</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>5</integer>
             <key>frames</key>
-            <string>371.40,273.00,0.00,1,1,1.00,5,0,0</string>
+            <string>290.40,224.00,0.00,1,1,1.00,5,0,0</string>
           </dict>
-          <key>instance1970233</key>
+          <key>instance238812</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>6</integer>
             <key>frames</key>
-            <string>271.40,565.85,0.00,1,1,1.00,6,0,0</string>
+            <string>354.40,605.85,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance1970244</key>
+          <key>instance238823</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>7</integer>
             <key>frames</key>
-            <string>173.75,321.45,0.00,1,1,1.00,7,0,0</string>
+            <string>160.75,288.70,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>instance1970252</key>
+          <key>instance238831</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>8</integer>
             <key>frames</key>
-            <string>469.05,516.95,0.00,1,1,1.00,8,0,0</string>
+            <string>480.00,537.20,0.00,1,1,1.00,8,0,0</string>
           </dict>
-          <key>instance1970260</key>
+          <key>instance238839</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>9</integer>
             <key>frames</key>
-            <string>173.50,517.90,0.00,1,1,1.00,9,0,0</string>
+            <string>160.75,537.20,0.00,1,1,1.00,9,0,0</string>
           </dict>
-          <key>instance1970174</key>
+          <key>instance238753</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>271.40,468.20,0.00,1,1,1.00,0,0,0</string>
+            <string>287.40,477.20,0.00,1,1,1.00,0,0,0</string>
           </dict>
-          <key>instance1970185</key>
+          <key>instance238764</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>371.40,369.70,0.00,1,1,1.00,1,0,0</string>
+            <string>350.40,350.70,0.00,1,1,1.00,1,0,0</string>
           </dict>
-          <key>instance1970193</key>
+          <key>instance238772</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>271.40,417.55,0.00,1,1,1.00,2,0,0</string>
+            <string>287.40,414.55,0.00,1,1,1.00,2,0,0</string>
           </dict>
-          <key>instance1970201</key>
+          <key>instance238780</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>3</integer>
             <key>frames</key>
-            <string>371.40,418.80,0.00,1,1,1.00,3,0,0</string>
+            <string>350.40,414.80,0.00,1,1,1.00,3,0,0</string>
           </dict>
-          <key>instance1970212</key>
+          <key>instance238791</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>468.00,322.60,0.00,1,1,1.00,4,0,0</string>
+            <string>480.00,350.70,0.00,1,1,1.00,4,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -717,138 +717,138 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,494.25,590.65</string>
+        <string>0,0,512.75,573.55</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.0016930500296283757</real>
+        <real>0.0017435271554354461</real>
         <key>children</key>
         <dict>
-          <key>instance1970420</key>
+          <key>instance238921</key>
           <dict>
             <key>class</key>
-            <string>fruit2</string>
-            <key>zIndex</key>
-            <integer>13</integer>
-            <key>frames</key>
-            <string>368.80,519.45,0.00,1,1,1.00,13,0,0</string>
-          </dict>
-          <key>instance1970294</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>271.40,468.20,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>instance1970305</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>371.40,369.70,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>instance1970313</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>271.40,417.55,0.00,1,1,1.00,2,0,0</string>
-          </dict>
-          <key>instance1970321</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>371.40,418.80,0.00,1,1,1.00,3,0,0</string>
-          </dict>
-          <key>instance1970332</key>
-          <dict>
-            <key>class</key>
-            <string>fruit2</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>421.50,369.10,0.00,1,1,1.00,4,0,0</string>
-          </dict>
-          <key>instance1970342</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>5</integer>
             <key>frames</key>
-            <string>371.40,273.00,0.00,1,1,1.00,5,0,0</string>
+            <string>415.40,287.00,0.00,1,1,1.00,5,0,0</string>
           </dict>
-          <key>instance1970353</key>
+          <key>instance238932</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>6</integer>
             <key>frames</key>
-            <string>271.40,565.85,0.00,1,1,1.00,6,0,0</string>
+            <string>224.40,540.85,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance1970364</key>
+          <key>instance238943</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>7</integer>
             <key>frames</key>
-            <string>173.75,321.45,0.00,1,1,1.00,7,0,0</string>
+            <string>161.75,288.45,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>instance1970372</key>
+          <key>instance238951</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>8</integer>
             <key>frames</key>
-            <string>469.05,516.95,0.00,1,1,1.00,8,0,0</string>
+            <string>480.05,539.95,0.00,1,1,1.00,8,0,0</string>
           </dict>
-          <key>instance1970380</key>
+          <key>instance238959</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>9</integer>
             <key>frames</key>
-            <string>223.10,469.85,0.00,1,1,1.00,9,0,0</string>
+            <string>223.10,476.85,0.00,1,1,1.00,9,0,0</string>
           </dict>
-          <key>instance1970390</key>
+          <key>instance238969</key>
           <dict>
             <key>class</key>
             <string>fruit3</string>
             <key>zIndex</key>
             <integer>10</integer>
             <key>frames</key>
-            <string>468.00,417.90,0.00,1,1,1.00,10,0,0</string>
+            <string>478.00,412.90,0.00,1,1,1.00,10,0,0</string>
           </dict>
-          <key>instance1970400</key>
+          <key>instance238979</key>
           <dict>
             <key>class</key>
             <string>fruit3</string>
             <key>zIndex</key>
             <integer>11</integer>
             <key>frames</key>
-            <string>220.00,371.40,0.00,1,1,1.00,11,0,0</string>
+            <string>223.00,351.40,0.00,1,1,1.00,11,0,0</string>
           </dict>
-          <key>instance1970410</key>
+          <key>instance238989</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>12</integer>
             <key>frames</key>
-            <string>269.60,269.90,0.00,1,1,1.00,12,0,0</string>
+            <string>289.60,287.90,0.00,1,1,1.00,12,0,0</string>
+          </dict>
+          <key>instance238999</key>
+          <dict>
+            <key>class</key>
+            <string>fruit2</string>
+            <key>zIndex</key>
+            <integer>13</integer>
+            <key>frames</key>
+            <string>351.80,539.45,0.00,1,1,1.00,13,0,0</string>
+          </dict>
+          <key>instance238873</key>
+          <dict>
+            <key>class</key>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>287.40,477.20,0.00,1,1,1.00,0,0,0</string>
+          </dict>
+          <key>instance238884</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>351.40,350.70,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>instance238892</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>286.40,414.55,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>instance238900</key>
+          <dict>
+            <key>class</key>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>351.40,412.85,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>instance238911</key>
+          <dict>
+            <key>class</key>
+            <string>fruit2</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>416.50,351.10,0.00,1,1,1.00,4,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -859,95 +859,158 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,491.15,590.65</string>
+        <string>0,0,577.60,574.55</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.0016930500296283757</real>
+        <real>0.0017404925593943088</real>
         <key>children</key>
         <dict>
-          <key>instance1970492</key>
+          <key>instance239182</key>
+          <dict>
+            <key>class</key>
+            <string>fruit4</string>
+            <key>zIndex</key>
+            <integer>15</integer>
+            <key>frames</key>
+            <string>476.90,286.50,0.00,1,1,1.00,15,0,0</string>
+          </dict>
+          <key>instance239195</key>
+          <dict>
+            <key>class</key>
+            <string>fruit4</string>
+            <key>zIndex</key>
+            <integer>16</integer>
+            <key>frames</key>
+            <string>414.35,478.15,0.00,1,1,1.00,16,0,0</string>
+          </dict>
+          <key>instance239033</key>
+          <dict>
+            <key>class</key>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>223.35,477.20,0.00,1,1,1.00,0,0,0</string>
+          </dict>
+          <key>instance239044</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>353.35,350.70,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>instance239208</key>
+          <dict>
+            <key>class</key>
+            <string>fruit4</string>
+            <key>zIndex</key>
+            <integer>17</integer>
+            <key>frames</key>
+            <string>289.70,350.50,0.00,1,1,1.00,17,0,0</string>
+          </dict>
+          <key>instance239052</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>288.35,416.55,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>instance239060</key>
+          <dict>
+            <key>class</key>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>352.35,416.80,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>instance239071</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>418.40,370.65,0.00,1,1,1.00,4,0,0</string>
+            <string>418.40,350.65,0.00,1,1,1.00,4,0,0</string>
           </dict>
-          <key>instance1970502</key>
+          <key>instance239081</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>5</integer>
             <key>frames</key>
-            <string>323.35,273.00,0.00,1,1,1.00,5,0,0</string>
+            <string>353.35,284.00,0.00,1,1,1.00,5,0,0</string>
           </dict>
-          <key>instance1970513</key>
+          <key>instance239092</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>6</integer>
             <key>frames</key>
-            <string>223.35,565.85,0.00,1,1,1.00,6,0,0</string>
+            <string>223.35,541.85,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance1970524</key>
+          <key>instance239103</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>7</integer>
             <key>frames</key>
-            <string>220.25,321.45,0.00,1,1,1.00,7,0,0</string>
+            <string>221.25,288.45,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>instance1970532</key>
+          <key>instance239111</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>8</integer>
             <key>frames</key>
-            <string>465.95,516.95,0.00,1,1,1.00,8,0,0</string>
+            <string>481.95,537.95,0.00,1,1,1.00,8,0,0</string>
           </dict>
-          <key>instance1970540</key>
+          <key>instance239119</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>9</integer>
             <key>frames</key>
-            <string>175.05,469.85,0.00,1,1,1.00,9,0,0</string>
+            <string>544.05,476.85,0.00,1,1,1.00,9,0,0</string>
           </dict>
-          <key>instance1970550</key>
+          <key>instance239129</key>
           <dict>
             <key>class</key>
             <string>fruit3</string>
             <key>zIndex</key>
             <integer>10</integer>
             <key>frames</key>
-            <string>464.90,417.90,0.00,1,1,1.00,10,0,0</string>
+            <string>483.90,414.90,0.00,1,1,1.00,10,0,0</string>
           </dict>
-          <key>instance1970560</key>
+          <key>instance239139</key>
           <dict>
             <key>class</key>
             <string>fruit3</string>
             <key>zIndex</key>
             <integer>11</integer>
             <key>frames</key>
-            <string>171.95,371.40,0.00,1,1,1.00,11,0,0</string>
+            <string>161.95,414.40,0.00,1,1,1.00,11,0,0</string>
           </dict>
-          <key>instance1970570</key>
+          <key>instance239149</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>12</integer>
             <key>frames</key>
-            <string>221.55,269.90,0.00,1,1,1.00,12,0,0</string>
+            <string>161.55,221.90,0.00,1,1,1.00,12,0,0</string>
           </dict>
-          <key>instance1970580</key>
+          <key>instance239159</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
@@ -956,77 +1019,14 @@
             <key>frames</key>
             <string>320.75,519.45,0.00,1,1,1.00,13,0,0</string>
           </dict>
-          <key>instance1970590</key>
+          <key>instance239169</key>
           <dict>
             <key>class</key>
             <string>fruit4</string>
             <key>zIndex</key>
             <integer>14</integer>
             <key>frames</key>
-            <string>464.90,324.00,0.00,1,1,1.00,14,0,0</string>
-          </dict>
-          <key>instance1970603</key>
-          <dict>
-            <key>class</key>
-            <string>fruit4</string>
-            <key>zIndex</key>
-            <integer>15</integer>
-            <key>frames</key>
-            <string>464.90,277.50,0.00,1,1,1.00,15,0,0</string>
-          </dict>
-          <key>instance1970616</key>
-          <dict>
-            <key>class</key>
-            <string>fruit4</string>
-            <key>zIndex</key>
-            <integer>16</integer>
-            <key>frames</key>
-            <string>370.35,468.15,0.00,1,1,1.00,16,0,0</string>
-          </dict>
-          <key>instance1970629</key>
-          <dict>
-            <key>class</key>
-            <string>fruit4</string>
-            <key>zIndex</key>
-            <integer>17</integer>
-            <key>frames</key>
-            <string>272.70,370.50,0.00,1,1,1.00,17,0,0</string>
-          </dict>
-          <key>instance1970454</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>223.35,468.20,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>instance1970465</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>323.35,369.70,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>instance1970473</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>223.35,417.55,0.00,1,1,1.00,2,0,0</string>
-          </dict>
-          <key>instance1970481</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>323.35,418.80,0.00,1,1,1.00,3,0,0</string>
+            <string>544.90,353.00,0.00,1,1,1.00,14,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1037,140 +1037,77 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,543.30,594.60</string>
+        <string>0,0,579.80,637.55</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.0016818028927009755</real>
+        <real>0.0015685044310250178</real>
         <key>children</key>
         <dict>
-          <key>instance1970752</key>
-          <dict>
-            <key>class</key>
-            <string>fruit2</string>
-            <key>zIndex</key>
-            <integer>9</integer>
-            <key>frames</key>
-            <string>175.05,469.85,0.00,1,1,1.00,9,0,0</string>
-          </dict>
-          <key>instance1970772</key>
-          <dict>
-            <key>class</key>
-            <string>fruit3</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>171.95,371.40,0.00,1,1,1.00,11,0,0</string>
-          </dict>
-          <key>instance1970792</key>
-          <dict>
-            <key>class</key>
-            <string>fruit2</string>
-            <key>zIndex</key>
-            <integer>13</integer>
-            <key>frames</key>
-            <string>320.75,519.45,0.00,1,1,1.00,13,0,0</string>
-          </dict>
-          <key>instance1970815</key>
-          <dict>
-            <key>class</key>
-            <string>fruit4</string>
-            <key>zIndex</key>
-            <integer>15</integer>
-            <key>frames</key>
-            <string>464.90,277.50,0.00,1,1,1.00,15,0,0</string>
-          </dict>
-          <key>instance1970841</key>
+          <key>instance239420</key>
           <dict>
             <key>class</key>
             <string>fruit4</string>
             <key>zIndex</key>
             <integer>17</integer>
             <key>frames</key>
-            <string>272.70,370.50,0.00,1,1,1.00,17,0,0</string>
+            <string>289.70,351.50,0.00,1,1,1.00,17,0,0</string>
           </dict>
-          <key>instance1970862</key>
+          <key>instance239441</key>
           <dict>
             <key>class</key>
             <string>fruit6</string>
             <key>zIndex</key>
             <integer>19</integer>
             <key>frames</key>
-            <string>321.25,469.70,0.00,1,1,1.00,19,0,0</string>
+            <string>289.25,475.70,0.00,1,1,1.00,19,0,0</string>
           </dict>
-          <key>instance1970878</key>
+          <key>instance239245</key>
           <dict>
             <key>class</key>
-            <string>fruit6</string>
+            <string>fruit0</string>
             <key>zIndex</key>
-            <integer>21</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>415.80,322.45,0.00,1,1,1.00,21,0,0</string>
+            <string>223.35,476.20,0.00,1,1,1.00,0,0,0</string>
           </dict>
-          <key>instance1970685</key>
+          <key>instance239264</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>223.35,417.55,0.00,1,1,1.00,2,0,0</string>
+            <string>223.35,415.55,0.00,1,1,1.00,2,0,0</string>
           </dict>
-          <key>instance1970704</key>
+          <key>instance239283</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>418.40,370.65,0.00,1,1,1.00,4,0,0</string>
+            <string>418.40,351.65,0.00,1,1,1.00,4,0,0</string>
           </dict>
-          <key>instance1970895</key>
+          <key>instance239304</key>
           <dict>
             <key>class</key>
-            <string>fruit5</string>
-            <key>zIndex</key>
-            <integer>23</integer>
-            <key>frames</key>
-            <string>174.20,270.65,0.00,1,1,1.00,23,0,0</string>
-          </dict>
-          <key>instance1970725</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>6</integer>
             <key>frames</key>
-            <string>223.35,565.85,0.00,1,1,1.00,6,0,0</string>
+            <string>223.35,604.85,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance1970666</key>
+          <key>instance239323</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>223.35,468.20,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>instance1970913</key>
-          <dict>
-            <key>class</key>
-            <string>fruit5</string>
-            <key>zIndex</key>
-            <integer>25</integer>
-            <key>frames</key>
-            <string>417.55,569.80,0.00,1,1,1.00,25,0,0</string>
-          </dict>
-          <key>instance1970744</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>8</integer>
             <key>frames</key>
-            <string>465.95,516.95,0.00,1,1,1.00,8,0,0</string>
+            <string>477.95,537.95,0.00,1,1,1.00,8,0,0</string>
           </dict>
-          <key>instance1970762</key>
+          <key>instance239341</key>
           <dict>
             <key>class</key>
             <string>fruit3</string>
@@ -1179,104 +1116,167 @@
             <key>frames</key>
             <string>464.90,417.90,0.00,1,1,1.00,10,0,0</string>
           </dict>
-          <key>instance1970782</key>
+          <key>instance239361</key>
           <dict>
             <key>class</key>
             <string>fruit2</string>
             <key>zIndex</key>
             <integer>12</integer>
             <key>frames</key>
-            <string>221.55,269.90,0.00,1,1,1.00,12,0,0</string>
+            <string>223.55,223.90,0.00,1,1,1.00,12,0,0</string>
           </dict>
-          <key>instance1970802</key>
+          <key>instance239457</key>
+          <dict>
+            <key>class</key>
+            <string>fruit6</string>
+            <key>zIndex</key>
+            <integer>21</integer>
+            <key>frames</key>
+            <string>415.80,289.45,0.00,1,1,1.00,21,0,0</string>
+          </dict>
+          <key>instance239492</key>
+          <dict>
+            <key>class</key>
+            <string>fruit5</string>
+            <key>zIndex</key>
+            <integer>25</integer>
+            <key>frames</key>
+            <string>417.55,603.80,0.00,1,1,1.00,25,0,0</string>
+          </dict>
+          <key>instance239381</key>
           <dict>
             <key>class</key>
             <string>fruit4</string>
             <key>zIndex</key>
             <integer>14</integer>
             <key>frames</key>
-            <string>464.90,324.00,0.00,1,1,1.00,14,0,0</string>
+            <string>481.90,286.00,0.00,1,1,1.00,14,0,0</string>
           </dict>
-          <key>instance1970828</key>
+          <key>instance239407</key>
           <dict>
             <key>class</key>
             <string>fruit4</string>
             <key>zIndex</key>
             <integer>16</integer>
             <key>frames</key>
-            <string>370.35,468.15,0.00,1,1,1.00,16,0,0</string>
+            <string>418.35,478.15,0.00,1,1,1.00,16,0,0</string>
           </dict>
-          <key>instance1970854</key>
+          <key>instance239474</key>
+          <dict>
+            <key>class</key>
+            <string>fruit5</string>
+            <key>zIndex</key>
+            <integer>23</integer>
+            <key>frames</key>
+            <string>159.20,224.65,0.00,1,1,1.00,23,0,0</string>
+          </dict>
+          <key>instance239433</key>
           <dict>
             <key>class</key>
             <string>fruit6</string>
             <key>zIndex</key>
             <integer>18</integer>
             <key>frames</key>
-            <string>518.10,468.15,0.00,1,1,1.00,18,0,0</string>
+            <string>547.10,476.15,0.00,1,1,1.00,18,0,0</string>
           </dict>
-          <key>instance1970870</key>
+          <key>instance239449</key>
           <dict>
             <key>class</key>
             <string>fruit6</string>
             <key>zIndex</key>
             <integer>20</integer>
             <key>frames</key>
-            <string>321.25,320.90,0.00,1,1,1.00,20,0,0</string>
+            <string>287.25,288.90,0.00,1,1,1.00,20,0,0</string>
           </dict>
-          <key>instance1970886</key>
+          <key>instance239256</key>
           <dict>
             <key>class</key>
-            <string>fruit5</string>
+            <string>fruit1</string>
             <key>zIndex</key>
-            <integer>22</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>516.75,371.40,0.00,1,1,1.00,22,0,0</string>
+            <string>354.35,349.70,0.00,1,1,1.00,1,0,0</string>
           </dict>
-          <key>instance1970693</key>
+          <key>instance239272</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>fruit0</string>
             <key>zIndex</key>
             <integer>3</integer>
             <key>frames</key>
-            <string>323.35,418.80,0.00,1,1,1.00,3,0,0</string>
+            <string>352.35,415.80,0.00,1,1,1.00,3,0,0</string>
           </dict>
-          <key>instance1970714</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>323.35,273.00,0.00,1,1,1.00,5,0,0</string>
-          </dict>
-          <key>instance1970904</key>
+          <key>instance239483</key>
           <dict>
             <key>class</key>
             <string>fruit5</string>
             <key>zIndex</key>
             <integer>24</integer>
             <key>frames</key>
-            <string>515.20,276.85,0.00,1,1,1.00,24,0,0</string>
+            <string>481.20,223.85,0.00,1,1,1.00,24,0,0</string>
           </dict>
-          <key>instance1970736</key>
+          <key>instance239293</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit0</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>351.35,225.00,0.00,1,1,1.00,5,0,0</string>
+          </dict>
+          <key>instance239315</key>
+          <dict>
+            <key>class</key>
+            <string>fruit1</string>
             <key>zIndex</key>
             <integer>7</integer>
             <key>frames</key>
-            <string>220.25,321.45,0.00,1,1,1.00,7,0,0</string>
+            <string>223.25,350.45,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>instance1970677</key>
+          <key>instance239331</key>
           <dict>
             <key>class</key>
-            <string>asset8</string>
+            <string>fruit2</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>9</integer>
             <key>frames</key>
-            <string>323.35,369.70,0.00,1,1,1.00,1,0,0</string>
+            <string>162.05,476.85,0.00,1,1,1.00,9,0,0</string>
+          </dict>
+          <key>instance239351</key>
+          <dict>
+            <key>class</key>
+            <string>fruit3</string>
+            <key>zIndex</key>
+            <integer>11</integer>
+            <key>frames</key>
+            <string>92.95,351.40,0.00,1,1,1.00,11,0,0</string>
+          </dict>
+          <key>instance239371</key>
+          <dict>
+            <key>class</key>
+            <string>fruit2</string>
+            <key>zIndex</key>
+            <integer>13</integer>
+            <key>frames</key>
+            <string>350.75,540.45,0.00,1,1,1.00,13,0,0</string>
+          </dict>
+          <key>instance239465</key>
+          <dict>
+            <key>class</key>
+            <string>fruit5</string>
+            <key>zIndex</key>
+            <integer>22</integer>
+            <key>frames</key>
+            <string>541.75,352.40,0.00,1,1,1.00,22,0,0</string>
+          </dict>
+          <key>instance239394</key>
+          <dict>
+            <key>class</key>
+            <string>fruit4</string>
+            <key>zIndex</key>
+            <integer>15</integer>
+            <key>frames</key>
+            <string>414.90,224.50,0.00,1,1,1.00,15,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1287,30 +1287,30 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,640.55,881.00</string>
+        <string>0,0,640.10,881.00</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00007811279487580067</real>
         <key>anchorY</key>
         <real>0.0011350737797956867</real>
         <key>children</key>
         <dict>
-          <key>instance1970948</key>
+          <key>instance239657</key>
           <dict>
             <key>class</key>
             <string>asset5</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>316.00,805.90,0.00,1,1,1.00,1,0,0</string>
+            <string>316.05,805.90,0.00,1,1,1.00,1,0,0</string>
           </dict>
-          <key>shuffleBtn</key>
+          <key>instance239663</key>
           <dict>
             <key>class</key>
-            <string>shuffleButton</string>
+            <string>asset3</string>
             <key>zIndex</key>
-            <integer>8</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>597.75,719.55,0.00,1,1,1.00,8,0,0</string>
+            <string>56.75,797.50,0.00,1,1,1.00,5,0,0</string>
           </dict>
           <key>findBtn</key>
           <dict>
@@ -1319,52 +1319,7 @@
             <key>zIndex</key>
             <integer>9</integer>
             <key>frames</key>
-            <string>513.40,719.55,0.00,1,1,1.00,9,0,0</string>
-          </dict>
-          <key>instance1970951</key>
-          <dict>
-            <key>class</key>
-            <string>asset6</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>105.70,808.20,0.00,1,1,1.00,2,0,0</string>
-          </dict>
-          <key>timeBar</key>
-          <dict>
-            <key>class</key>
-            <string>TimeBar</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>259.20,817.40,0.00,1,1,1.00,3,0,0</string>
-          </dict>
-          <key>instance1970970</key>
-          <dict>
-            <key>class</key>
-            <string>TimeBarBG</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>258.20,816.55,0.00,1,1,1.00,7,0,0</string>
-          </dict>
-          <key>instance1970966</key>
-          <dict>
-            <key>class</key>
-            <string>asset4</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>223.45,796.15,0.00,1.0823822021484375,1.0823822021484375,1.00,6,0,0</string>
-          </dict>
-          <key>instance1970946</key>
-          <dict>
-            <key>class</key>
-            <string>bg</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+            <string>513.45,719.55,0.00,1,1,1.00,9,0,0</string>
           </dict>
           <key>scoreTxt</key>
           <dict>
@@ -1373,7 +1328,7 @@
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>105.05,807.70,0.00,1,1,1.00,4,0,0,Showcard Gothic,20,#96E104,center,84,28</string>
+            <string>105.10,807.70,0.00,1,1,1.00,4,0,0,Showcard Gothic,20,#96E104,center,84,28</string>
             <key>text</key>
             <string>6783</string>
             <key>input</key>
@@ -1391,14 +1346,59 @@
             <key>height</key>
             <real>28</real>
           </dict>
-          <key>instance1970954</key>
+          <key>instance239679</key>
           <dict>
             <key>class</key>
-            <string>asset3</string>
+            <string>TimeBarBG</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>56.70,797.50,0.00,1,1,1.00,5,0,0</string>
+            <string>258.25,816.55,0.00,1,1,1.00,7,0,0</string>
+          </dict>
+          <key>instance239525</key>
+          <dict>
+            <key>class</key>
+            <string>bg</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>0.05,1.00,0.00,1,1,1.00,0,0,0</string>
+          </dict>
+          <key>timeBar</key>
+          <dict>
+            <key>class</key>
+            <string>TimeBar</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>259.25,817.40,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>instance239675</key>
+          <dict>
+            <key>class</key>
+            <string>asset4</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>223.50,796.15,0.00,1.0823822021484375,1.0823822021484375,1.00,6,0,0</string>
+          </dict>
+          <key>instance239660</key>
+          <dict>
+            <key>class</key>
+            <string>asset6</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>105.75,808.20,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>shuffleBtn</key>
+          <dict>
+            <key>class</key>
+            <string>shuffleButton</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>597.80,719.55,0.00,1,1,1.00,8,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1423,7 +1423,7 @@
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>323.85,94.10,0.00,0.4250030517578125,0.4250030517578125,1.00,0,0,0|323.85,94.10,0.00,0.8113861083984375,0.7614593505859375,1.00,0,0,0|323.85,94.10,0.00,1.1977691650390625,1.097930908203125,1.00,0,0,0|323.85,94.10,0.00,1.5841522216796875,1.43438720703125,1.00,0,0,0|323.80,94.10,0.00,1.380615234375,1.28076171875,1.00,0,0,0|323.80,94.10,0.00,1.1770477294921875,1.12713623046875,1.00,0,0,0|323.85,94.10,0.00,0.9735107421875,0.9735107421875,1.00,0,0,0|323.85,94.10,0.00,0.9945220947265625,0.9945220947265625,1.00,0,0,0|323.85,94.10,0.00,1.015533447265625,1.015533447265625,1.00,0,0,0|323.85,94.10,0.00,1.0365447998046875,1.0365447998046875,1.00,0,0,0|323.85,94.10,0.00,1.05755615234375,1.05755615234375,1.00,0,0,0|||||323.85,94.10,0.00,1.0079803466796875,1.0079803466796875,1.00,0,0,0|323.80,94.10,0.00,0.958404541015625,0.958404541015625,1.00,0,0,0|323.85,94.15,0.00,0.908843994140625,0.908843994140625,1.00,0,0,0|323.85,94.10,0.00,0.8592681884765625,0.8592681884765625,1.00,0,0,0|323.85,94.10,0.00,1.2393341064453125,1.2393341064453125,0.75,0,0,0|323.85,94.10,0.00,1.619384765625,1.619384765625,0.50,0,0,0|323.85,94.15,0.00,1.9994659423828125,1.9994659423828125,0.25,0,0,0|323.85,94.10,0.00,2.3795013427734375,2.3795013427734375,0.00,0,0,0</string>
+            <string>323.85,94.10,0.00,0.42498779296875,0.42498779296875,1.00,0,0,0|323.85,94.10,0.00,0.811370849609375,0.761444091796875,1.00,0,0,0|323.85,94.10,0.00,1.1977691650390625,1.097930908203125,1.00,0,0,0|323.85,94.10,0.00,1.5841522216796875,1.43438720703125,1.00,0,0,0|323.80,94.10,0.00,1.380615234375,1.28076171875,1.00,0,0,0|323.80,94.10,0.00,1.1770477294921875,1.12713623046875,1.00,0,0,0|323.85,94.10,0.00,0.9735107421875,0.9735107421875,1.00,0,0,0|323.85,94.10,0.00,0.9945220947265625,0.9945220947265625,1.00,0,0,0|323.85,94.10,0.00,1.015533447265625,1.015533447265625,1.00,0,0,0|323.85,94.10,0.00,1.0365447998046875,1.0365447998046875,1.00,0,0,0|323.85,94.10,0.00,1.05755615234375,1.05755615234375,1.00,0,0,0|||||323.85,94.10,0.00,1.0079803466796875,1.0079803466796875,1.00,0,0,0|323.80,94.10,0.00,0.9583892822265625,0.9583892822265625,1.00,0,0,0|323.85,94.15,0.00,0.9088287353515625,0.9088287353515625,1.00,0,0,0|323.85,94.10,0.00,0.8592529296875,0.8592529296875,1.00,0,0,0|323.85,94.10,0.00,1.23931884765625,1.23931884765625,0.75,0,0,0|323.85,94.10,0.00,1.619384765625,1.619384765625,0.50,0,0,0|323.85,94.15,0.00,1.9994354248046875,1.9994354248046875,0.25,0,0,0|323.85,94.10,0.00,2.3795013427734375,2.3795013427734375,0.00,0,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1441,7 +1441,7 @@
         <real>0.4763681592039801</real>
         <key>children</key>
         <dict>
-          <key>instance1971048</key>
+          <key>instance239757</key>
           <dict>
             <key>class</key>
             <string>ClickRect</string>
