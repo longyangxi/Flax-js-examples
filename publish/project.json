@@ -5,7 +5,7 @@
   "height":880,
   "landscape":true,
   "rotateImg":"res/rotate.png",
-  "language":"zh",
+  "language":"",
   "languageJson":true,
   "useFlaxRes":false,
   "loading":"res/logo.png",
