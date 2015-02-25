@@ -67,6 +67,7 @@
     "src/GameBubbles.js",
     "src/GameFruitsLink.js",
     "src/GameShooters.js",
+    "src/GamePhysics.js",
     "src/GameTimberQiang.js",
     "src/Config.js"
   ]

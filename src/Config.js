@@ -44,6 +44,9 @@ Global.scenesList = [
     //射击
     //A simple game of shooters
     {name:"shooters", class: GameShooters, res: res_shooters},
+    //物理游戏
+    //A simple game of physics
+    {name:"physics", class: GamePhysics, res: res_physics},
     //光头强砍树游戏
     //A simple game of timber qiang
     {name:"timberQiangMenu", class:MenuScene, res:res_timberQiang},

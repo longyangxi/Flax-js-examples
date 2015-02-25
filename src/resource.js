@@ -49,6 +49,9 @@ var res = {
     shooters:"res/gameShooters.plist",
     shooters_png:"res/gameShooters.png",
 
+    physics:"res/gamePhysics.plist",
+    physics_png:"res/gamePhysics.png",
+
     timberQiang:"res/gameTimberQiang.plist",
     timberQiang_png:"res/gameTimberQiang.png"
 };
@@ -150,6 +153,13 @@ var res_shooters = [
     res.shooters_png,
     music.gun0,
     music.gun1
+]
+
+var res_physics = [
+    res.sceneNav,
+    res.sceneNav_png,
+    res.physics,
+    res.physics_png
 ]
 
 var res_timberQiang = [

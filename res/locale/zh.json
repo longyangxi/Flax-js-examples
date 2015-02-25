@@ -21,6 +21,7 @@
     "shooters":"枪手: 枪与射击",
     "scrollingBG": "滚动背景",
     "tiledImage":"瓦片地图(点屏幕)",
+    "physics":"物理游戏(点击屏幕)",
     "timberQiangMenu":"游戏：疯狂的光头强",
     "timberQiangGame":"游戏：疯狂的光头强"
 }
