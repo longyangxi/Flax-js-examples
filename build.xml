@@ -57,12 +57,12 @@
                 <file name="src/UIBMFont.js"/>
                 <file name="src/UIPanel.js"/>
                 <file name="src/EffectAndPool.js"/>
-                <file name="src/ScrollingBGTest.js"/>
                 <file name="src/TiledImageTest.js"/>
                 <file name="src/GamePopStars.js"/>
                 <file name="src/GameBubbles.js"/>
                 <file name="src/GameFruitsLink.js"/>
                 <file name="src/GameShooters.js"/>
+                <file name="src/GamePhysics.js"/>
                 <file name="src/GameTimberQiang.js"/>
                 <file name="src/Config.js"/>
                 <file name="main.js"/>
