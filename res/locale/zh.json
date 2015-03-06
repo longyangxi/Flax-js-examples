@@ -13,6 +13,7 @@
     "uiProgress":"UI 进度条",
     "bmp":"位图文本",
     "uiBmFont":"位图和TTF文本",
+    "uiInput":"输入文本",
     "uiPanel":"一个UI面板",
     "effect":"特效和对象池(点屏幕)",
     "poppingStars":"消除星星: TileMap",

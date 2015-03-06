@@ -25,6 +25,9 @@ var res = {
     uiBMFont:"res/uiBmFont.plist",
     uiBMFont_png:"res/uiBmFont.png",
 
+    uiInput:"res/uiInput.plist",
+    uiInput_png:"res/uiInput.png",
+
     uiPanel:"res/uiPanel.plist",
     uiPanel_png:"res/uiPanel.png",
 
@@ -93,6 +96,15 @@ var res_uiBmFont = [
     res.uiPanel_png,
     res.uiBMFont,
     res.uiBMFont_png
+]
+
+var res_uiInput = [
+    res.sceneNav,
+    res.sceneNav_png,
+    res.uiPanel,
+    res.uiPanel_png,
+    res.uiInput,
+    res.uiInput_png
 ]
 
 var res_uiPanel = [

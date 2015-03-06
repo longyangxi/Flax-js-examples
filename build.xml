@@ -5,7 +5,7 @@
              classpath="/Users/long/Documents/www/cocos2d-js-v3.1/tools/cocos2d-console/bin/../plugins/project_compile/build_web/bin/compiler-1.7.jar"/>
 
     <target name="compile">
-        <jscomp compilationLevel="advanced" 
+        <jscomp compilationLevel="simple" 
                 warning="quiet"
                 debug="false" 
                 output="./publish/game.min.js"
@@ -55,8 +55,10 @@
                 <file name="src/UIButton.js"/>
                 <file name="src/UIProgress.js"/>
                 <file name="src/UIBMFont.js"/>
+                <file name="src/UIInput.js"/>
                 <file name="src/UIPanel.js"/>
                 <file name="src/EffectAndPool.js"/>
+                <file name="src/ScrollingBGTest.js"/>
                 <file name="src/TiledImageTest.js"/>
                 <file name="src/GamePopStars.js"/>
                 <file name="src/GameBubbles.js"/>

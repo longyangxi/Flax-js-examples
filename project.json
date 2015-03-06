@@ -59,6 +59,7 @@
     "src/UIButton.js",
     "src/UIProgress.js",
     "src/UIBMFont.js",
+    "src/UIInput.js",
     "src/UIPanel.js",
     "src/EffectAndPool.js",
     "src/ScrollingBGTest.js",

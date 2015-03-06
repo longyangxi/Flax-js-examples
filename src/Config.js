@@ -20,6 +20,9 @@ Global.scenesList = [
     //位图字体
     //Bitmap Font
     {name:"uiBmFont", class:UIBmFont, res:res_uiBmFont},
+    //输入文本
+    //Input Text
+    {name:"uiInput", class:UIInput, res:res_uiInput},
     //UI面板
     //UI panel
     {name:"uiPanel", class:UIPanelScene, res:res_uiPanel},

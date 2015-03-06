@@ -29,6 +29,7 @@ flax._sprite = {
     prevFrame:-1,
     totalFrames:0,
     frameInterval:0,
+    ignoreBodyRotation:false,
     define:null,
     name:null,
     assetsFile:null,
@@ -721,6 +722,7 @@ flax._sprite = {
         this.autoDestroyWhenOver = false;
         this.autoStopWhenOver = false;
         this.autoHideWhenOver = false;
+        this.ignoreBodyRotation = false;
         this.gotoAndStop(0);
 
         this._tileInited = false;
@@ -786,16 +788,8 @@ cc.defineGetterSetter(_p, "tileMap", _p.getTileMap, _p.setTileMap);
 _p.currentLabel;
 cc.defineGetterSetter(_p, "currentLabel", _p.getCurrentLabel);
 //fix the .x, .y bug no invoking setPosition mehtod
-try{
-    /** @expose */
-    _p.x;
-    cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
-    /** @expose */
-    _p.y;
-    cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
-}catch (e){
-
-}
+cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
+cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
 //////////////////////////////////////////////////////////////////////
 
 window._p = flax.FlaxSpriteBatch.prototype;
@@ -819,15 +813,6 @@ cc.defineGetterSetter(_p, "tileMap", _p.getTileMap, _p.setTileMap);
 _p.currentLabel;
 cc.defineGetterSetter(_p, "currentLabel", _p.getCurrentLabel);
 //fix the .x, .y bug no invoking setPosition mehtod
-try{
-    /** @expose */
-    _p.x;
-    cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
-    /** @expose */
-    _p.y;
-    cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
-}catch (e){
-
-}
-
+cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
+cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
 delete window._p;

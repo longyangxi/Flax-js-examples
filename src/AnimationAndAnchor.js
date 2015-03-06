@@ -18,6 +18,6 @@ var AnimationWithAnchor = BaseScene.extend({
             if(fps > 60) fps = 24;
             anim.fps = fps;
             ui.fpsTxt.text = "FPS: " + fps;
-        })
+        });
     }
 })

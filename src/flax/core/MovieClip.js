@@ -66,7 +66,7 @@ flax.FrameData = cc.Class.extend({
             child.setFontName(this.font);
             child.setFontFillColor(this.fontColor);
             child.setHorizontalAlignment(this.textAlign);
-            child.setDimensions(this.textWidth, this.textHeight);
+            child.setDimensions({width: this.textWidth, height:this.textHeight});
             //todo: fix the bug of cocos: no update when the font color changed
             child.setFontSize(this.fontSize - 1);
             child.setFontSize(this.fontSize);
@@ -80,45 +80,6 @@ flax.FrameData = cc.Class.extend({
     },
     clone:function(){
         return new flax.FrameData(this._data);
-    }
-});
-
-flax.FrameData_mat = cc.Class.extend({
-    a:1,
-    b:0,
-    c:0,
-    d:1,
-    tx:0,
-    ty:0,
-    opacity:255,
-    zIndex:-1,
-    _data:null,
-
-    ctor:function(data){
-        this._data = data;
-        this.a = parseFloat(data[0]);
-        this.b = parseFloat(data[1]);
-        this.c = parseFloat(data[2]);
-        this.d = parseFloat(data[3]);
-        this.tx = parseFloat(data[4]);
-        this.ty = parseFloat(data[5]);
-        this.opacity = Math.round(255*parseFloat(data[6]));
-        this.zIndex = parseInt(data[7]);
-    },
-    setForChild:function(child, offsetX, offsetY)
-    {
-        this.tx += offsetX;
-        this.ty += offsetY;
-
-        ccs.TransformHelp.matrixToNode(this, child);
-
-        this.tx -= offsetX;
-        this.ty -= offsetY;
-
-        if(child.setOpacity && this.opacity != child.opacity) child.opacity = this.opacity;
-    },
-    clone:function(){
-        return new flax.FrameData_mat(this._data);
     }
 });
 
@@ -171,10 +132,7 @@ flax._movieClip = {
                 var fd = fs[i];
                 if(fd){
                     fd = fd.split(",");
-                    //mat format
-                    if(fd.length == 8) frames[i] = new flax.FrameData_mat(fd);
-                    //common format
-                    else frames[i] = new flax.FrameData(fd);
+                    frames[i] = new flax.FrameData(fd);
                 }
             }
             this._frameDatas[childName] = frames;
