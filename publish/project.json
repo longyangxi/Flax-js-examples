@@ -3,7 +3,7 @@
   "gameId":"FlaxExamples",
   "width":640,
   "height":880,
-  "landscape":true,
+  "landscape":false,
   "rotateImg":"res/rotate.png",
   "language":"",
   "languageJson":true,
