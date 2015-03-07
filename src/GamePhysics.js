@@ -22,17 +22,17 @@ var GamePhysics = BaseScene.extend({
         rot = Math.min(65, rot);
         this.gun.rotation = rot;
 
-        var ball = flax.assetsManager.createDisplay(res.physics, "b" + flax.randInt(0, 5), {parent:this, zIndex: 99}, true);
         var anchor = this.gun.getAnchor("shoot");
         pos = cc.p(anchor.x, anchor.y);
         pos = this.gun.convertToWorldSpace(pos);
-//        pos = this.ui.convertToNodeSpace(pos);
+
+        var ball = flax.assetsManager.createDisplay(res.physics, "b" + flax.randInt(0, 5), {parent:this, zIndex: 99}, true);
         ball.setPosition(pos);
         ball.createPhysics(flax.physicsTypeDynamic, false, true);
         ball.addPhysicsShape("main", 1, 0.3, 0.5);
         var v = flax.getPointOnCircle(cc.p(), 1600, rot);
         ball.physicsBody.SetLinearVelocity({x: v.x/PTM_RATIO, y: v.y/PTM_RATIO});
-//        pb.ApplyForce(cc.pMult(cc.p(16 - 32*Math.random(), 20 + Math.random()*35),pb.GetMass()), pb.GetWorldCenter());
+
         flax.clearDraw();
         var pos1 = flax.getPointOnCircle(pos, 600, rot);
         flax.physicsRaycast(function(collider,collisionPoint, endPoint, fraction){
@@ -42,9 +42,9 @@ var GamePhysics = BaseScene.extend({
             flax.drawLine(collisionPoint, endPoint);
         }, pos, pos1, 24);
 
-        if(this.ui.getCollider("hole").containsPoint(touch.getLocation())){
-            cc.log("click");
-        }
+//        if(this.ui.getCollider("hole").containsPoint(touch.getLocation())){
+//            cc.log("click");
+//        }
     },
     initPhysics:function(ui){
         flax.createPhysicsWorld(theGravity);
