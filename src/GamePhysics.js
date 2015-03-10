@@ -13,6 +13,24 @@ var GamePhysics = BaseScene.extend({
         this.initPhysics(this.ui);
         flax.inputManager.addListener(this.ui.back, this.onClick, InputType.click, this);
     },
+    initPhysics:function(ui){
+        flax.createPhysicsWorld(theGravity);
+        flax.startPhysicsWorld();
+
+        ui.createPhysics(flax.physicsTypeStatic);
+        ui.addPhysicsShape("topBar", 1, 0.3, 0.5);
+        ui.addPhysicsShape("leftBar", 1, 0.3, 0.5);
+        ui.addPhysicsShape("rightBar", 1, 0.3, 0.5);
+        ui.addPhysicsShape("leftEdge", 1, 0.3, 0.5);
+        ui.addPhysicsShape("rightEdge", 1, 0.3, 0.5);
+        ui.addPhysicsShape("hole", 1, 0.3, 0.5, true);
+
+//        ui.getCollider("leftEdge").debugDraw();
+//        ui.getCollider("rightEdge").debugDraw();
+//        ui.getCollider("hole").debugDraw();
+
+        flax.onCollideStart.add(this.onCollid, this);
+    },
     onClick:function(touch, event)
     {
         var pos = touch.getLocation();
@@ -45,24 +63,6 @@ var GamePhysics = BaseScene.extend({
 //        if(this.ui.getCollider("hole").containsPoint(touch.getLocation())){
 //            cc.log("click");
 //        }
-    },
-    initPhysics:function(ui){
-        flax.createPhysicsWorld(theGravity);
-        flax.startPhysicsWorld();
-
-        ui.createPhysics(flax.physicsTypeStatic);
-        ui.addPhysicsShape("topBar", 10, 0.3, 0.5);
-        ui.addPhysicsShape("leftBar", 10, 0.3, 0.5);
-        ui.addPhysicsShape("rightBar", 10, 0.3, 0.5);
-        ui.addPhysicsShape("leftEdge", 10, 0.3, 0.5);
-        ui.addPhysicsShape("rightEdge", 10, 0.3, 0.5);
-        ui.addPhysicsShape("hole", 10, 0.3, 0.5, true);
-
-//        ui.getCollider("leftEdge").debugDraw();
-//        ui.getCollider("rightEdge").debugDraw();
-//        ui.getCollider("hole").debugDraw();
-
-        flax.onCollideStart.add(this.onCollid, this);
     },
     onCollid:function(collider0, collider1)
     {

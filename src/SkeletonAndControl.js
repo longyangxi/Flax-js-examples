@@ -15,6 +15,9 @@ var SkeletonAndControl = BaseScene.extend({
         //侦听每一帧改变事件：渲染一帧调用一次，频率为动画本身的fps
         //Listening the frame change signal, one callback one frame, the rate is according by the fps of the animation
         this.skeleton.onFrameChanged.add(this._onFrameChanged, this);
+        //侦听帧Label事件
+        //Listening the frame label change signal
+        this.skeleton.onFrameLabel.add(this._onFrameLabel, this);
         //侦听动画完毕事件：如果是play()，最后一帧发出；如果是gotoAndPlay("anim"), anim动画的最后一帧发出
         //Listening the animation over signal, if tricked by play(), sent on the last frame;
         //or if gotoAndPlay("anim"), sent on the last frame of the animation "anim"
@@ -43,9 +46,11 @@ var SkeletonAndControl = BaseScene.extend({
         //执行动画控制命令
         //Execute the animation control command
         eval("this.skeleton."+btn.label.text);
-        //Replace the head with anotherHead
         if(this.skeleton.head){
+            //Replace the head with anotherHead in this.skeleton's assetsFile
             this.skeleton.replaceChild("head", "anotherHead");
+            //Replace the head with anotherHead in another assetsFile
+            this.skeleton.replaceChild("head", "anotherHead", res.animation);
         }
     },
     _onFrameChanged:function(frame)
@@ -54,13 +59,19 @@ var SkeletonAndControl = BaseScene.extend({
         //Note: frame is just the same as this.skeleton.currentFrame
         this.ctrPanel.infoTxt.text = "FPS: " + this.skeleton.fps +", currentFrame: " + frame + ", playing: " + this.skeleton.playing + "\ncurrentLabel: " + this.skeleton.currentLabel + ", currentAnim: " + this.skeleton.currentAnim;
     },
+    _onFrameLabel:function(label)
+    {
+//        this._showMsg("Frame label: " + label);
+        cc.log("Frame label: " + label);
+    },
     _onAnimationOver:function(sprite)
     {
         this._showMsg("Animation over!");
     },
     _onSequenceOver:function(sprite)
     {
-        this._showMsg("Sequence over!");
+//        this._showMsg("Sequence over!");
+        cc.log("Sequence over!");
     },
     _showMsg:function(msg)
     {

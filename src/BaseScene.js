@@ -60,7 +60,7 @@ var BaseScene = cc.Scene.extend({
  * there has a js class named TopBar and extends from flax.MovieClip when create this asset, if has, dynamic map to it. Of
  * course, if it's frame-by-frame animation, it should extend from flax.Animation
  *
- * Detail: http://flax.longames.com/?p=196
+ * Detail: http://flax.so/?p=196
  * */
 var TopBar = flax.MovieClip.extend({
     onEnter:function()
