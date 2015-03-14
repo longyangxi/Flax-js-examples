@@ -24,7 +24,8 @@ cc.game.onStart = function(){
 
     //Show the warning for a new user
     if(!flax.userData.warningShowed){
-        alert("Warning: \n示例中所有的素材，只能作为学习目的使用，不得用于任何上线的游戏中，谢谢合作!\nAll the assets in this example, only can be used to research, is FORBIDDEN to any business project, thank you!")
+        var warning = "Warning: \n示例中所有的素材，只能作为学习目的使用，不得用于任何上线的游戏中，谢谢合作!\nAll the assets in this example, only can be used to research, is FORBIDDEN to any business project, thank you!";
+        cc.sys.isNative? cc.log(warning) : alert(warning);
         flax.userData.warningShowed = true;
         flax.saveUserData();
     }

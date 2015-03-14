@@ -7,7 +7,7 @@ var EffectAndPool = BaseScene.extend({
         this._super();
         //一般情况下，flax会在首次使用某个素材时自动解析，但对于稍大的素材，如果能预先处理，可避免第一次使用该素材可能造成的卡顿
         //Flax always auto parse an asset when used at the first time. But for some large size of asset, if we handled it in advance,
-        //the game will run more smoothly when the asset is used ate the first time
+        //the game will run more smoothly when the asset is used at the first time
         flax.assetsManager.addAssets(res.effect);
         //侦听鼠标或者触摸
         //Listening the mouse or touch

@@ -69,6 +69,8 @@ var res_animation = [
 var res_skeleton = [
     res.sceneNav,
     res.sceneNav_png,
+    res.animation,
+    res.animation_png,
     res.skeleton,
     res.skeleton_png
 ]

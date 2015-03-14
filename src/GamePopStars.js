@@ -21,14 +21,14 @@ var GamePopStars = BaseScene.extend({
         this.tileMap.setMapSize(ROWS, COLS)
         this.tileMap.offsetX = 64;
         this.tileMap.offsetY = 180;
-//        this.tileMap.showDebugGrid();
+        //this.tileMap.showDebugGrid();
 
         //Initialize the whole map
         for(var i = 0; i < ROWS; i++)
         {
             for(var j = 0; j < COLS; j++)
             {
-                var star = flax.assetsManager.createDisplay(res.poppingStars, "star" + flax.randInt(0, 4), {parent: this}, true);
+                var star = flax.assetsManager.createDisplay(res.poppingStars, "star" + flax.randInt(0, 4), {parent: this}, false);
                 this.tileMap.snapToTile(star, i, j, true);
             }
         }
@@ -62,7 +62,9 @@ var GamePopStars = BaseScene.extend({
                         }else{
                             star = objs[0];
                             if(space > 0){
-                                star.runAction(cc.moveTo(0.2, star.x, star.y - TILE_SIZE*space));
+                                //why not use moveTo action, setPosition will not be called in JSB
+//                                star.runAction(cc.moveTo(0.2, star.x, star.y - TILE_SIZE*space));
+                                star.moveTo(cc.p(star.x, star.y - TILE_SIZE*space), 0.2);
                             }
                         }
                     }
@@ -73,7 +75,9 @@ var GamePopStars = BaseScene.extend({
                         var newStar = flax.assetsManager.createDisplay(res.poppingStars, "star" + flax.randInt(0, 4), {parent: this}, true);
                         newStar.tileMap = this.tileMap;
                         newStar.setPosition(targetPos.x, targetPos.y + 260 + Math.random()*60);
-                        newStar.runAction(cc.moveTo(0.3, targetPos));
+                        //why not use moveTo action, setPosition will not be called in JSB
+//                        newStar.runAction(cc.moveTo(0.3, targetPos));
+                        newStar.moveTo(targetPos, 0.3);
                     }
                 }
             }

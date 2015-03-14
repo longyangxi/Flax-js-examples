@@ -80,7 +80,7 @@ var MainGame = flax.MovieClip.extend({
             }else{
                 this.onFailed();
             }
-            this.treeBatch.removeChildAtIndex(0);
+            this.treeBatch.removeChildAtIndex(0, true);
             this.treeBatch.runAction(cc.MoveTo.create(0.1, cc.p(this.treeBatch.x, this.treeBatch.y - SEG_H)))
             this.createTreeSegment();
         }
@@ -109,7 +109,7 @@ var MainGame = flax.MovieClip.extend({
         flax.inputManager.removeListener(null, this.onTouch);
     },
     showTreeAnim:function(){
-        var anim = flax.assetsManager.createDisplay(res.timberQiang,"treeAnim",{parent: this, zIndex:2,autoDestroyWhenOver:true}, true);
+        var anim = flax.assetsManager.createDisplay(res.timberQiang,"treeAnim",{parent: this, zIndex:2,autoDestroyWhenOver:true}, false);
         anim.fps = 60;
         anim.setPosition(TREE_X,TREE_Y + SEG_H - 65);
         anim.replaceChild("tree",this.treeBatch.getChildren()[0].assetID);

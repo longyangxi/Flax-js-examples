@@ -6,7 +6,7 @@
  * 为了让某些使用特殊字体的TTF文本能正确显示，请提前注册它所使用的字体
  * To make some TTF TextField used special font to display correctly, pleas pre-register its font
  * */
-flax.registerFont("AntsyPants", "res/font/ANTSYPAN.TTF");
+if(!cc.sys.isNative) flax.registerFont("AntsyPants", "res/font/ANTSYPAN.TTF");
 
 var UIBmFont = BaseScene.extend({
     onEnter:function()

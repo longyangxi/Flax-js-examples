@@ -12,3 +12,15 @@
 .idea/misc.xml
 
 .idea/modules.xml
+
+.cocos-project.json
+
+CMakeLists.txt
+
+flax.png
+
+frameworks/*
+
+runtime/*
+
+tools/*

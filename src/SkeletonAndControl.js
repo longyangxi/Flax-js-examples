@@ -50,7 +50,7 @@ var SkeletonAndControl = BaseScene.extend({
             //Replace the head with anotherHead in this.skeleton's assetsFile
             this.skeleton.replaceChild("head", "anotherHead");
             //Replace the head with anotherHead in another assetsFile
-            this.skeleton.replaceChild("head", "anotherHead", res.animation);
+//            this.skeleton.replaceChild("head", "anotherHead", res.animation);
         }
     },
     _onFrameChanged:function(frame)

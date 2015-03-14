@@ -17,8 +17,8 @@ var BaseScene = cc.Scene.extend({
         var nav = flax.assetsManager.createDisplay(res.sceneNav, "SceneNav", {parent: this, zIndex: 9999});
         //场景导航按钮事件
         //Navigation button event
-        flax.inputManager.addListener(nav.leftBtn, this._showPrevScene);
-        flax.inputManager.addListener(nav.rightBtn, this._showNextScene);
+        flax.inputManager.addListener(nav.leftBtn, this._showPrevScene, InputType.click, this);
+        flax.inputManager.addListener(nav.rightBtn, this._showNextScene, InputType.click, this);
 
         //侦听按键事件
         //Listening the keyboard event
@@ -35,7 +35,11 @@ var BaseScene = cc.Scene.extend({
             currentSceneIndex = 0;
             return;
         }
-        flax.replaceScene(Global.scenesList[currentSceneIndex].name, cc.TransitionMoveInB, 0.3);
+        var newScene = Global.scenesList[currentSceneIndex].name;
+        //ignore physics demo in JSB
+        if(cc.sys.isNative && newScene == "physics") this._showPrevScene();
+        //todo, transiontion moves the scene then cause TileMap bug in JSB
+        else flax.replaceScene(newScene);//, cc.TransitionMoveInB, 0.3);
     },
     _showNextScene:function()
     {
@@ -44,7 +48,11 @@ var BaseScene = cc.Scene.extend({
             currentSceneIndex = Global.scenesList.length - 1;
             return;
         }
-        flax.replaceScene(Global.scenesList[currentSceneIndex].name, cc.TransitionMoveInT, 0.3);
+        var newScene = Global.scenesList[currentSceneIndex].name;
+        //ignore physics demo in JSB
+        if(cc.sys.isNative && newScene == "physics") this._showNextScene();
+        //todo, transiontion moves the scene then cause TileMap bug in JSB
+        else flax.replaceScene(newScene);//, cc.TransitionMoveInB, 0.3);
     },
     _onKeyDown:function(key)
     {
