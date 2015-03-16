@@ -1381,7 +1381,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -1716,34 +1716,7 @@
         <real>0.001040582726326743</real>
         <key>children</key>
         <dict>
-          <key>instance18288</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>354.90,783.95,0.00,1,1,1.00,11,0,0</string>
-          </dict>
-          <key>instance18309</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>12</integer>
-            <key>frames</key>
-            <string>317.10,653.35,0.00,1,1,1.00,12,0,0</string>
-          </dict>
-          <key>instance18159</key>
-          <dict>
-            <key>class</key>
-            <string>HealProp</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>188.95,655.00,0.00,1,1,1.00,3,0,0</string>
-          </dict>
-          <key>instance18151</key>
+          <key>instance18674</key>
           <dict>
             <key>class</key>
             <string>ArmorProp</string>
@@ -1752,23 +1725,14 @@
             <key>frames</key>
             <string>495.35,718.65,0.00,1,1,1.00,2,0,0</string>
           </dict>
-          <key>player</key>
+          <key>instance18682</key>
           <dict>
             <key>class</key>
-            <string>Player</string>
+            <string>HealProp</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>3</integer>
             <key>frames</key>
-            <string>312.00,81.50,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>instance18175</key>
-          <dict>
-            <key>class</key>
-            <string>MultiProp</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>473.30,470.25,0.00,1,1,1.00,5,0,0</string>
+            <string>188.95,655.00,0.00,1,1,1.00,3,0,0</string>
           </dict>
           <key>bg</key>
           <dict>
@@ -1779,52 +1743,7 @@
             <key>frames</key>
             <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
           </dict>
-          <key>instance18204</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>435.75,335.80,0.00,1,1,1.00,7,0,0</string>
-          </dict>
-          <key>instance18225</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>8</integer>
-            <key>frames</key>
-            <string>511.80,618.75,0.00,1,1,1.00,8,0,0</string>
-          </dict>
-          <key>instance18246</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>9</integer>
-            <key>frames</key>
-            <string>348.40,519.85,0.00,1,1,1.00,9,0,0</string>
-          </dict>
-          <key>instance18267</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>101.95,743.95,0.00,1,1,1.00,10,0,0</string>
-          </dict>
-          <key>instance18183</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>156.50,497.10,0.00,1,1,1.00,6,0,0</string>
-          </dict>
-          <key>instance18167</key>
+          <key>instance18690</key>
           <dict>
             <key>class</key>
             <string>SpeedProp</string>
@@ -1833,7 +1752,88 @@
             <key>frames</key>
             <string>177.40,362.85,0.00,1,1,1.00,4,0,0</string>
           </dict>
-          <key>instance18330</key>
+          <key>player</key>
+          <dict>
+            <key>class</key>
+            <string>Player</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>312.00,81.50,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>instance18698</key>
+          <dict>
+            <key>class</key>
+            <string>MultiProp</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>473.30,470.25,0.00,1,1,1.00,5,0,0</string>
+          </dict>
+          <key>instance18706</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>156.50,497.10,0.00,1,1,1.00,6,0,0</string>
+          </dict>
+          <key>instance18727</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>435.75,335.80,0.00,1,1,1.00,7,0,0</string>
+          </dict>
+          <key>instance18748</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>511.80,618.75,0.00,1,1,1.00,8,0,0</string>
+          </dict>
+          <key>instance18769</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>9</integer>
+            <key>frames</key>
+            <string>348.40,519.85,0.00,1,1,1.00,9,0,0</string>
+          </dict>
+          <key>instance18790</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>10</integer>
+            <key>frames</key>
+            <string>101.95,743.95,0.00,1,1,1.00,10,0,0</string>
+          </dict>
+          <key>instance18811</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>11</integer>
+            <key>frames</key>
+            <string>354.90,783.95,0.00,1,1,1.00,11,0,0</string>
+          </dict>
+          <key>instance18832</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>12</integer>
+            <key>frames</key>
+            <string>317.10,653.35,0.00,1,1,1.00,12,0,0</string>
+          </dict>
+          <key>instance18853</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1842,7 +1842,7 @@
             <key>frames</key>
             <string>93.90,240.20,0.00,1,1,1.00,13,0,0</string>
           </dict>
-          <key>instance18351</key>
+          <key>instance18874</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1936,7 +1936,7 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance18396</key>
+          <key>instance18919</key>
           <dict>
             <key>class</key>
             <string>asset6</string>
@@ -1945,7 +1945,7 @@
             <key>frames</key>
             <string>50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||||||</string>
           </dict>
-          <key>instance18613</key>
+          <key>instance19136</key>
           <dict>
             <key>class</key>
             <string>asset12</string>
@@ -1954,7 +1954,7 @@
             <key>frames</key>
             <string>null||||||||||||||||||||||||||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0|||</string>
           </dict>
-          <key>instance18572</key>
+          <key>instance19095</key>
           <dict>
             <key>class</key>
             <string>asset11</string>
@@ -1963,7 +1963,7 @@
             <key>frames</key>
             <string>null||||||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||</string>
           </dict>
-          <key>instance18510</key>
+          <key>instance19033</key>
           <dict>
             <key>class</key>
             <string>asset8</string>
@@ -1972,7 +1972,7 @@
             <key>frames</key>
             <string>null||||||||50.55,46.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||</string>
           </dict>
-          <key>instance18551</key>
+          <key>instance19074</key>
           <dict>
             <key>class</key>
             <string>asset10</string>
@@ -1981,7 +1981,7 @@
             <key>frames</key>
             <string>null||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||</string>
           </dict>
-          <key>instance18492</key>
+          <key>instance19015</key>
           <dict>
             <key>class</key>
             <string>asset7</string>
@@ -1990,7 +1990,7 @@
             <key>frames</key>
             <string>null||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||</string>
           </dict>
-          <key>instance18593</key>
+          <key>instance19116</key>
           <dict>
             <key>class</key>
             <string>asset8</string>
@@ -1999,7 +1999,7 @@
             <key>frames</key>
             <string>null||||||||||||||||||||||||47.40,45.10,180.00,1.3387298583984375,1.3387298583984375,1.00,0,0,180||||null|||</string>
           </dict>
-          <key>instance18530</key>
+          <key>instance19053</key>
           <dict>
             <key>class</key>
             <string>asset9</string>
@@ -2024,7 +2024,7 @@
         <real>0.5000000000000001</real>
         <key>children</key>
         <dict>
-          <key>instance18440</key>
+          <key>instance18963</key>
           <dict>
             <key>class</key>
             <string>asset4</string>

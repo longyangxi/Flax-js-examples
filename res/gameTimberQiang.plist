@@ -446,7 +446,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -843,7 +843,16 @@
         <real>0.4795539033457249</real>
         <key>children</key>
         <dict>
-          <key>instance14742</key>
+          <key>bar</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol7</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>16.00,26.20,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>instance15446</key>
           <dict>
             <key>class</key>
             <string>Symbol8</string>
@@ -860,15 +869,6 @@
             <integer>1</integer>
             <key>frames</key>
             <string>16.00,26.20,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>bar</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol7</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>16.00,26.20,0.00,1,1,1.00,2,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -895,39 +895,9 @@
             <key>frames</key>
             <string>233.10,773.05,0.00,1,1,1.00,3,0,0,Helvetica,70,#FFFFFF,center,168,86</string>
             <key>text</key>
-            <string>999%0D</string>
+            <string>999</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Helvetica</string>
-            <key>size</key>
-            <integer>70</integer>
-            <key>color</key>
-            <string>#FFFFFF</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>168</real>
-            <key>height</key>
-            <real>86</real>
-          </dict>
-          <key>treeBase</key>
-          <dict>
-            <key>class</key>
-            <string>s8</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>231.80,139.85,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>t1</key>
-          <dict>
-            <key>class</key>
-            <string>Tap</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>476.95,477.80,0.00,1,1,1.00,4,0,0</string>
           </dict>
           <key>t0</key>
           <dict>
@@ -938,14 +908,14 @@
             <key>frames</key>
             <string>167.00,478.80,89.99,1.0000000041909516,1.0000000041909516,1.00,5,89.99475441473209,89.99475441473209</string>
           </dict>
-          <key>player</key>
+          <key>t1</key>
           <dict>
             <key>class</key>
-            <string>HeroQiang</string>
+            <string>Tap</string>
             <key>zIndex</key>
-            <integer>2</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>321.00,112.75,0.00,1,1,1.00,2,0,0</string>
+            <string>476.95,477.80,0.00,1,1,1.00,4,0,0</string>
           </dict>
           <key>energy</key>
           <dict>
@@ -956,7 +926,25 @@
             <key>frames</key>
             <string>324.70,815.40,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance14770</key>
+          <key>treeBase</key>
+          <dict>
+            <key>class</key>
+            <string>s8</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>231.80,139.85,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>player</key>
+          <dict>
+            <key>class</key>
+            <string>HeroQiang</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>321.00,112.75,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>instance15474</key>
           <dict>
             <key>class</key>
             <string>Symbol1</string>
@@ -981,7 +969,7 @@
         <real>0.001129305477131564</real>
         <key>children</key>
         <dict>
-          <key>instance14833</key>
+          <key>instance15537</key>
           <dict>
             <key>class</key>
             <string>tree0</string>
@@ -989,69 +977,6 @@
             <integer>8</integer>
             <key>frames</key>
             <string>322.15,203.20,0.00,1,1,1.00,8,0,0</string>
-          </dict>
-          <key>startBtn</key>
-          <dict>
-            <key>class</key>
-            <string>s21</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>320.35,130.70,0.00,1,1,1.00,10,0,0</string>
-          </dict>
-          <key>treeBase</key>
-          <dict>
-            <key>class</key>
-            <string>s8</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>231.80,142.85,0.00,1,1,1.00,2,0,0</string>
-          </dict>
-          <key>instance14819</key>
-          <dict>
-            <key>class</key>
-            <string>tree2</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>322.15,573.85,0.00,1,1,1.00,3,0,0</string>
-          </dict>
-          <key>instance14823</key>
-          <dict>
-            <key>class</key>
-            <string>tree0</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>322.15,450.85,0.00,1,1,1.00,4,0,0</string>
-          </dict>
-          <key>instance14827</key>
-          <dict>
-            <key>class</key>
-            <string>tree1</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>322.15,697.95,0.00,1,1,1.00,6,0,0</string>
-          </dict>
-          <key>instance14825</key>
-          <dict>
-            <key>class</key>
-            <string>tree0</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>322.15,326.45,0.00,1,1,1.00,5,0,0</string>
-          </dict>
-          <key>instance14831</key>
-          <dict>
-            <key>class</key>
-            <string>tree0</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>322.15,822.85,0.00,1,1,1.00,7,0,0</string>
           </dict>
           <key>label__0</key>
           <dict>
@@ -1062,6 +987,69 @@
             <key>frames</key>
             <string>105.45,511.40,0.00,1,1,1.00,11,0,0</string>
           </dict>
+          <key>instance15523</key>
+          <dict>
+            <key>class</key>
+            <string>tree2</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>322.15,573.85,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>startBtn</key>
+          <dict>
+            <key>class</key>
+            <string>s21</string>
+            <key>zIndex</key>
+            <integer>10</integer>
+            <key>frames</key>
+            <string>320.35,130.70,0.00,1,1,1.00,10,0,0</string>
+          </dict>
+          <key>instance15527</key>
+          <dict>
+            <key>class</key>
+            <string>tree0</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>322.15,450.85,0.00,1,1,1.00,4,0,0</string>
+          </dict>
+          <key>instance15531</key>
+          <dict>
+            <key>class</key>
+            <string>tree1</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>322.15,697.95,0.00,1,1,1.00,6,0,0</string>
+          </dict>
+          <key>instance15529</key>
+          <dict>
+            <key>class</key>
+            <string>tree0</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>322.15,326.45,0.00,1,1,1.00,5,0,0</string>
+          </dict>
+          <key>instance15535</key>
+          <dict>
+            <key>class</key>
+            <string>tree0</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>322.15,822.85,0.00,1,1,1.00,7,0,0</string>
+          </dict>
+          <key>treeBase</key>
+          <dict>
+            <key>class</key>
+            <string>s8</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>231.80,142.85,0.00,1,1,1.00,2,0,0</string>
+          </dict>
           <key>player</key>
           <dict>
             <key>class</key>
@@ -1071,7 +1059,7 @@
             <key>frames</key>
             <string>195.55,213.90,0.00,1,1,1.00,9,0,0</string>
           </dict>
-          <key>instance14812</key>
+          <key>instance15516</key>
           <dict>
             <key>class</key>
             <string>Symbol1</string>
@@ -1096,15 +1084,6 @@
         <real>0.0011165075643387483</real>
         <key>children</key>
         <dict>
-          <key>label__0</key>
-          <dict>
-            <key>class</key>
-            <string>s20</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>174.35,738.40,0.00,1,1,1.00,5,0,0</string>
-          </dict>
           <key>scoreTxt</key>
           <dict>
             <key>class</key>
@@ -1114,21 +1093,9 @@
             <key>frames</key>
             <string>205.05,536.60,0.00,1,1,1.00,6,0,0,Helvetica,70,#FFFFFF,center,208,86</string>
             <key>text</key>
-            <string>9999%0D</string>
+            <string>9999</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Helvetica</string>
-            <key>size</key>
-            <integer>70</integer>
-            <key>color</key>
-            <string>#FFFFFF</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>208</real>
-            <key>height</key>
-            <real>86</real>
           </dict>
           <key>label__1</key>
           <dict>
@@ -1139,14 +1106,50 @@
             <key>frames</key>
             <string>262.15,398.20,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>startBtn</key>
+          <key>instance15570</key>
           <dict>
             <key>class</key>
-            <string>s21</string>
+            <string>s17</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>321.85,119.05,0.00,1,1,1.00,4,0,0</string>
+            <string>84.00,732.05,0.00,1,1,1.00,0,0,0</string>
+          </dict>
+          <key>instance15572</key>
+          <dict>
+            <key>class</key>
+            <string>s18</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>145.60,846.30,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>instance15576</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol3</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>235.65,577.75,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>instance15574</key>
+          <dict>
+            <key>class</key>
+            <string>s18</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>490.10,845.25,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>label__0</key>
+          <dict>
+            <key>class</key>
+            <string>s20</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>174.35,738.40,0.00,1,1,1.00,5,0,0</string>
           </dict>
           <key>bestTxt</key>
           <dict>
@@ -1157,57 +1160,18 @@
             <key>frames</key>
             <string>212.80,354.55,0.00,1,1,1.00,8,0,0,Helvetica,70,#FFFFFF,center,179,86</string>
             <key>text</key>
-            <string>9999%0D</string>
+            <string>9999</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Helvetica</string>
-            <key>size</key>
-            <integer>70</integer>
-            <key>color</key>
-            <string>#FFFFFF</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>179</real>
-            <key>height</key>
-            <real>86</real>
           </dict>
-          <key>instance14866</key>
+          <key>startBtn</key>
           <dict>
             <key>class</key>
-            <string>s17</string>
+            <string>s21</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>84.00,732.05,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>instance14868</key>
-          <dict>
-            <key>class</key>
-            <string>s18</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>145.60,846.30,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>instance14872</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol3</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>235.65,577.75,0.00,1,1,1.00,3,0,0</string>
-          </dict>
-          <key>instance14870</key>
-          <dict>
-            <key>class</key>
-            <string>s18</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>490.10,845.25,0.00,1,1,1.00,2,0,0</string>
+            <string>321.85,119.05,0.00,1,1,1.00,4,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1225,16 +1189,7 @@
         <real>0.6452812645281264</real>
         <key>children</key>
         <dict>
-          <key>instance15291</key>
-          <dict>
-            <key>class</key>
-            <string>Circle</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null|||||||||34.85,72.90,0.00,0.544036865234375,0.544036865234375,1.00,0,0,0|29.90,77.80,0.00,0.843048095703125,0.843048095703125,0.86,0,0,0|24.95,82.80,0.00,1.1420745849609375,1.1420745849609375,0.71,0,0,0|19.95,87.70,0.00,1.4410858154296875,1.4410858154296875,0.57,0,0,0|14.95,92.65,0.00,1.7400970458984375,1.7400970458984375,0.43,0,0,0|10.00,97.60,0.00,2.039093017578125,2.039093017578125,0.29,0,0,0|5.05,102.55,0.00,2.3381195068359375,2.3381195068359375,0.14,0,0,0|0.00,107.55,0.00,2.63714599609375,2.63714599609375,0.00,0,0,0|null||||||</string>
-          </dict>
-          <key>instance14902</key>
+          <key>instance15606</key>
           <dict>
             <key>class</key>
             <string>Finger</string>
@@ -1242,6 +1197,15 @@
             <integer>0</integer>
             <key>frames</key>
             <string>123.65,-23.45,0.00,1,1,1.00,0,0,0||||122.10,-21.65,0.00,0.9837493896484375,0.9837493896484375,1.00,0,0,0|120.55,-19.90,0.00,0.967498779296875,0.967498779296875,1.00,0,0,0|119.00,-18.10,0.00,0.9512481689453125,0.9512481689453125,1.00,0,0,0|117.45,-16.30,0.00,0.93499755859375,0.93499755859375,1.00,0,0,0|115.90,-14.55,0.00,0.9187469482421875,0.9187469482421875,1.00,0,0,0|114.35,-12.75,0.00,0.902496337890625,0.902496337890625,1.00,1,0,0|115.90,-14.60,0.00,0.9187469482421875,0.9187469482421875,1.00,1,0,0|117.45,-16.30,0.00,0.93499755859375,0.93499755859375,1.00,1,0,0|119.00,-18.15,0.00,0.9512481689453125,0.9512481689453125,1.00,1,0,0|120.55,-19.90,0.00,0.967498779296875,0.967498779296875,1.00,1,0,0|122.10,-21.70,0.00,0.9837493896484375,0.9837493896484375,1.00,1,0,0|123.65,-23.45,0.00,1,1,1.00,1,0,0||123.65,-23.45,0.00,1,1,1.00,0,0,0||||||</string>
+          </dict>
+          <key>instance15995</key>
+          <dict>
+            <key>class</key>
+            <string>Circle</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null|||||||||34.85,72.90,0.00,0.544036865234375,0.544036865234375,1.00,0,0,0|29.90,77.80,0.00,0.843048095703125,0.843048095703125,0.86,0,0,0|24.95,82.80,0.00,1.1420745849609375,1.1420745849609375,0.71,0,0,0|19.95,87.70,0.00,1.4410858154296875,1.4410858154296875,0.57,0,0,0|14.95,92.65,0.00,1.7400970458984375,1.7400970458984375,0.43,0,0,0|10.00,97.60,0.00,2.039093017578125,2.039093017578125,0.29,0,0,0|5.05,102.55,0.00,2.3381195068359375,2.3381195068359375,0.14,0,0,0|0.00,107.55,0.00,2.63714599609375,2.63714599609375,0.00,0,0,0|null||||||</string>
           </dict>
         </dict>
       </dict>
@@ -1259,43 +1223,16 @@
         <real>0.577359535012455</real>
         <key>children</key>
         <dict>
-          <key>instance15295</key>
+          <key>instance15634</key>
           <dict>
             <key>class</key>
-            <string>hjx20566_79083</string>
+            <string>hjx42732_37397</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>null|||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||||||||||||null|||||||||||</string>
+            <string>78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||||||||||||null||||||||||||||||||||||||||||||||</string>
           </dict>
-          <key>instance15297</key>
-          <dict>
-            <key>class</key>
-            <string>hjx98604_41999</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0||||||null|||||</string>
-          </dict>
-          <key>instance15299</key>
-          <dict>
-            <key>class</key>
-            <string>hjx16768_24221</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||||||||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||</string>
-          </dict>
-          <key>instance14928</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol5</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>43.40,-0.00,0.00,1,1,1.00,0,0,0|||||||||||||||||||||||||||||||||||||||||||||||</string>
-          </dict>
-          <key>instance15293</key>
+          <key>instance15997</key>
           <dict>
             <key>class</key>
             <string>hjx16768_24221</string>
@@ -1304,14 +1241,41 @@
             <key>frames</key>
             <string>null|||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0||||||null||||||||||||||||||||||||||</string>
           </dict>
-          <key>instance14930</key>
+          <key>instance16001</key>
           <dict>
             <key>class</key>
-            <string>hjx42732_37397</string>
+            <string>hjx98604_41999</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||||||||||||null||||||||||||||||||||||||||||||||</string>
+            <string>null||||||||||||||||||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0||||||null|||||</string>
+          </dict>
+          <key>instance15999</key>
+          <dict>
+            <key>class</key>
+            <string>hjx20566_79083</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>null|||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||||||||||||null|||||||||||</string>
+          </dict>
+          <key>instance16003</key>
+          <dict>
+            <key>class</key>
+            <string>hjx16768_24221</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>null||||||||||||||||||||||||||||||||||||||||||78.40,79.20,0.00,1.624481201171875,1.624481201171875,1.00,1,0,0|||||</string>
+          </dict>
+          <key>instance15632</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol5</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>43.40,-0.00,0.00,1,1,1.00,0,0,0|||||||||||||||||||||||||||||||||||||||||||||||</string>
           </dict>
         </dict>
       </dict>
@@ -1329,7 +1293,7 @@
         <real>0.9674479166666666</real>
         <key>children</key>
         <dict>
-          <key>instance14956</key>
+          <key>instance15660</key>
           <dict>
             <key>class</key>
             <string>s26</string>
