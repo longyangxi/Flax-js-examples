@@ -1,0 +1,22 @@
+{
+  "version":1.0,
+  "gameId":"FlaxExamples",
+  "width":640,
+  "height":880,
+  "landscape":false,
+  "rotateImg":"res/rotate.png",
+  "language":"",
+  "languageJson":true,
+  "useFlaxRes":false,
+  "loading":"res/logo.png",
+  "preloader":"flax.Preloader",
+  "domainAllowed":[
+    
+  ],
+  "project_type":"javascript",
+  "debugMode":1,
+  "showFPS":true,
+  "frameRate":60,
+  "id":"gameCanvas",
+  "renderMode":0
+}

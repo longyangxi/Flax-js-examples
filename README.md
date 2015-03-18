@@ -4,7 +4,7 @@ Examples for Flax-js
 
 Online Demo
 ===========
-http://longames.com/flax/example/
+http://longames.com/h5/example/
 
 Flax-js
 =======
