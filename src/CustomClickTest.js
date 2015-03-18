@@ -8,7 +8,7 @@ var CustomClickTest = BaseScene.extend({
     {
         this._super();
         this.p = flax.assetsManager.createDisplay(res.customClick, "panel", {parent:this});
-
+        this.p.infoTxt.text = "";
         for(var i = 0; i < 4; i++)
         {
             var m = this.p["m" + i]

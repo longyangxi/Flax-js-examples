@@ -116,7 +116,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -151,155 +151,99 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,640.00,1761.00</string>
+        <string>0,0,640.00,881.00</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
-        <real>0.0005678591709256105</real>
+        <real>0.0011350737797956867</real>
         <key>children</key>
         <dict>
-          <key>instance4573</key>
+          <key>scoreTxt3</key>
           <dict>
             <key>class</key>
-            <string>PanelBack</string>
+            <string>ScoreFont</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>titleTxt</key>
-          <dict>
-            <key>class</key>
-            <string>bmp</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>181.00,658.10,0.00,1,1,1.00,6,0,0,AntsyPants,32,#F4DC95,center,294,38</string>
-            <key>text</key>
-            <string>Bitmap   Text</string>
-            <key>input</key>
-            <false/>
-            <key>font</key>
-            <string>AntsyPants</string>
-            <key>size</key>
-            <integer>32</integer>
-            <key>color</key>
-            <string>#F4DC95</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>294</real>
-            <key>height</key>
-            <real>38</real>
-          </dict>
-          <key>scoreTxt1</key>
-          <dict>
-            <key>class</key>
-            <string>ScoreFont</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>226.15,492.20,0.00,1,1,1.00,3,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
+            <string>226.15,300.65,0.00,1,1,1.00,1,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
             <key>text</key>
             <string>12345</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>LiquidCrystal</string>
-            <key>size</key>
-            <integer>60</integer>
-            <key>color</key>
-            <string>#FF6600</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>179</real>
-            <key>height</key>
-            <real>59</real>
-          </dict>
-          <key>scoreTxt0</key>
-          <dict>
-            <key>class</key>
-            <string>ScoreFont</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>226.15,587.95,0.00,1,1,1.00,4,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
-            <key>text</key>
-            <string>12345</string>
-            <key>input</key>
-            <false/>
-            <key>font</key>
-            <string>LiquidCrystal</string>
-            <key>size</key>
-            <integer>60</integer>
-            <key>color</key>
-            <string>#FF6600</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>179</real>
-            <key>height</key>
-            <real>59</real>
-          </dict>
-          <key>instance4564</key>
-          <dict>
-            <key>class</key>
-            <string>PanelBack</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>0.00,881.00,0.00,1,1,1.00,0,0,0</string>
           </dict>
           <key>scoreTxt2</key>
           <dict>
             <key>class</key>
             <string>ScoreFont</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>226.15,396.45,0.00,1,1,1.00,5,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
+            <string>226.15,396.45,0.00,1,1,1.00,4,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
             <key>text</key>
             <string>12345</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>LiquidCrystal</string>
-            <key>size</key>
-            <integer>60</integer>
-            <key>color</key>
-            <string>#FF6600</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>179</real>
-            <key>height</key>
-            <real>59</real>
           </dict>
-          <key>scoreTxt3</key>
+          <key>titleTxt</key>
+          <dict>
+            <key>class</key>
+            <string>bmp</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>181.00,658.10,0.00,1,1,1.00,5,0,0,AntsyPants,32,#F4DC95,center,294,38</string>
+            <key>text</key>
+            <string>Bitmap   Text</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>instance5118965</key>
+          <dict>
+            <key>class</key>
+            <string>PanelBack</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+          </dict>
+          <key>scoreTxt0</key>
+          <dict>
+            <key>class</key>
+            <string>ScoreFont</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>226.15,587.95,0.00,1,1,1.00,3,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
+            <key>text</key>
+            <string>12345</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>txt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>61.00,147.70,0.00,1,1,1.00,6,0,0,null,20,#FFFFFF,center,512,26</string>
+            <key>text</key>
+            <string>特殊符号和中文测试:[]!~`@#$%^&amp;*-_+=}{|?/;&lt;&gt;.,'\"“”\\</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>scoreTxt1</key>
           <dict>
             <key>class</key>
             <string>ScoreFont</string>
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>226.15,300.65,0.00,1,1,1.00,2,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
+            <string>226.15,492.20,0.00,1,1,1.00,2,0,0,LiquidCrystal,60,#FF6600,center,179,59</string>
             <key>text</key>
             <string>12345</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>LiquidCrystal</string>
-            <key>size</key>
-            <integer>60</integer>
-            <key>color</key>
-            <string>#FF6600</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>179</real>
-            <key>height</key>
-            <real>59</real>
           </dict>
         </dict>
       </dict>

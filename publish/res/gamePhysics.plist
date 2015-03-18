@@ -127,7 +127,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -342,7 +342,7 @@
         <real>0.4748405386250886</real>
         <key>children</key>
         <dict>
-          <key>instance25249</key>
+          <key>instance25939</key>
           <dict>
             <key>class</key>
             <string>asset7</string>
@@ -367,14 +367,14 @@
         <real>0.05055034651447209</real>
         <key>colliders</key>
         <dict>
-          <key>leftBar</key>
-          <string>Rect,43.70,458.95,22.00,840.00,0.00</string>
           <key>rightEdge</key>
           <string>Poly,540.80,119.80,251.00,201.40,0.00,659.55'221.39'647.63'220.66'641.30'219.91'623.50'217.38'615.80'215.98'596.63'212.08'590.30'210.41'573.75'205.81'567.58'203.89'549.80'197.73'541.78'194.46'520.10'184.92'511.45'180.54'490.11'169.06'483.26'164.74'467.20'154.25'462.80'151.01'449.85'140.98'443.80'135.92'428.81'122.98'423.93'118.41'415.05'110.09'415.71'70.05'416.61'27.86'416.92'25.25'417.49'20.50'541.89'20.50'666.30'20.50'666.30'121.00</string>
           <key>leftEdge</key>
           <string>Poly,172.25,129.43,249.50,169.45,0.00,59.31'215.14'52.62'215.15'52.12'210.90'50.67'172.68'49.52'131.15'47.45'53.51'47.47'50.90'47.50'46.15'172.50'46.15'297.50'46.15'297.50'76.09'297.50'106.02'286.25'116.01'271.40'128.89'267.00'132.43'253.67'142.68'247.16'147.35'229.84'159.18'223.16'163.25'204.25'174.06'196.00'178.22'175.15'188.10'168.00'190.90'150.72'197.37'145.50'199.06'129.93'203.68'122.50'205.57'103.38'209.95'96.50'211.08'79.95'213.58'75.00'214.13</string>
           <key>topBar</key>
           <string>Rect,345.40,894.55,648.00,32.00,0.00</string>
+          <key>leftBar</key>
+          <string>Rect,43.70,458.95,22.00,840.00,0.00</string>
           <key>rightBar</key>
           <string>Rect,650.50,458.95,22.00,840.00,0.00</string>
           <key>hole</key>
@@ -382,7 +382,16 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance25285</key>
+          <key>rightEdge</key>
+          <dict>
+            <key>class</key>
+            <string>asset2</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>650.85,481.60,0.00,1,1,1.00,7,0,0</string>
+          </dict>
+          <key>instance25975</key>
           <dict>
             <key>class</key>
             <string>asset4</string>
@@ -390,15 +399,6 @@
             <integer>4</integer>
             <key>frames</key>
             <string>138.45,110.35,23.00,1.0996337671098448,1.0996337671098448,1.00,4,23.001491938823875,23.001491938823875</string>
-          </dict>
-          <key>instance25288</key>
-          <dict>
-            <key>class</key>
-            <string>asset1</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>346.10,895.40,0.00,1,1,1.00,5,0,0</string>
           </dict>
           <key>leftEdge</key>
           <dict>
@@ -409,32 +409,14 @@
             <key>frames</key>
             <string>42.65,481.60,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance25282</key>
+          <key>back</key>
           <dict>
             <key>class</key>
-            <string>asset4</string>
+            <string>bg</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>563.40,110.20,-23.00,1.0996218425694397,1.0996218425694397,1.00,3,-23.000028243714222,-23.000028243714222</string>
-          </dict>
-          <key>con</key>
-          <dict>
-            <key>class</key>
-            <string>asset3</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>258.45,129.75,0.00,1.0996551514730528,1.0996551514730528,1.00,2,0.0007950348912734681,0.0007950348912734681</string>
-          </dict>
-          <key>rightEdge</key>
-          <dict>
-            <key>class</key>
-            <string>asset2</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>650.85,481.60,0.00,1,1,1.00,7,0,0</string>
+            <string>25.55,971.60,0.00,1,1,1.00,0,0,0</string>
           </dict>
           <key>gun</key>
           <dict>
@@ -445,14 +427,32 @@
             <key>frames</key>
             <string>355.55,162.40,0.00,0.9999847412109375,0.9999847412109375,1.00,1,0,0</string>
           </dict>
-          <key>back</key>
+          <key>con</key>
           <dict>
             <key>class</key>
-            <string>bg</string>
+            <string>asset3</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>2</integer>
             <key>frames</key>
-            <string>25.55,971.60,0.00,1,1,1.00,0,0,0</string>
+            <string>258.45,129.75,0.00,1.0996551514730528,1.0996551514730528,1.00,2,0.0007950348912734681,0.0007950348912734681</string>
+          </dict>
+          <key>instance25972</key>
+          <dict>
+            <key>class</key>
+            <string>asset4</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>563.40,110.20,-23.00,1.0996218425694397,1.0996218425694397,1.00,3,-23.000028243714222,-23.000028243714222</string>
+          </dict>
+          <key>instance25978</key>
+          <dict>
+            <key>class</key>
+            <string>asset1</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>346.10,895.40,0.00,1,1,1.00,5,0,0</string>
           </dict>
         </dict>
       </dict>

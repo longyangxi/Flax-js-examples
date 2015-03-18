@@ -17,7 +17,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -84,20 +84,8 @@
             <string>Button</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Arial</string>
-            <key>size</key>
-            <integer>14</integer>
-            <key>color</key>
-            <string>#000000</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>58</real>
-            <key>height</key>
-            <real>30</real>
           </dict>
-          <key>instance2313438</key>
+          <key>instance10549</key>
           <dict>
             <key>class</key>
             <string>asset3</string>
@@ -131,14 +119,14 @@
             <key>frames</key>
             <string>168.65,792.25,0.00,1,1,1.00,5,0,0</string>
           </dict>
-          <key>bg</key>
+          <key>resumeBtn</key>
           <dict>
             <key>class</key>
-            <string>bg</string>
+            <string>mcBtn</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+            <string>482.65,792.25,0.00,1,1,1.00,4,0,0</string>
           </dict>
           <key>startxBtn</key>
           <dict>
@@ -149,23 +137,14 @@
             <key>frames</key>
             <string>248.65,792.25,0.00,1,1,1.00,1,0,0</string>
           </dict>
-          <key>resumeBtn</key>
+          <key>bg</key>
           <dict>
             <key>class</key>
-            <string>mcBtn</string>
+            <string>bg</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>482.65,792.25,0.00,1,1,1.00,4,0,0</string>
-          </dict>
-          <key>startyBtn</key>
-          <dict>
-            <key>class</key>
-            <string>mcBtn</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>327.65,792.25,0.00,1,1,1.00,2,0,0</string>
+            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
           </dict>
           <key>pauseBtn</key>
           <dict>
@@ -175,6 +154,15 @@
             <integer>3</integer>
             <key>frames</key>
             <string>404.65,792.25,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>startyBtn</key>
+          <dict>
+            <key>class</key>
+            <string>mcBtn</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>327.65,792.25,0.00,1,1,1.00,2,0,0</string>
           </dict>
         </dict>
       </dict>

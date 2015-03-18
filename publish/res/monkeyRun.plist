@@ -5,6 +5,17 @@
       <key>monkeyRun_000000</key>
       <dict>
         <key>frame</key>
+        <string>{{0,654},{78,90}}</string>
+        <key>offset</key>
+        <string>{0.00,0.00}</string>
+        <key>rotated</key>
+        <false/>
+        <key>sourceSize</key>
+        <string>{76,88}</string>
+      </dict>
+      <key>monkeyRun_000001</key>
+      <dict>
+        <key>frame</key>
         <string>{{0,0},{198,126}}</string>
         <key>offset</key>
         <string>{-16.00,-8.27}</string>
@@ -13,7 +24,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000001</key>
+      <key>monkeyRun_000002</key>
       <dict>
         <key>frame</key>
         <string>{{0,383},{193,133}}</string>
@@ -24,7 +35,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000002</key>
+      <key>monkeyRun_000003</key>
       <dict>
         <key>frame</key>
         <string>{{192,516},{187,138}}</string>
@@ -35,7 +46,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000003</key>
+      <key>monkeyRun_000004</key>
       <dict>
         <key>frame</key>
         <string>{{379,393},{181,144}}</string>
@@ -46,7 +57,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000004</key>
+      <key>monkeyRun_000005</key>
       <dict>
         <key>frame</key>
         <string>{{198,0},{182,142}}</string>
@@ -57,7 +68,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000005</key>
+      <key>monkeyRun_000006</key>
       <dict>
         <key>frame</key>
         <string>{{558,139},{174,140}}</string>
@@ -68,7 +79,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000006</key>
+      <key>monkeyRun_000007</key>
       <dict>
         <key>frame</key>
         <string>{{379,537},{181,137}}</string>
@@ -79,7 +90,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000007</key>
+      <key>monkeyRun_000008</key>
       <dict>
         <key>frame</key>
         <string>{{381,139},{177,136}}</string>
@@ -90,7 +101,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000008</key>
+      <key>monkeyRun_000009</key>
       <dict>
         <key>frame</key>
         <string>{{380,0},{179,139}}</string>
@@ -101,7 +112,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000009</key>
+      <key>monkeyRun_000010</key>
       <dict>
         <key>frame</key>
         <string>{{195,251},{186,142}}</string>
@@ -112,7 +123,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000010</key>
+      <key>monkeyRun_000011</key>
       <dict>
         <key>frame</key>
         <string>{{0,516},{192,138}}</string>
@@ -123,7 +134,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000011</key>
+      <key>monkeyRun_000012</key>
       <dict>
         <key>frame</key>
         <string>{{0,251},{195,132}}</string>
@@ -134,7 +145,7 @@
         <key>sourceSize</key>
         <string>{228,142.05}</string>
       </dict>
-      <key>monkeyRun_000012</key>
+      <key>monkeyRun_000013</key>
       <dict>
         <key>frame</key>
         <string>{{0,126},{196,125}}</string>
@@ -149,7 +160,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -163,6 +174,19 @@
     </dict>
     <key>displays</key>
     <dict>
+      <key>anotherHead</key>
+      <dict>
+        <key>type</key>
+        <string>null</string>
+        <key>anchorX</key>
+        <real>-1.9000000000000001</real>
+        <key>anchorY</key>
+        <real>-0.8136363636363636</real>
+        <key>start</key>
+        <integer>0</integer>
+        <key>end</key>
+        <integer>0</integer>
+      </dict>
       <key>monkey_run</key>
       <dict>
         <key>type</key>
@@ -172,9 +196,9 @@
         <key>anchorY</key>
         <real>0.13551566349876804</real>
         <key>start</key>
-        <integer>0</integer>
+        <integer>1</integer>
         <key>end</key>
-        <integer>12</integer>
+        <integer>13</integer>
       </dict>
     </dict>
     <key>mcs</key>
@@ -193,31 +217,6 @@
         <real>0.0012974375608173856</real>
         <key>children</key>
         <dict>
-          <key>fpsTxt</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>220.00,770.75,0.00,1,1,1.00,0,0,0,Arial,32,#F4DC95,center,235,40</string>
-            <key>text</key>
-            <string>FPS:</string>
-            <key>input</key>
-            <false/>
-            <key>font</key>
-            <string>Arial</string>
-            <key>size</key>
-            <integer>32</integer>
-            <key>color</key>
-            <string>#000000</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>235</real>
-            <key>height</key>
-            <real>40</real>
-          </dict>
           <key>tipTxt</key>
           <dict>
             <key>class</key>
@@ -230,18 +229,19 @@
             <string>tips</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Arial</string>
-            <key>size</key>
-            <integer>28</integer>
-            <key>color</key>
-            <string>#000000</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>499</real>
-            <key>height</key>
-            <real>35</real>
+          </dict>
+          <key>fpsTxt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>220.00,770.75,0.00,1,1,1.00,0,0,0,Arial,32,#F4DC95,center,235,40</string>
+            <key>text</key>
+            <string>FPS:</string>
+            <key>input</key>
+            <false/>
           </dict>
         </dict>
       </dict>

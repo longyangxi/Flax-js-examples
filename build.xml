@@ -53,6 +53,7 @@
                 <file name="src/AnimationAndAnchor.js"/>
                 <file name="src/SkeletonAndControl.js"/>
                 <file name="src/UIButton.js"/>
+                <file name="src/CustomClickTest.js"/>
                 <file name="src/UIProgress.js"/>
                 <file name="src/UIBMFont.js"/>
                 <file name="src/UIInput.js"/>

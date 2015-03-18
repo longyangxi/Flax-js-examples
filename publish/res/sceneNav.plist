@@ -116,7 +116,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -209,19 +209,19 @@
         <integer>6</integer>
         <key>labels</key>
         <dict>
-          <key>selected</key>
-          <dict>
-            <key>start</key>
-            <integer>0</integer>
-            <key>end</key>
-            <integer>0</integer>
-          </dict>
           <key>up</key>
           <dict>
             <key>start</key>
             <integer>1</integer>
             <key>end</key>
             <integer>1</integer>
+          </dict>
+          <key>selected</key>
+          <dict>
+            <key>start</key>
+            <integer>0</integer>
+            <key>end</key>
+            <integer>0</integer>
           </dict>
         </dict>
       </dict>
@@ -285,15 +285,6 @@
         <real>0.0011350737797956867</real>
         <key>children</key>
         <dict>
-          <key>resumeBtn</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol22</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>283.95,390.95,0.00,1,1,1.00,1,0,0</string>
-          </dict>
           <key>back</key>
           <dict>
             <key>class</key>
@@ -302,6 +293,15 @@
             <integer>0</integer>
             <key>frames</key>
             <string>0.00,1.00,0.00,8.827606201171875,14.9786376953125,1.00,0,0,0</string>
+          </dict>
+          <key>resumeBtn</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol22</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>283.95,390.95,0.00,1,1,1.00,1,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -319,57 +319,14 @@
         <real>0.0011355248963833531</real>
         <key>children</key>
         <dict>
-          <key>instance1148732</key>
+          <key>instance11928</key>
           <dict>
             <key>class</key>
-            <string>TopBar</string>
+            <string>asset2</string>
             <key>zIndex</key>
-            <integer>6</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>472.50,856.45,0.00,1,1,1.00,6,0,0</string>
-          </dict>
-          <key>rightBtn</key>
-          <dict>
-            <key>class</key>
-            <string>arrow</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>499.30,36.30,180.00,1,1,1.00,4,-180,180</string>
-          </dict>
-          <key>titleTxt</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>0.30,873.25,0.00,1,1,1.00,2,0,0,Arial Bold,20,#FFFFFF,center,414,26</string>
-            <key>text</key>
-            <string>Title</string>
-            <key>input</key>
-            <false/>
-            <key>font</key>
-            <string>Arial Bold</string>
-            <key>size</key>
-            <integer>20</integer>
-            <key>color</key>
-            <string>#000000</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>414</real>
-            <key>height</key>
-            <real>26</real>
-          </dict>
-          <key>leftBtn</key>
-          <dict>
-            <key>class</key>
-            <string>arrow</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>134.80,36.30,0.00,1,1,1.00,3,0,0</string>
+            <string>2528.65,858.20,0.00,13.912857055664063,1,1.00,1,0,0</string>
           </dict>
           <key>navTxt</key>
           <dict>
@@ -383,29 +340,35 @@
             <string>0/99</string>
             <key>input</key>
             <false/>
-            <key>font</key>
-            <string>Arial Bold</string>
-            <key>size</key>
-            <integer>24</integer>
-            <key>color</key>
-            <string>#000000</string>
-            <key>align</key>
-            <string>center</string>
-            <key>width</key>
-            <real>133</real>
-            <key>height</key>
-            <real>31</real>
           </dict>
-          <key>instance1148728</key>
+          <key>rightBtn</key>
           <dict>
             <key>class</key>
-            <string>asset2</string>
+            <string>arrow</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>2528.65,858.20,0.00,13.912857055664063,1,1.00,1,0,0</string>
+            <string>499.30,36.30,180.00,1,1,1.00,4,-180,180</string>
           </dict>
-          <key>instance1148726</key>
+          <key>leftBtn</key>
+          <dict>
+            <key>class</key>
+            <string>arrow</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>134.80,36.30,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>instance11932</key>
+          <dict>
+            <key>class</key>
+            <string>TopBar</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>472.50,856.45,0.00,1,1,1.00,6,0,0</string>
+          </dict>
+          <key>instance11926</key>
           <dict>
             <key>class</key>
             <string>asset2</string>
@@ -413,6 +376,19 @@
             <integer>0</integer>
             <key>frames</key>
             <string>1559.65,37.20,0.00,7.8260345458984375,1,1.00,0,0,0</string>
+          </dict>
+          <key>titleTxt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>0.30,873.25,0.00,1,1,1.00,2,0,0,Arial Bold,20,#FFFFFF,center,414,26</string>
+            <key>text</key>
+            <string>Title</string>
+            <key>input</key>
+            <false/>
           </dict>
         </dict>
       </dict>
@@ -430,14 +406,14 @@
         <real>0.4455089820359282</real>
         <key>children</key>
         <dict>
-          <key>soundBtn</key>
+          <key>enBtn</key>
           <dict>
             <key>class</key>
-            <string>sprite274</string>
+            <string>asset4</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>3</integer>
             <key>frames</key>
-            <string>46.25,43.55,0.00,0.6999969482421875,0.6999969482421875,1.00,1,0,0</string>
+            <string>183.45,21.00,0.00,0.79998779296875,0.79998779296875,1.00,3,0,0</string>
           </dict>
           <key>zhBtn</key>
           <dict>
@@ -448,15 +424,6 @@
             <key>frames</key>
             <string>124.45,21.05,0.00,0.79998779296875,0.79998779296875,1.00,2,0,0</string>
           </dict>
-          <key>enBtn</key>
-          <dict>
-            <key>class</key>
-            <string>asset4</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>183.45,21.00,0.00,0.79998779296875,0.79998779296875,1.00,3,0,0</string>
-          </dict>
           <key>pauseBtn</key>
           <dict>
             <key>class</key>
@@ -465,6 +432,15 @@
             <integer>0</integer>
             <key>frames</key>
             <string>-2.00,43.80,0.00,0.6999969482421875,0.6999969482421875,1.00,0,0,0</string>
+          </dict>
+          <key>soundBtn</key>
+          <dict>
+            <key>class</key>
+            <string>sprite274</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>46.25,43.55,0.00,0.6999969482421875,0.6999969482421875,1.00,1,0,0</string>
           </dict>
         </dict>
       </dict>

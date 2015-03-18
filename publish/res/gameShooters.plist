@@ -258,9 +258,9 @@
       <key>gameShooters_000023</key>
       <dict>
         <key>frame</key>
-        <string>{{167,138},{2,2}}</string>
+        <string>{{187,137},{3,3}}</string>
         <key>offset</key>
-        <string>{-26.45,11.97}</string>
+        <string>{-25.95,11.47}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
@@ -315,264 +315,264 @@
         <key>frame</key>
         <string>{{172,123},{14,14}}</string>
         <key>offset</key>
-        <string>{-8.50,-14.60}</string>
+        <string>{-8.50,-1.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000029</key>
       <dict>
         <key>frame</key>
         <string>{{186,123},{14,14}}</string>
         <key>offset</key>
-        <string>{-9.65,-12.15}</string>
+        <string>{-9.65,1.45}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000030</key>
       <dict>
         <key>frame</key>
         <string>{{157,123},{15,15}}</string>
         <key>offset</key>
-        <string>{-10.30,-10.20}</string>
+        <string>{-10.30,3.40}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000031</key>
       <dict>
         <key>frame</key>
         <string>{{141,123},{16,16}}</string>
         <key>offset</key>
-        <string>{-11.05,-8.20}</string>
+        <string>{-11.05,5.40}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000032</key>
       <dict>
         <key>frame</key>
         <string>{{272,603},{36,23}}</string>
         <key>offset</key>
-        <string>{-2.20,-9.25}</string>
+        <string>{-2.20,4.35}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000033</key>
       <dict>
         <key>frame</key>
         <string>{{332,381},{34,24}}</string>
         <key>offset</key>
-        <string>{-2.30,-7.30}</string>
+        <string>{-2.30,6.30}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000034</key>
       <dict>
         <key>frame</key>
         <string>{{333,195},{33,25}}</string>
         <key>offset</key>
-        <string>{-1.90,-5.35}</string>
+        <string>{-1.90,8.25}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000035</key>
       <dict>
         <key>frame</key>
         <string>{{346,0},{32,26}}</string>
         <key>offset</key>
-        <string>{-1.55,-3.40}</string>
+        <string>{-1.55,10.20}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000036</key>
       <dict>
         <key>frame</key>
         <string>{{355,220},{31,39}}</string>
         <key>offset</key>
-        <string>{-1.20,-7.40}</string>
+        <string>{-1.20,6.20}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000037</key>
       <dict>
         <key>frame</key>
         <string>{{312,0},{34,41}}</string>
         <key>offset</key>
-        <string>{-0.90,-4.70}</string>
+        <string>{-0.90,8.90}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000038</key>
       <dict>
         <key>frame</key>
         <string>{{313,485},{37,43}}</string>
         <key>offset</key>
-        <string>{-0.60,-2.10}</string>
+        <string>{-0.60,11.50}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000039</key>
       <dict>
         <key>frame</key>
         <string>{{309,42},{39,45}}</string>
         <key>offset</key>
-        <string>{-0.80,0.70}</string>
+        <string>{-0.80,14.30}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000040</key>
       <dict>
         <key>frame</key>
         <string>{{251,105},{42,48}}</string>
         <key>offset</key>
-        <string>{-0.50,2.90}</string>
+        <string>{-0.50,16.50}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000041</key>
       <dict>
         <key>frame</key>
         <string>{{249,198},{42,46}}</string>
         <key>offset</key>
-        <string>{-0.50,3.90}</string>
+        <string>{-0.50,17.50}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000042</key>
       <dict>
         <key>frame</key>
         <string>{{367,179},{31,37}}</string>
         <key>offset</key>
-        <string>{6.00,1.40}</string>
+        <string>{6.00,15.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000043</key>
       <dict>
         <key>frame</key>
         <string>{{379,0},{30,39}}</string>
         <key>offset</key>
-        <string>{6.40,3.70}</string>
+        <string>{6.40,17.30}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000044</key>
       <dict>
         <key>frame</key>
         <string>{{382,488},{29,41}}</string>
         <key>offset</key>
-        <string>{6.75,6.40}</string>
+        <string>{6.75,20.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000045</key>
       <dict>
         <key>frame</key>
         <string>{{381,450},{30,38}}</string>
         <key>offset</key>
-        <string>{6.05,7.90}</string>
+        <string>{6.05,21.50}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000046</key>
       <dict>
         <key>frame</key>
         <string>{{399,93},{23,23}}</string>
         <key>offset</key>
-        <string>{1.35,2.40}</string>
+        <string>{1.35,16.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000047</key>
       <dict>
         <key>frame</key>
         <string>{{249,244},{24,24}}</string>
         <key>offset</key>
-        <string>{0.65,5.20}</string>
+        <string>{0.65,18.80}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000048</key>
       <dict>
         <key>frame</key>
         <string>{{438,503},{25,25}}</string>
         <key>offset</key>
-        <string>{-0.05,8.40}</string>
+        <string>{-0.05,22.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000049</key>
       <dict>
         <key>frame</key>
         <string>{{426,50},{25,25}}</string>
         <key>offset</key>
-        <string>{-0.05,8.40}</string>
+        <string>{-0.05,22.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000050</key>
       <dict>
         <key>frame</key>
-        <string>{{159,138},{2,2}}</string>
+        <string>{{175,137},{3,3}}</string>
         <key>offset</key>
-        <string>{-11.55,19.90}</string>
+        <string>{-11.05,33.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000051</key>
       <dict>
         <key>frame</key>
-        <string>{{165,138},{2,2}}</string>
+        <string>{{184,137},{3,3}}</string>
         <key>offset</key>
-        <string>{0.50,-52.10}</string>
+        <string>{1.00,-39.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{41,51.8}</string>
+        <string>{41,79}</string>
       </dict>
       <key>gameShooters_000052</key>
       <dict>
@@ -643,9 +643,9 @@
       <key>gameShooters_000058</key>
       <dict>
         <key>frame</key>
-        <string>{{161,138},{2,2}}</string>
+        <string>{{178,137},{3,3}}</string>
         <key>offset</key>
-        <string>{-0.23,-0.45}</string>
+        <string>{0.27,-0.95}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
@@ -654,9 +654,9 @@
       <key>gameShooters_000059</key>
       <dict>
         <key>frame</key>
-        <string>{{157,138},{2,2}}</string>
+        <string>{{172,137},{3,3}}</string>
         <key>offset</key>
-        <string>{-0.23,-0.45}</string>
+        <string>{0.27,-0.95}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
@@ -1017,13 +1017,13 @@
       <key>gameShooters_000092</key>
       <dict>
         <key>frame</key>
-        <string>{{163,138},{2,2}}</string>
+        <string>{{181,137},{3,3}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{0,0}</string>
+        <string>{1,1}</string>
       </dict>
       <key>gameShooters_000093</key>
       <dict>
@@ -1381,7 +1381,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2</real>
+      <real>2.21</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -1493,7 +1493,7 @@
         <key>anchorX</key>
         <real>0.5121951219512195</real>
         <key>anchorY</key>
-        <real>-0.5057915057915059</real>
+        <real>0.012658227848101266</real>
         <key>start</key>
         <integer>28</integer>
         <key>end</key>
@@ -1628,9 +1628,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>NaN</real>
+        <real>0</real>
         <key>anchorY</key>
-        <real>NaN</real>
+        <real>1</real>
         <key>start</key>
         <integer>92</integer>
         <key>end</key>
@@ -1716,7 +1716,7 @@
         <real>0.001040582726326743</real>
         <key>children</key>
         <dict>
-          <key>instance11132437</key>
+          <key>instance18674</key>
           <dict>
             <key>class</key>
             <string>ArmorProp</string>
@@ -1725,7 +1725,7 @@
             <key>frames</key>
             <string>495.35,718.65,0.00,1,1,1.00,2,0,0</string>
           </dict>
-          <key>instance11132445</key>
+          <key>instance18682</key>
           <dict>
             <key>class</key>
             <string>HealProp</string>
@@ -1734,16 +1734,16 @@
             <key>frames</key>
             <string>188.95,655.00,0.00,1,1,1.00,3,0,0</string>
           </dict>
-          <key>instance11132511</key>
+          <key>bg</key>
           <dict>
             <key>class</key>
-            <string>Enemy</string>
+            <string>bg</string>
             <key>zIndex</key>
-            <integer>8</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>511.80,618.75,0.00,1,1,1.00,8,0,0</string>
+            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
           </dict>
-          <key>instance11132453</key>
+          <key>instance18690</key>
           <dict>
             <key>class</key>
             <string>SpeedProp</string>
@@ -1761,7 +1761,16 @@
             <key>frames</key>
             <string>312.00,81.50,0.00,1,1,1.00,1,0,0</string>
           </dict>
-          <key>instance11132469</key>
+          <key>instance18698</key>
+          <dict>
+            <key>class</key>
+            <string>MultiProp</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>473.30,470.25,0.00,1,1,1.00,5,0,0</string>
+          </dict>
+          <key>instance18706</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1770,16 +1779,7 @@
             <key>frames</key>
             <string>156.50,497.10,0.00,1,1,1.00,6,0,0</string>
           </dict>
-          <key>instance11132574</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>354.90,783.95,0.00,1,1,1.00,11,0,0</string>
-          </dict>
-          <key>instance11132490</key>
+          <key>instance18727</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1788,16 +1788,16 @@
             <key>frames</key>
             <string>435.75,335.80,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>bg</key>
+          <key>instance18748</key>
           <dict>
             <key>class</key>
-            <string>bg</string>
+            <string>Enemy</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>8</integer>
             <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+            <string>511.80,618.75,0.00,1,1,1.00,8,0,0</string>
           </dict>
-          <key>instance11132532</key>
+          <key>instance18769</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1806,7 +1806,7 @@
             <key>frames</key>
             <string>348.40,519.85,0.00,1,1,1.00,9,0,0</string>
           </dict>
-          <key>instance11132553</key>
+          <key>instance18790</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
@@ -1815,14 +1815,41 @@
             <key>frames</key>
             <string>101.95,743.95,0.00,1,1,1.00,10,0,0</string>
           </dict>
-          <key>instance11132461</key>
+          <key>instance18811</key>
           <dict>
             <key>class</key>
-            <string>MultiProp</string>
+            <string>Enemy</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>11</integer>
             <key>frames</key>
-            <string>463.65,472.90,0.00,1,1,1.00,5,0,0</string>
+            <string>354.90,783.95,0.00,1,1,1.00,11,0,0</string>
+          </dict>
+          <key>instance18832</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>12</integer>
+            <key>frames</key>
+            <string>317.10,653.35,0.00,1,1,1.00,12,0,0</string>
+          </dict>
+          <key>instance18853</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>13</integer>
+            <key>frames</key>
+            <string>93.90,240.20,0.00,1,1,1.00,13,0,0</string>
+          </dict>
+          <key>instance18874</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>14</integer>
+            <key>frames</key>
+            <string>306.60,319.50,0.00,1,1,1.00,14,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -1909,61 +1936,16 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance11132774</key>
+          <key>instance18919</key>
           <dict>
             <key>class</key>
-            <string>asset10</string>
+            <string>asset6</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||</string>
+            <string>50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||||||</string>
           </dict>
-          <key>instance11132753</key>
-          <dict>
-            <key>class</key>
-            <string>asset9</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||</string>
-          </dict>
-          <key>instance11132795</key>
-          <dict>
-            <key>class</key>
-            <string>asset11</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||</string>
-          </dict>
-          <key>instance11132715</key>
-          <dict>
-            <key>class</key>
-            <string>asset7</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||</string>
-          </dict>
-          <key>instance11132733</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||50.55,46.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||</string>
-          </dict>
-          <key>instance11132816</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||||||||47.40,45.10,180.00,1.3387298583984375,1.3387298583984375,1.00,0,0,180||||null|||</string>
-          </dict>
-          <key>instance11132836</key>
+          <key>instance19136</key>
           <dict>
             <key>class</key>
             <string>asset12</string>
@@ -1972,14 +1954,59 @@
             <key>frames</key>
             <string>null||||||||||||||||||||||||||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0|||</string>
           </dict>
-          <key>instance11132619</key>
+          <key>instance19095</key>
           <dict>
             <key>class</key>
-            <string>asset6</string>
+            <string>asset11</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||||||</string>
+            <string>null||||||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||</string>
+          </dict>
+          <key>instance19033</key>
+          <dict>
+            <key>class</key>
+            <string>asset8</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||50.55,46.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||</string>
+          </dict>
+          <key>instance19074</key>
+          <dict>
+            <key>class</key>
+            <string>asset10</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||</string>
+          </dict>
+          <key>instance19015</key>
+          <dict>
+            <key>class</key>
+            <string>asset7</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||</string>
+          </dict>
+          <key>instance19116</key>
+          <dict>
+            <key>class</key>
+            <string>asset8</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||||||||||||||||||47.40,45.10,180.00,1.3387298583984375,1.3387298583984375,1.00,0,0,180||||null|||</string>
+          </dict>
+          <key>instance19053</key>
+          <dict>
+            <key>class</key>
+            <string>asset9</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||</string>
           </dict>
         </dict>
       </dict>
@@ -1997,7 +2024,7 @@
         <real>0.5000000000000001</real>
         <key>children</key>
         <dict>
-          <key>instance11132663</key>
+          <key>instance18963</key>
           <dict>
             <key>class</key>
             <string>asset4</string>
