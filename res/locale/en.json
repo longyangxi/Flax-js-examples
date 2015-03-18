@@ -24,5 +24,10 @@
     "tiledImage":"Tiled Image(Click Screen)",
     "physics":"Physics Game(Click Screen)",
     "timberQiangMenu":"A game: Timber Qiang",
-    "timberQiangGame":"A game: Timber Qiang"
+    "timberQiangGame":"A game: Timber Qiang",
+    "customClick":"Custom Click Area",
+    "noCollider":"No Custom Click",
+    "rectCollider":"Rectangle Click Area",
+    "circleCollider":"Circle Click Area",
+    "polyCollider":"Fully CusTOM Click Area"
 }

@@ -14,6 +14,9 @@ Global.scenesList = [
     //按钮
     //Button
     {name:"uiButton", class:UIButton, res:res_button},
+    //自定义点击范围
+    //Custom Click Area
+    {name:"customClick", class:CustomClickTest, res:res_customClick},
     //进度条
     //ProgressBar
     {name:"uiProgress", class:UIProgress, res:res_progress},

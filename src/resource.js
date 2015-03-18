@@ -16,6 +16,9 @@ var res = {
     skeleton:"res/skeletonControl.plist",
     skeleton_png:"res/skeletonControl.png",
 
+    customClick:"res/customClick.plist",
+    customClick_png:"res/customClick.png",
+
     uiButton:"res/uiButton.plist",
     uiButton_png:"res/uiButton.png",
 
@@ -74,7 +77,12 @@ var res_skeleton = [
     res.skeleton,
     res.skeleton_png
 ]
-
+var res_customClick = [
+    res.sceneNav,
+    res.sceneNav_png,
+    res.customClick,
+    res.customClick_png
+]
 var res_button = [
     res.sceneNav,
     res.sceneNav_png,

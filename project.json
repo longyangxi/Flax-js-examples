@@ -59,6 +59,7 @@
       "src/AnimationAndAnchor.js",
       "src/SkeletonAndControl.js",
       "src/UIButton.js",
+      "src/CustomClickTest.js",
       "src/UIProgress.js",
       "src/UIBMFont.js",
       "src/UIInput.js",

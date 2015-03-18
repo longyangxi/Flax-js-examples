@@ -24,5 +24,10 @@
     "tiledImage":"瓦片地图(点屏幕)",
     "physics":"物理游戏(点击屏幕)",
     "timberQiangMenu":"游戏：疯狂的光头强",
-    "timberQiangGame":"游戏：疯狂的光头强"
+    "timberQiangGame":"游戏：疯狂的光头强",
+    "customClick":"自定义点击区域",
+    "noCollider":"不定义点击区域",
+    "rectCollider":"矩形点击区域",
+    "circleCollider":"圆形点击区域",
+    "polyCollider":"任意形状点击区域"
 }
