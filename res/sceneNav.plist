@@ -5,7 +5,7 @@
       <key>sceneNav_000000</key>
       <dict>
         <key>frame</key>
-        <string>{{0,89},{75,61}}</string>
+        <string>{{0,158},{75,61}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -16,7 +16,7 @@
       <key>sceneNav_000001</key>
       <dict>
         <key>frame</key>
-        <string>{{0,0},{83,89}}</string>
+        <string>{{0,69},{83,89}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -27,7 +27,7 @@
       <key>sceneNav_000002</key>
       <dict>
         <key>frame</key>
-        <string>{{140,134},{52,46}}</string>
+        <string>{{150,67},{52,46}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -38,7 +38,7 @@
       <key>sceneNav_000003</key>
       <dict>
         <key>frame</key>
-        <string>{{0,200},{73,50}}</string>
+        <string>{{73,219},{73,50}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -49,7 +49,7 @@
       <key>sceneNav_000004</key>
       <dict>
         <key>frame</key>
-        <string>{{0,150},{73,50}}</string>
+        <string>{{0,219},{73,50}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -60,18 +60,18 @@
       <key>sceneNav_000005</key>
       <dict>
         <key>frame</key>
-        <string>{{83,0},{67,67}}</string>
+        <string>{{0,0},{95,69}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
         <false/>
         <key>sourceSize</key>
-        <string>{65,65}</string>
+        <string>{93,67}</string>
       </dict>
       <key>sceneNav_000006</key>
       <dict>
         <key>frame</key>
-        <string>{{83,67},{67,67}}</string>
+        <string>{{83,69},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -82,7 +82,7 @@
       <key>sceneNav_000007</key>
       <dict>
         <key>frame</key>
-        <string>{{73,150},{67,67}}</string>
+        <string>{{95,0},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -93,7 +93,7 @@
       <key>sceneNav_000008</key>
       <dict>
         <key>frame</key>
-        <string>{{73,217},{67,67}}</string>
+        <string>{{146,203},{67,67}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -104,7 +104,18 @@
       <key>sceneNav_000009</key>
       <dict>
         <key>frame</key>
-        <string>{{140,180},{48,48}}</string>
+        <string>{{83,136},{67,67}}</string>
+        <key>offset</key>
+        <string>{0.00,0.00}</string>
+        <key>rotated</key>
+        <false/>
+        <key>sourceSize</key>
+        <string>{65,65}</string>
+      </dict>
+      <key>sceneNav_000010</key>
+      <dict>
+        <key>frame</key>
+        <string>{{150,113},{48,48}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>rotated</key>
@@ -116,7 +127,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.22</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -124,7 +135,7 @@
       <key>realTextureFileName</key>
       <string>sceneNav.png</string>
       <key>size</key>
-      <string>{284,290}</string>
+      <string>{296,290}</string>
       <key>textureFileName</key>
       <string>sceneNav.png</string>
     </dict>
@@ -195,6 +206,19 @@
         <key>end</key>
         <integer>4</integer>
       </dict>
+      <key>asset5</key>
+      <dict>
+        <key>type</key>
+        <string>button</string>
+        <key>anchorX</key>
+        <real>0.5392473118279569</real>
+        <key>anchorY</key>
+        <real>0.6052238805970149</real>
+        <key>start</key>
+        <integer>5</integer>
+        <key>end</key>
+        <integer>5</integer>
+      </dict>
       <key>sprite271</key>
       <dict>
         <key>type</key>
@@ -204,9 +228,9 @@
         <key>anchorY</key>
         <real>1.0446153846153847</real>
         <key>start</key>
-        <integer>5</integer>
-        <key>end</key>
         <integer>6</integer>
+        <key>end</key>
+        <integer>7</integer>
         <key>labels</key>
         <dict>
           <key>up</key>
@@ -234,9 +258,9 @@
         <key>anchorY</key>
         <real>1.0446153846153847</real>
         <key>start</key>
-        <integer>7</integer>
-        <key>end</key>
         <integer>8</integer>
+        <key>end</key>
+        <integer>9</integer>
         <key>labels</key>
         <dict>
           <key>up</key>
@@ -264,9 +288,9 @@
         <key>anchorY</key>
         <real>0.5119565217391304</real>
         <key>start</key>
-        <integer>9</integer>
+        <integer>10</integer>
         <key>end</key>
-        <integer>9</integer>
+        <integer>10</integer>
       </dict>
     </dict>
     <key>mcs</key>
@@ -312,32 +336,32 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,640.00,880.65</string>
+        <string>0,0,644.45,885.20</string>
         <key>anchorX</key>
-        <real>0.00046875</real>
+        <real>0.00046551322833423853</real>
         <key>anchorY</key>
-        <real>0.0011355248963833531</real>
+        <real>0.0062697695436059134</real>
         <key>children</key>
         <dict>
-          <key>instance11928</key>
+          <key>leftBtn</key>
           <dict>
             <key>class</key>
-            <string>asset2</string>
+            <string>arrow</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>2528.65,858.20,0.00,13.912857055664063,1,1.00,1,0,0</string>
+            <string>134.80,40.85,0.00,1,1,1.00,4,0,0</string>
           </dict>
-          <key>navTxt</key>
+          <key>titleTxt</key>
           <dict>
             <key>class</key>
             <string>null</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>3</integer>
             <key>frames</key>
-            <string>251.10,49.50,0.00,1,1,1.00,5,0,0,Arial Bold,24,#FFFFFF,center,133,31</string>
+            <string>0.30,877.80,0.00,1,1,1.00,3,0,0,Arial Bold,20,#FFFFFF,center,414,26</string>
             <key>text</key>
-            <string>0/99</string>
+            <string>Title</string>
             <key>input</key>
             <false/>
           </dict>
@@ -346,47 +370,56 @@
             <key>class</key>
             <string>arrow</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>499.30,36.30,180.00,1,1,1.00,4,-180,180</string>
+            <string>499.30,40.85,180.00,1,1,1.00,5,-180,180</string>
           </dict>
-          <key>leftBtn</key>
+          <key>instance9057720</key>
           <dict>
             <key>class</key>
-            <string>arrow</string>
+            <string>asset2</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>134.80,36.30,0.00,1,1,1.00,3,0,0</string>
+            <string>2528.65,862.75,0.00,13.912857055664063,1,1.00,1,0,0</string>
           </dict>
-          <key>instance11932</key>
+          <key>instance9057726</key>
           <dict>
             <key>class</key>
             <string>TopBar</string>
             <key>zIndex</key>
-            <integer>6</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>472.50,856.45,0.00,1,1,1.00,6,0,0</string>
+            <string>472.50,861.00,0.00,1,1,1.00,7,0,0</string>
           </dict>
-          <key>instance11926</key>
+          <key>instance9057718</key>
           <dict>
             <key>class</key>
             <string>asset2</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>1559.65,37.20,0.00,7.8260345458984375,1,1.00,0,0,0</string>
+            <string>1559.65,41.75,0.00,7.8260345458984375,1,1.00,0,0,0</string>
           </dict>
-          <key>titleTxt</key>
+          <key>logoBtn</key>
+          <dict>
+            <key>class</key>
+            <string>asset5</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>593.30,48.15,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>navTxt</key>
           <dict>
             <key>class</key>
             <string>null</string>
             <key>zIndex</key>
-            <integer>2</integer>
+            <integer>6</integer>
             <key>frames</key>
-            <string>0.30,873.25,0.00,1,1,1.00,2,0,0,Arial Bold,20,#FFFFFF,center,414,26</string>
+            <string>251.10,54.05,0.00,1,1,1.00,6,0,0,Arial Bold,24,#FFFFFF,center,133,31</string>
             <key>text</key>
-            <string>Title</string>
+            <string>0/99</string>
             <key>input</key>
             <false/>
           </dict>
@@ -406,14 +439,14 @@
         <real>0.4455089820359282</real>
         <key>children</key>
         <dict>
-          <key>enBtn</key>
+          <key>soundBtn</key>
           <dict>
             <key>class</key>
-            <string>asset4</string>
+            <string>sprite274</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>183.45,21.00,0.00,0.79998779296875,0.79998779296875,1.00,3,0,0</string>
+            <string>46.25,43.55,0.00,0.6999969482421875,0.6999969482421875,1.00,1,0,0</string>
           </dict>
           <key>zhBtn</key>
           <dict>
@@ -424,6 +457,15 @@
             <key>frames</key>
             <string>124.45,21.05,0.00,0.79998779296875,0.79998779296875,1.00,2,0,0</string>
           </dict>
+          <key>enBtn</key>
+          <dict>
+            <key>class</key>
+            <string>asset4</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>183.45,21.00,0.00,0.79998779296875,0.79998779296875,1.00,3,0,0</string>
+          </dict>
           <key>pauseBtn</key>
           <dict>
             <key>class</key>
@@ -432,15 +474,6 @@
             <integer>0</integer>
             <key>frames</key>
             <string>-2.00,43.80,0.00,0.6999969482421875,0.6999969482421875,1.00,0,0,0</string>
-          </dict>
-          <key>soundBtn</key>
-          <dict>
-            <key>class</key>
-            <string>sprite274</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>46.25,43.55,0.00,0.6999969482421875,0.6999969482421875,1.00,1,0,0</string>
           </dict>
         </dict>
       </dict>

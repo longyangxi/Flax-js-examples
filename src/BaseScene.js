@@ -27,6 +27,10 @@ var BaseScene = cc.Scene.extend({
         var info = Global.scenesList[currentSceneIndex];
         nav.navTxt.text = (currentSceneIndex + 1) + "/" + Global.scenesList.length;
         nav.titleTxt.text = flax.getLanguageStr(info.name);
+
+        flax.inputManager.addListener(nav.logoBtn, function(touch, event){
+            flax.goHomeUrl();
+        });
     },
     _showPrevScene:function()
     {
