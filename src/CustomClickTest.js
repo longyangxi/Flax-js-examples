@@ -8,7 +8,7 @@ var CustomClickTest = BaseScene.extend({
     {
         this._super();
         this.p = flax.assetsManager.createDisplay(res.customClick, "panel", {parent:this});
-        this.p.infoTxt.text = "";
+        this.p['infoTxt'].text = "";
         for(var i = 0; i < 4; i++)
         {
             var m = this.p["m" + i]
@@ -19,9 +19,9 @@ var CustomClickTest = BaseScene.extend({
     _onClick:function(touch, event)
     {
         var target = event.currentTarget;
-        this.p.infoTxt.text = target.name + " was clicked!";
+        this.p['infoTxt'].text = target.name + " was clicked!";
         this.scheduleOnce(function(){
-            this.p.infoTxt.text = "";
+            this.p['infoTxt'].text = "";
         }, 1.0);
     }
 })

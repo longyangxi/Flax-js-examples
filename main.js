@@ -17,9 +17,9 @@ cc.game.onStart = function(){
     //根据url来获取GET参数 (Fetch the GET params by the url)
     var getVars = flax.getUrlVars();
     //从url中解析是否有通过lan指定当前语言，否则按照project.json中的language设置或者系统语言 (Param lan in url means current language)
-    if(getVars.lan) flax.updateLanguage(getVars.lan);
+    if(getVars['lan']) flax.updateLanguage(getVars['lan']);
     //根据参数sid，来显示第一个场景 (Param s in url means the initial scene index)
-    currentSceneIndex = parseInt(getVars.sid) || 0;
+    currentSceneIndex = parseInt(getVars["sid"]) || 0;
     flax.replaceScene(Global.scenesList[currentSceneIndex].name);
 
     //Show the warning for a new user
@@ -30,5 +30,4 @@ cc.game.onStart = function(){
         flax.saveUserData();
     }
 };
-
 cc.game.run();

@@ -23,8 +23,8 @@ var BattleStage = flax.MovieClip.extend({
         this.initElements();
         //Set the enemies as the player's target
         //TODO, there is another method with TileMap to check the bullet collision in Flax
-        this.player.targets = this.enemies;
-        this.player.props = this.props;
+        this['player'].targets = this.enemies;
+        this['player'].props = this.props;
         //Scrolling background
 //        var bg = new flax.ScrollingBG(this.bg);
 //        bg.startYScroll(-50);
@@ -128,7 +128,7 @@ var Enemy = flax.MCGunner.extend({
         this.setGunParam(EnemyGunParam, ["weapon0"]);
         this.autoShoot();
         //The enemy always aim to the player
-        this.aimToTarget(this.parent.player);
+        this.aimToTarget(this.parent['player']);
         //Auto play children's animation when this is playing
         this.autoPlayChildren = true;
         this.sameFpsForChildren = false;
@@ -142,7 +142,7 @@ var Enemy = flax.MCGunner.extend({
     },
     onDie:function()
     {
-        var targets = this.parent.player.targets;
+        var targets = this.parent['player'].targets;
         //Play die animation
         var dieAnim = flax.assetsManager.createDisplay(res.shooters, "EnemyDeath", {parent: this.parent, x: this.x, y: this.y, zIndex: this.zIndex}, true);
         dieAnim.autoDestroyWhenOver = true;
@@ -159,3 +159,7 @@ var Enemy = flax.MCGunner.extend({
         this._super();
     }
 })
+//Avoid the following class to be obscured in advanced compiled mode
+window['BattleStage'] = BattleStage;
+window['Player'] = Player;
+window['Enemy'] = Enemy;

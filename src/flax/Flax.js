@@ -20,6 +20,9 @@ var TileValue = TileValue || {
 
 var flax = flax || {};
 
+//Avoid to advanced compile mode
+window['flax'] = flax;
+
 flax.version = 1.81;
 flax.minToolVersion = 2.0;
 flax.language = null;
@@ -44,7 +47,7 @@ flax._addResVersion = function(url)
 {
     if(cc.sys.isNative  || typeof url != "string" || flax.isSoundFile(url)) return url;
     if(url.indexOf("?v=") > -1) return url;
-    return url + "?v=" + cc.game.config.version;
+    return url + "?v=" + cc.game.config["version"];
 }
 flax._removeResVersion = function(url)
 {
@@ -57,7 +60,7 @@ flax.isDomainAllowed = function()
 {
     if(cc.sys.isNative) return true;
     var domain = document.domain;
-    var domainAllowed = cc.game.config.domainAllowed;
+    var domainAllowed = cc.game.config["domainAllowed"];
     return flax.isLocalDebug() || domainAllowed == null || domainAllowed.length == 0 || domainAllowed.indexOf(domain) > -1;
 }
 flax.isLocalDebug = function()
@@ -69,7 +72,7 @@ flax.isLocalDebug = function()
 if(!cc.sys.isNative){
     //if local debug, make the version randomly, so every time debug is refresh
     if(flax.isLocalDebug()) {
-        cc.game.config.version = 1 + Math.floor(Math.random()*(999999 - 1))
+        cc.game.config["version"] = 1 + Math.floor(Math.random()*(999999 - 1))
     }
 //set the game canvas color as html body color
     /************************************************/
@@ -109,10 +112,10 @@ flax.init = function(resolutionPolicy, initialUserData)
     if(flax.fetchUserData) flax.fetchUserData(initialUserData);
     flax._checkOSVersion();
 
-    var width = cc.game.config.width;
-    var height = cc.game.config.height;
+    var width = cc.game.config["width"];
+    var height = cc.game.config["height"];
     if(!cc.sys.isNative){
-        var stg = document.getElementById(cc.game.config.id);
+        var stg = document.getElementById(cc.game.config["id"]);
         stg.width = width = width || stg.width;
         stg.height = height = height || stg.height;
         cc.view.adjustViewPort(true);
@@ -122,11 +125,11 @@ flax.init = function(resolutionPolicy, initialUserData)
         cc.view.setDesignResolutionSize(width, height, resolutionPolicy);
     }
 
-    flax.frameInterval = 1/cc.game.config.frameRate;
+    flax.frameInterval = 1/cc.game.config["frameRate"];
     flax.assetsManager = flax.AssetsManager.create();
     //if(cc.game.config.timeScale)  cc.director.getScheduler().setTimeScale(cc.game.config.timeScale);
 
-    var lan = cc.game.config.language;
+    var lan = cc.game.config["language"];
     if(lan == null || lan == "") {
         if(flax.language == null) {
             lan = cc.sys.language;
@@ -150,10 +153,10 @@ flax.getLanguageStr = function(key){
 flax.updateLanguage = function(lan){
     if(lan == null || lan == "" || lan == flax.language) return;
     flax.language = lan;
-    if(cc.game.config.languages && cc.game.config.languages.length) flax.languages = cc.game.config.languages;
+    if(cc.game.config["languages"] && cc.game.config["languages"].length) flax.languages = cc.game.config["languages"];
     flax.languageIndex = flax.languages.indexOf(lan);
     if(flax.languageIndex == -1) cc.log("Invalid language: " + lan);
-    if(cc.game.config.languageJson) flax._languageToLoad = flax._getLanguagePath(lan);
+    if(cc.game.config["languageJson"]) flax._languageToLoad = flax._getLanguagePath(lan);
 }
 flax._getLanguagePath = function(lan){
     return  "res/locale/"+(lan || flax.language)+".json";
@@ -170,36 +173,44 @@ flax.addModule = function(cls, module, override){
         throw "Module can not be null!"
     }
     for(var k in module){
-        if(k === "onEnter"){
-            if(cls.prototype.__onEnterNum === undefined) cls.prototype.__onEnterNum = 0;
-            else cls.prototype.__onEnterNum++;
-            cls.prototype["__onEnter"+cls.prototype.__onEnterNum] = module.onEnter;
-        }else if(k === "onExit"){
-            if(cls.prototype.__onExitNum === undefined) cls.prototype.__onExitNum = 0;
-            else cls.prototype.__onExitNum++;
-            cls.prototype["__onExit"+cls.prototype.__onExitNum] = module.onExit;
+        if(k.indexOf("on") == 0){
+//        if(k === "onEnter" || k === "onExit"){
+            var nk = "__" + k;
+            var kn = nk + "Num";
+            if(cls.prototype[kn] === undefined) cls.prototype[kn] = 0;
+            else cls.prototype[kn]++;
+            cls.prototype[nk + cls.prototype[kn]] = module[k];
+//        if(k === "onEnter"){
+//            if(cls.prototype.__onEnterNum === undefined) cls.prototype.__onEnterNum = 0;
+//            else cls.prototype.__onEnterNum++;
+//            cls.prototype["__onEnter"+cls.prototype.__onEnterNum] = module.onEnter;
+//        }else if(k === "onExit"){
+//            if(cls.prototype.__onExitNum === undefined) cls.prototype.__onExitNum = 0;
+//            else cls.prototype.__onExitNum++;
+//            cls.prototype["__onExit"+cls.prototype.__onExitNum] = module.onExit;
         }else if(override === true || !cls.prototype[k]){
             cls.prototype[k] = module[k];
         }
     }
 }
-flax.callModuleOnEnter = function(owner){
-    if(owner.__onEnterNum !== undefined){
-        var i = owner.__onEnterNum;
+flax.callModuleFuction = function(owner, funcName, params){
+    funcName = "__" + funcName;
+    var num = owner[funcName + "Num"];
+    if(num !== undefined){
+        var i = num;
         while(i >= 0){
-            owner["__onEnter"+i]();
+            owner[funcName+i](params);
             i--;
         }
+    }else if(owner[funcName]){
+        owner[funcName](params);
     }
 }
+flax.callModuleOnEnter = function(owner){
+    flax.callModuleFuction(owner, "onEnter");
+}
 flax.callModuleOnExit = function(owner){
-    if(owner.__onExitNum !== undefined){
-        var i = owner.__onExitNum;
-        while(i >= 0){
-            owner["__onExit"+i]();
-            i--;
-        }
-    }
+    flax.callModuleFuction(owner, "onExit");
 }
 
 flax._checkOSVersion = function(){
@@ -312,7 +323,7 @@ flax.preload = function(res, callBack)
         if(r == null) throw "There is a null resource!";
         if(cc.loader.getRes(r) == null && flax._soundResources[r] == null) {
             //in mobile web or jsb, .flax is not good now, so replace it  to .plist and .png
-            if(typeof r == "string" && cc.path.extname(r) == ".flax" && (cc.sys.isNative || cc.game.config.useFlaxRes === false)){
+            if(typeof r == "string" && cc.path.extname(r) == ".flax" && (cc.sys.isNative || cc.game.config["useFlaxRes"] === false)){
                 if(cc.sys.isNative) cc.log("***Warning: .flax is not support JSB for now, use .plist + .png insteadly!");
                 var plist = cc.path.changeBasename(r,".plist");
                 var png = cc.path.changeBasename(r,".png");
@@ -328,7 +339,7 @@ flax.preload = function(res, callBack)
         }
     }
     if(needLoad){
-        var loaderScene =  flax.nameToObject(cc.game.config.preloader || "flax.Preloader");
+        var loaderScene =  flax.nameToObject(cc.game.config["preloader"] || "flax.Preloader");
         loaderScene = new loaderScene();
         loaderScene.initWithResources(res1, function(){
             //replace the resource's key with no version string when not in JSB
@@ -417,9 +428,9 @@ flax.playSound = function(path)
 //----------------------sound about-------------------------------------------------------
 flax._checkDeviceOrientation = function(){
     if(cc.sys.isNative) return;
-    if(!flax._orientationTip && cc.sys.isMobile && cc.game.config.rotateImg){
+    if(!flax._orientationTip && cc.sys.isMobile && cc.game.config["rotateImg"]){
         flax._orientationTip = cc.LayerColor.create(flax.bgColor, cc.visibleRect.width + 10, cc.visibleRect.height +10);
-        var img =  cc.Sprite.create(cc.game.config.rotateImg);
+        var img =  cc.Sprite.create(cc.game.config["rotateImg"]);
         img.setPosition(cc.visibleRect.center);
         flax._orientationTip.__icon = img;
         flax._orientationTip.addChild(img);
@@ -435,7 +446,7 @@ flax._checkDeviceOrientation = function(){
 flax._oldGamePauseState = false;
 flax._showOrientaionTip = function(){
     var newLandscape = (Math.abs(window.orientation) == 90);
-    flax._orientationTip.visible = (cc.game.config.landscape != newLandscape);
+    flax._orientationTip.visible = (cc.game.config["landscape"] != newLandscape);
     flax._orientationTip.__icon.rotation = (newLandscape ? -90 : 0);
     document.body.scrollTop = 0;
     if(flax._orientationTip.visible) {
@@ -734,7 +745,7 @@ flax.createDInts = function(count, centerInt)
 flax.homeUrl = "http://flax.so";
 flax.goHomeUrl = function()
 {
-    var homeUrl = cc.game.config.homeUrl || flax.homeUrl;
+    var homeUrl = cc.game.config["homeUrl"] || flax.homeUrl;
     if(!cc.sys.isNative && homeUrl){
         window.open(homeUrl);
     }

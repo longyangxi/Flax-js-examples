@@ -62,9 +62,9 @@ flax.Label = cc.Sprite.extend({
         if(this._fontDefine == null){
             throw "Can't find the font named: " + this.fontName;
         }
-        this.frames = flax.assetsManager.getFrameNames(this.assetsFile, parseInt(this._fontDefine.start), parseInt(this._fontDefine.end));
-        this.chars = this._fontDefine.chars;
-        this.fontSize = parseInt(this._fontDefine.size);
+        this.frames = flax.assetsManager.getFrameNames(this.assetsFile, parseInt(this._fontDefine['start']), parseInt(this._fontDefine['end']));
+        this.chars = this._fontDefine['chars'];
+        this.fontSize = parseInt(this._fontDefine['size']);
     },
     tweenInt:function(from, to, time){
         this.setString(from);
@@ -181,7 +181,7 @@ flax.Label = cc.Sprite.extend({
     }
 });
 
-window._p = flax.Label.prototype;
+var _p = flax.Label.prototype;
 /** @expose */
 _p.gap;
 cc.defineGetterSetter(_p, "gap", _p.getGap, _p.setGap);
@@ -191,13 +191,11 @@ cc.defineGetterSetter(_p, "spaceGap", _p.getSpaceGap, _p.setSpaceGap);
 /** @expose */
 _p.text;
 cc.defineGetterSetter(_p, "text", _p.getString, _p.setString);
-delete window._p;
 
-window._p = cc.LabelTTF.prototype;
+_p = cc.LabelTTF.prototype;
 /** @expose */
 _p.text;
 cc.defineGetterSetter(_p, "text", _p.getString, _p.setString);
-delete window._p;
 
 flax.Label.create = function(assetsFile, data, define)
 {

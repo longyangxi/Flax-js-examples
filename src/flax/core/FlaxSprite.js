@@ -51,12 +51,12 @@ flax._sprite = {
     _definedMainCollider:false,
     _anchorBindings:null,
     _inited:false,
-    tx:0,
-    ty:0,
-    autoUpdateTileWhenMove:true,
-    tileValue:TileValue.WALKABLE,
-    _tileMap:null,
-    _tileInited:false,
+//    tx:0,
+//    ty:0,
+//    autoUpdateTileWhenMove:true,
+//    tileValue:TileValue.WALKABLE,
+//    _tileMap:null,
+//    _tileInited:false,
     _mouseEnabled:true,
     _baseAssetID:null,
     _subAnims:null,
@@ -98,13 +98,13 @@ flax._sprite = {
         this.assetID = this._handleSumAnims(assetID);
         this.define = this.getDefine();
         //set the anchor
-        var anchorX = this.define.anchorX;
-        var anchorY = this.define.anchorY;
+        var anchorX = this.define['anchorX'];
+        var anchorY = this.define['anchorY'];
         if(!isNaN(anchorX) && !isNaN(anchorY)) {
             this.setAnchorPoint(anchorX, anchorY);
         }
         //set the fps from flash
-        if(this.fps == 0) this.fps = this.define.fps;
+        if(this.fps == 0) this.fps = this.define['fps'];
         this.onNewSource();
         this.currentFrame = 0;
         this._initFrameLabels();
@@ -136,7 +136,7 @@ flax._sprite = {
     {
         this._labelFrames = [];
         this._frameSounds = {};
-        var labels = this.define.labels;
+        var labels = this.define['labels'];
         if(!labels) return;
         for(var name in labels)
         {
@@ -144,14 +144,14 @@ flax._sprite = {
             //special labels
             if(name.indexOf("@") > -1){
                 //todo, add more special labels expect @sound
-                if(this.define.sounds == null) this.define.sounds = {};
-                this.define.sounds["" + label.start] = DEFAULT_SOUNDS_FOLDER + name.slice(0, name.indexOf("@"));
+                if(this.define['sounds'] == null) this.define['sounds'] = {};
+                this.define['sounds']["" + label.start] = DEFAULT_SOUNDS_FOLDER + name.slice(0, name.indexOf("@"));
                 delete labels[name];
             }else{
                 this._labelFrames.push(label.start);
             }
         }
-        flax.copyProperties(this.define.sounds, this._frameSounds);
+        flax.copyProperties(this.define['sounds'], this._frameSounds);
     },
     addFrameSound:function(frame, sound)
     {
@@ -163,8 +163,8 @@ flax._sprite = {
     },
     getLabels:function(label)
     {
-        if(this.define.labels){
-            return this.define.labels[label];
+        if(this.define['labels']){
+            return this.define['labels'][label];
         }
         return null;
     },
@@ -173,7 +173,7 @@ flax._sprite = {
         return this.getLabels(label) != null;
     },
     getMainCollider:function(){
-        return this._mainCollider;
+        return this.getCollider('main') || this._mainCollider;
     },
     getPhysicsBody:function(){
         return this._physicsBody;
@@ -186,7 +186,6 @@ flax._sprite = {
                 c = an[this.currentFrame];
             }
         }
-        if(c == null) cc.log("Warning: The collider: " + name + " can't be found at " + this.assetID + "of" + this.assetsFile + ", make sure you are a pro user!");
         return c;
     },
     createPhysics:function(type, fixedRotation, bullet){
@@ -248,7 +247,7 @@ flax._sprite = {
     _initColliders:function(){
         this._mainCollider = null;
         this._colliders = {};
-        var cs = this.define.colliders;
+        var cs = this.define['colliders'];
         if(cs){
             var cd = null;
             for(var k in cs){
@@ -279,15 +278,15 @@ flax._sprite = {
     },
     getRect:function(global)
     {
-        return this._mainCollider.getRect(global);
+        return this.getMainCollider().getRect(global);
     },
     getCenter:function(global){
-        return this._mainCollider.getCenter(global);
+        return this.getMainCollider().getCenter(global);
     },
     getAnchor:function(name)
     {
-        if(this.define.anchors){
-            var an = this.define.anchors[name];
+        if(this.define['anchors']){
+            var an = this.define['anchors'][name];
             if(an != null) {
                 return new flax.Anchor(an[this.currentFrame]);
             }
@@ -296,11 +295,11 @@ flax._sprite = {
     },
     bindAnchor:function(anchorName, node, alwaysBind)
     {
-        if(!this.define.anchors) {
+        if(!this.define['anchors']) {
             cc.log(this.assetID+": there is no any anchor!");
             return false;
         }
-        if(this.define.anchors[anchorName] == null) {
+        if(this.define['anchors'][anchorName] == null) {
             cc.log(this.assetID+": there is no anchor named "+anchorName);
             return false;
         }
@@ -320,7 +319,7 @@ flax._sprite = {
     },
     getCurrentLabel:function()
     {
-        var labels = this.define.labels;
+        var labels = this.define['labels'];
         if(!labels) return null;
         for(var name in labels)
         {
@@ -472,7 +471,7 @@ flax._sprite = {
     {
         if(this.playing)
         {
-            if(this.totalFrames > 1) this.schedule(this.onFrame, 1.0/this._fps, cc.REPEAT_FOREVER, 0.0);
+            if(this.totalFrames > 1) this.schedule(this.onFrame, 1.0/this._fps);
         }else{
             this.unschedule(this.onFrame);
         }
@@ -514,7 +513,7 @@ flax._sprite = {
                 this.onSequenceOver.dispatch(this);
             }
             if(!this._loopSequence) {
-                this.gotoAndPlay(this._animSequence[this._sequenceIndex - 1], true);
+                if(!this.autoStopWhenOver) this.gotoAndPlay(this._animSequence[this._sequenceIndex - 1], true);
                 this._animSequence = [];
                 return;
             }
@@ -589,9 +588,9 @@ flax._sprite = {
     {
         this._super();
         this._destroyed = false;
-        if(this._tileMap && !this._tileInited) {
-            this.updateTile(true);
-        }
+//        if(this._tileMap && !this._tileInited) {
+//            this.updateTile(true);
+//        }
         this._updateCollider();
         if(this._physicsBodyParam) {
             this.createPhysics(this._physicsBodyParam.type, this._physicsBodyParam.fixedRotation, this._physicsBodyParam.bullet);
@@ -626,8 +625,8 @@ flax._sprite = {
         if(this.__isInputMask) flax.inputManager.removeMask(this);
 
         //remove tilemap
-        if(this._tileMap) this._tileMap.removeObject(this);
-        this._tileMap = null;
+//        if(this._tileMap) this._tileMap.removeObject(this);
+//        this._tileMap = null;
 
         //remove anchors
         var node = null;
@@ -663,30 +662,30 @@ flax._sprite = {
             }
         }
     },
-    getTileMap:function()
-    {
-        return this._tileMap;
-    },
-    setTileMap:function(map)
-    {
-        if(map && !(map instanceof flax.TileMap)) map = flax.getTileMap(map);
-        if(this._tileMap == map) return;
-        if(this._tileMap) this._tileMap.removeObject(this);
-        this._tileMap = map;
-        if(this._tileMap == null) return;
-
-        if(this.parent) {
-            this.updateTile(true);
-            this._updateCollider();
-        }
-    },
-    updateTile:function(forceUpdate){
-        if(!this._tileMap) return;
-        var pos = this.getPosition();
-        if(this.parent) pos = this.parent.convertToWorldSpace(pos);
-        var t = this._tileMap.getTileIndex(pos);
-        this.setTile(t.x, t.y, forceUpdate);
-    },
+//    getTileMap:function()
+//    {
+//        return this._tileMap;
+//    },
+//    setTileMap:function(map)
+//    {
+//        if(map && !(map instanceof flax.TileMap)) map = flax.getTileMap(map);
+//        if(this._tileMap == map) return;
+//        if(this._tileMap) this._tileMap.removeObject(this);
+//        this._tileMap = map;
+//        if(this._tileMap == null) return;
+//
+//        if(this.parent) {
+//            this.updateTile(true);
+//            this._updateCollider();
+//        }
+//    },
+//    updateTile:function(forceUpdate){
+//        if(!this._tileMap) return;
+//        var pos = this.getPosition();
+//        if(this.parent) pos = this.parent.convertToWorldSpace(pos);
+//        var t = this._tileMap.getTileIndex(pos);
+//        this.setTile(t.x, t.y, forceUpdate);
+//    },
     _updateCollider:function(){
 //        if(this._mainCollider == null) {
 //            this._mainCollider = flax.getRect(this, true);
@@ -708,9 +707,7 @@ flax._sprite = {
             if(dirty) this._super(pos, yValue);
         }
         if(!dirty || !this.parent) return;
-        if(this.autoUpdateTileWhenMove && this._tileMap){
-            this.updateTile();
-        }
+        flax.callModuleFuction(this, "onPosition");
         this._updateCollider();
     },
     setPositionX:function (x) {
@@ -772,26 +769,26 @@ flax._sprite = {
             this.setPosition(cc.pAdd(pos, cc.pMult(this._moveSpeed, delta)));
         }
     },
-    setTile:function(tx, ty, forceUpdate)
-    {
-        if (forceUpdate === true || tx != this.tx || ty != this.ty) {
-            var oldTx = this.tx;
-            var oldTy = this.ty;
-            this.tx = tx;
-            this.ty = ty;
-            if(this._tileMap && this.parent)
-            {
-                this._tileMap.removeObject(this, oldTx, oldTy);
-                if(this.parent) {
-                    this._tileMap.addObject(this);
-                    this._tileInited = true;
-                }
-            }
-        }else {
-            //update the zOrder sort in the tile
-//            this._tileMap.updateLayout(tx, ty);
-        }
-    },
+//    setTile:function(tx, ty, forceUpdate)
+//    {
+//        if (forceUpdate === true || tx != this.tx || ty != this.ty) {
+//            var oldTx = this.tx;
+//            var oldTy = this.ty;
+//            this.tx = tx;
+//            this.ty = ty;
+//            if(this._tileMap && this.parent)
+//            {
+//                this._tileMap.removeObject(this, oldTx, oldTy);
+//                if(this.parent) {
+//                    this._tileMap.addObject(this);
+//                    this._tileInited = true;
+//                }
+//            }
+//        }else {
+//            //update the zOrder sort in the tile
+////            this._tileMap.updateLayout(tx, ty);
+//        }
+//    },
     _destroyed:false,
     destroy:function()
     {
@@ -805,7 +802,7 @@ flax._sprite = {
         this.removeFromParent();
     },
     /**
-     * Do some thins when the object recycled by the pool
+     * Do some things when the object recycled by the pool
      * */
     onRecycle:function()
     {
@@ -820,7 +817,7 @@ flax._sprite = {
         this.ignoreBodyRotation = false;
         this.gotoAndStop(0);
 
-        this._tileInited = false;
+//        this._tileInited = false;
         this.setPosition(0, 0);
         this._animSequence.length = 0;
         this._loopSequence = false;
@@ -853,6 +850,10 @@ flax.FlaxSprite.create = function(assetsFile, assetID)
     tl.clsName = "flax.FlaxSprite";
     return tl;
 };
+flax.addModule(flax.FlaxSprite, flax.TileMapModule);
+//Avoid to advanced compile mode
+window['flax']['FlaxSprite'] = flax.FlaxSprite;
+
 /////////////////////////////////////////////////////////////
 flax.FlaxSpriteBatch = cc.SpriteBatchNode.extend(flax._sprite);
 flax.FlaxSpriteBatch.create = function(assetsFile, assetID)
@@ -861,9 +862,28 @@ flax.FlaxSpriteBatch.create = function(assetsFile, assetID)
     tl.clsName = "flax.FlaxSpriteBatch";
     return tl;
 }
+flax.addModule(flax.FlaxSpriteBatch, flax.TileMapModule);
+//Avoid to advanced compile mode
+window['flax']['FlaxSpriteBatch'] = flax.FlaxSpriteBatch;
 
 /////////////////////////////////////////////////////////////
-window._p = flax.FlaxSprite.prototype;
+var _p = flax.FlaxSprite.prototype;
+
+/** @expose */
+_p.name;
+/** @expose */
+_p.assetsFile;
+/** @expose */
+_p.assetID;
+/** @expose */
+_p.clsName;
+/** @expose */
+_p.onEnter;
+/** @expose */
+_p.onExit;
+/** @expose */
+_p.onPosition;
+
 /** @expose */
 _p.mainCollider;
 cc.defineGetterSetter(_p, "mainCollider", _p.getMainCollider);
@@ -887,7 +907,22 @@ cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
 cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
 //////////////////////////////////////////////////////////////////////
 
-window._p = flax.FlaxSpriteBatch.prototype;
+_p = flax.FlaxSpriteBatch.prototype;
+
+/** @expose */
+_p.name;
+/** @expose */
+_p.assetsFile;
+/** @expose */
+_p.assetID;
+/** @expose */
+_p.clsName;
+/** @expose */
+_p.onEnter;
+/** @expose */
+_p.onExit;
+/** @expose */
+_p.onPosition;
 
 /** @expose */
 _p.mainCollider;
@@ -910,4 +945,3 @@ cc.defineGetterSetter(_p, "currentLabel", _p.getCurrentLabel);
 //fix the .x, .y bug no invoking setPosition mehtod
 cc.defineGetterSetter(_p, "x", _p.getPositionX, _p.setPositionX);
 cc.defineGetterSetter(_p, "y", _p.getPositionY, _p.setPositionY);
-delete window._p;

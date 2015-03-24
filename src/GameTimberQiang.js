@@ -16,30 +16,30 @@ var MainGame = flax.MovieClip.extend({
     _started:false,
     onEnter:function(){
         this._super();
-        this.t0.play();
-        this.t1.play();
-        this.player.autoStopWhenOver = true;
-        this.player.zIndex = 2;
-        this.player.scale = 1.2;
-        this.player.side = 1;
+        this['t0'].play();
+        this['t1'].play();
+        this['player'].autoStopWhenOver = true;
+        this['player'].zIndex = 2;
+        this['player'].scale = 1.2;
+        this['player'].side = 1;
         score = 0;
         gameOver = false;
-        this.scoreTxt.gap = -2;
-        this.scoreTxt.setString(0);
+        this['scoreTxt'].gap = -2;
+        this['scoreTxt'].setString(0);
         flax.inputManager.addListener(this, this.onTouch,null, this)
         this.treeBatch = cc.SpriteBatchNode.create(cc.path.changeBasename(res.timberQiang, ".png"), 8);
         this.addChild(this.treeBatch, 2);
         this.initTree();
 
         this._time = START_TIME;
-        this.energy.bar.percentage = 100*this._time/MAX_TIME;
+        this['energy']['bar'].percentage = 100*this._time/MAX_TIME;
         this.scheduleUpdate();
     },
     update:function(delta){
         if(!this._started || gameOver) return;
-        this._time -= 1.8*delta*this.energy.bar.percentage/100;
+        this._time -= 1.8*delta*this['energy']['bar'].percentage/100;
         this._time -= 0.6*delta*Math.min(Math.max(0.5, 0.5*score/100),2);
-        this.energy.bar.percentage = 100*this._time/MAX_TIME;
+        this['energy']['bar'].percentage = 100*this._time/MAX_TIME;
         if(this._time <= 0){
             this.unscheduleUpdate();
             this.onFailed();
@@ -48,35 +48,35 @@ var MainGame = flax.MovieClip.extend({
     onTouch:function(touch, event){
         if(gameOver) return;
         this._started = true;
-        if(this.t0){
-            this.t0.destroy();
-            this.t1.destroy();
-            this.t0 = null;
-            this.t1 = null;
+        if(this['t0']){
+            this['t0'].destroy();
+            this['t1'].destroy();
+            this['t0'] = null;
+            this['t1'] = null;
         }
         var pos = touch.getLocation();
         if(pos.x > cc.visibleRect.width/2){
-            this.player.scaleX = -1;
-            this.player.side = 2;
+            this['player'].scaleX = -1;
+            this['player'].side = 2;
         }else{
-            this.player.scaleX = 1;
-            this.player.side = 1;
+            this['player'].scaleX = 1;
+            this['player'].side = 1;
         }
         flax.playSound(music.chop);
 
-        this.player.gotoAndPlay(0);
+        this['player'].gotoAndPlay(0);
 
         var tSide = this.treeBatch.getChildren()[0].side;
-        if(tSide != 0 && tSide == this.player.side){
+        if(tSide != 0 && tSide == this['player'].side){
             this.onFailed();
         }else{
             tSide = this.treeBatch.getChildren()[1].side;
-            if( tSide == 0 || tSide != this.player.side){
+            if( tSide == 0 || tSide != this['player'].side){
                 score += 1;
                 this._time += CLICK_TIME;
-                this.scoreTxt.setString(score);
+                this['scoreTxt'].setString(score);
                 this.showTreeAnim();
-                this.energy.runAction(cc.Sequence.create(cc.ScaleTo.create(0.1, 1.1),cc.ScaleTo.create(0.1, 1.0)));
+                this['energy'].runAction(cc.Sequence.create(cc.ScaleTo.create(0.1, 1.1),cc.ScaleTo.create(0.1, 1.0)));
             }else{
                 this.onFailed();
             }
@@ -98,10 +98,10 @@ var MainGame = flax.MovieClip.extend({
     },
     onFailed:function(){
         var death = flax.assetsManager.createDisplay(res.timberQiang,"death", {parent: this, zIndex:200}, true);
-        death.x = (this.player.side == 1) ? 150 : 500;
+        death.x = (this['player'].side == 1) ? 150 : 500;
         death.y = 240;
         death.runAction(cc.MoveTo.create(0.3, cc.p(death.x, 150)));
-        this.player.destroy();
+        this['player'].destroy();
         this.scheduleOnce(function(){
             flax.assetsManager.createDisplay(res.timberQiang,"ResultPanel",{parent: this, zIndex:1000});
         },0.5);
@@ -114,7 +114,7 @@ var MainGame = flax.MovieClip.extend({
         anim.setPosition(TREE_X,TREE_Y + SEG_H - 65);
         anim.replaceChild("tree",this.treeBatch.getChildren()[0].assetID);
         anim.play();
-        if(this.player.side == 2) anim.scaleX = -1;
+        if(this['player'].side == 2) anim.scaleX = -1;
     },
     createTreeSegment:function(tn){
         var i = 0;
@@ -139,9 +139,6 @@ var GameScene = BaseScene.extend({
 
         var ui = flax.assetsManager.createDisplay(res.timberQiang, "MainGame");
         this.addChild(ui);
-    },
-    onExit:function(){
-        this._super();
     }
 });
 
@@ -150,10 +147,10 @@ var MenuScene = BaseScene.extend({
         this._super();
         var ui = flax.assetsManager.createDisplay(res.timberQiang, "MainMenu");
         this.addChild(ui);
-        flax.inputManager.addListener(ui.startBtn, function(){
+        flax.inputManager.addListener(ui['startBtn'], function(){
            flax.replaceScene("timberQiangGame");
         });
-        ui.player.play();
+        ui['player'].play();
     }
 })
 
@@ -161,17 +158,21 @@ var ResultPanel = flax.MovieClip.extend({
    onEnter:function(){
        this._super();
        gameOver = true;
-       flax.inputManager.addListener(this.startBtn, function(){
+       flax.inputManager.addListener(this['startBtn'], function(){
            flax.replaceScene("timberQiangGame");
        },null, this);
 
-       this.scoreTxt.setString(parseInt(score));
+       this['scoreTxt'].setString(parseInt(score));
        var record = false;
-       if(flax.userData.score < score){
-           flax.userData.score = score;
+       if(flax.userData['score'] < score){
+           flax.userData['score'] = score;
            flax.saveUserData();
            record = true;
        }
-       this.bestTxt.setString(parseInt(flax.userData.score));
+       this['bestTxt'].setString(parseInt(flax.userData['score']));
    }
 });
+
+//Avoid the following class to be obscured in advanced compiled mode
+window['MainGame'] = MainGame;
+window['ResultPanel'] = ResultPanel;

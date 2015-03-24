@@ -21,6 +21,11 @@ flax._gunnerDefine = {
     onRecycle:function()
     {
         this._super();
+        this.camp = null;
+        this._gunParam = null;
+        this.targets = null;
+        this._guns = null;
+        this._autoShooting = this._waitingShoot = this._auto = false;
         this.stopShoot();
     },
     getGunParam:function(){
@@ -130,7 +135,7 @@ flax._gunnerDefine = {
         var delta = {};
         var newValue = 0;
         for(var k in param){
-            newValue = this._guns[0]["param"][k] + param[k];
+            newValue = this._guns[0].param[k] + param[k];
             if(newValue <= 0) {
                 delete param[k];
                 continue;
@@ -150,28 +155,40 @@ flax._gunnerDefine = {
     onDie:function()
     {
         this.stopShoot();
+        flax.callModuleFuction(this, "onDie");
         if(this.ownerBody) this.ownerBody.destroy();
         else this.destroy();
     }
 };
 
 flax.Gunner = flax.Animator.extend(flax._gunnerDefine);
+//Avoid to advanced compile mode
+window['flax']['Gunner'] = flax.Gunner;
+
 flax.MCGunner = flax.MovieClip.extend(flax._gunnerDefine);
+//Avoid to advanced compile mode
+window['flax']['MCGunner'] = flax.MCGunner;
 
 flax.addModule(flax.Gunner, flax.HealthModule, false);
 flax.addModule(flax.MCGunner, flax.HealthModule, false);
 
-window._p = flax.Gunner.prototype;
-
+var _p = flax.Gunner.prototype;
+/** @expose */
+_p.onHit;
+/** @expose */
+_p.onDie;
+/** @expose */
 _p.gunParam;
 cc.defineGetterSetter(_p, "gunParam", _p.getGunParam, _p.setGunParam);
 
-window._p = flax.MCGunner.prototype;
-
+_p = flax.MCGunner.prototype;
+/** @expose */
+_p.onHit;
+/** @expose */
+_p.onDie;
+/** @expose */
 _p.gunParam;
 cc.defineGetterSetter(_p, "gunParam", _p.getGunParam, _p.setGunParam);
-
-delete window._p;
 
 flax.Gunner.create = function(assetsFile, assetID)
 {

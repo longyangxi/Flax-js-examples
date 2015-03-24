@@ -28,7 +28,7 @@ var GamePopStars = BaseScene.extend({
         {
             for(var j = 0; j < COLS; j++)
             {
-                var star = flax.assetsManager.createDisplay(res.poppingStars, "star" + flax.randInt(0, 4), {parent: this}, false);
+                var star = flax.assetsManager.createDisplay(res.poppingStars, "star" + flax.randInt(0, 4), {parent: this}, true);
                 this.tileMap.snapToTile(star, i, j, true);
             }
         }

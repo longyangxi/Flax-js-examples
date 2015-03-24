@@ -18,9 +18,9 @@ var GameFruitsLink = BaseScene.extend({
         this._super();
 
         this.panel = flax.assetsManager.createDisplay(res.fruits, "FruitsScene", {parent:this});
-        this.panel.scoreTxt.gap = - 3;
-        this.panel.scoreTxt.text = 0;
-        this.panel.timeBar.percentage = 100;
+        this.panel['scoreTxt'].gap = - 3;
+        this.panel['scoreTxt'].text = 0;
+        this.panel['timeBar'].percentage = 100;
 
         this.timeLeft = this.levelTime;
         this.schedule(this.countDown, 1, cc.REPEAT_FOREVER, 1);
@@ -41,7 +41,7 @@ var GameFruitsLink = BaseScene.extend({
             //todo,game over
             cc.log("Time is up, game over!");
         }
-        this.panel.timeBar.percentage = 100*this.timeLeft/this.levelTime;
+        this.panel['timeBar'].percentage = 100*this.timeLeft/this.levelTime;
     },
     newLevel:function()
     {
@@ -49,15 +49,15 @@ var GameFruitsLink = BaseScene.extend({
         if(this.level > MAX_LEVEL) this.level = 1;
 
         if(this.levelMap){
-            flax.inputManager.removeListener(this.panel.shuffleBtn, this.levelMap.shuffle);
-            flax.inputManager.removeListener(this.panel.findBtn, this.levelMap.showHint);
+            flax.inputManager.removeListener(this.panel['shuffleBtn'], this.levelMap.shuffle);
+            flax.inputManager.removeListener(this.panel['findBtn'], this.levelMap.showHint);
             this.levelMap.destroy();
         }
         this.levelMap = flax.assetsManager.createDisplay(res.fruits, "level" + this.level, {parent: this});
         this.totalFruits = fruitsMap.getAllObjects().length;
 
-        flax.inputManager.addListener(this.panel.shuffleBtn, this.levelMap.shuffle, InputType.click, this.levelMap);
-        flax.inputManager.addListener(this.panel.findBtn, this.levelMap.showHint, InputType.click, this.levelMap);
+        flax.inputManager.addListener(this.panel['shuffleBtn'], this.levelMap.shuffle, InputType.click, this.levelMap);
+        flax.inputManager.addListener(this.panel['findBtn'], this.levelMap.showHint, InputType.click, this.levelMap);
 
         this.levelMap.onLinked.add(this.onLinked, this);
     },
@@ -65,7 +65,7 @@ var GameFruitsLink = BaseScene.extend({
     {
         this.totalFruits -= 2;
         //Update the score
-        this.panel.scoreTxt.text = parseInt(this.panel.scoreTxt.text) + 20;
+        this.panel['scoreTxt'].text = parseInt(this.panel['scoreTxt'].text) + 20;
         //Completed the level
         if(this.totalFruits == 0){
             var levelUp = flax.assetsManager.createDisplay(res.fruits, "LevelUpAnim", {parent:this, autoDestroyWhenOver:true}, true);
@@ -178,3 +178,5 @@ var LevelMap = flax.MovieClip.extend({
         }
     }
 })
+//Avoid LevelMap to be obscured in advanced compiled mode
+window['LevelMap'] = LevelMap;

@@ -42,11 +42,11 @@ var SkeletonAndControl = BaseScene.extend({
     _controlAnim:function(touch, event)
     {
         var btn = event.currentTarget;
-        cc.log("Command: " + btn.label.text);
+        cc.log("Command: " + btn['label'].text);
         //执行动画控制命令
         //Execute the animation control command
-        eval("this.skeleton."+btn.label.text);
-        if(this.skeleton.head){
+        eval("this.skeleton."+btn['label'].text);
+        if(this.skeleton['head']){
             //Replace the head with anotherHead in this.skeleton's assetsFile
             this.skeleton.replaceChild("head", "anotherHead");
             //Replace the head with anotherHead in another assetsFile
@@ -57,7 +57,7 @@ var SkeletonAndControl = BaseScene.extend({
     {
         //注: frame即this.skeleton.currentFrame
         //Note: frame is just the same as this.skeleton.currentFrame
-        this.ctrPanel.infoTxt.text = "FPS: " + this.skeleton.fps +", currentFrame: " + frame + ", playing: " + this.skeleton.playing + "\ncurrentLabel: " + this.skeleton.currentLabel + ", currentAnim: " + this.skeleton.currentAnim;
+        this.ctrPanel['infoTxt'].text = "FPS: " + this.skeleton.fps +", currentFrame: " + frame + ", playing: " + this.skeleton.playing + "\ncurrentLabel: " + this.skeleton.currentLabel + ", currentAnim: " + this.skeleton.currentAnim;
     },
     _onFrameLabel:function(label)
     {
@@ -81,7 +81,7 @@ var SkeletonAndControl = BaseScene.extend({
         var infoAnim = flax.assetsManager.createDisplay(res.skeleton, "InfoAnim", {parent: this, x : 140 + Math.random()*400, y : 300 + 500*Math.random()}, true);
         //文本信息
         //Text message
-        infoAnim.info.txt.text = msg;
+        infoAnim['info']['txt'].text = msg;
         //autoDestroyWhenOver: 表示动画完毕时，自动销毁，适合特效类动画 (Means auto destroy when animation is over, is good choice for effect animation)
         //autoStopWhenOver: 动画完毕时停在当前帧 (Stop at the current frame when animation is over)
         //autoHideWhenOver: 动画完毕时自动隐藏 (Hide itself when animation is over)
@@ -90,3 +90,18 @@ var SkeletonAndControl = BaseScene.extend({
         infoAnim.play();
     }
 })
+//Avoid the properties or methods to be obscured in advanced compiled mode
+/** @expose */
+SkeletonAndControl.prototype.skeleton;
+/** @expose */
+flax.FlaxSprite.prototype.play;
+/** @expose */
+flax.FlaxSprite.prototype.stop;
+/** @expose */
+flax.FlaxSprite.prototype.gotoAndPlay;
+/** @expose */
+flax.FlaxSprite.prototype.gotoAndStop;
+/** @expose */
+flax.FlaxSprite.prototype.playSequence;
+/** @expose */
+flax.FlaxSprite.prototype.playSequenceLoop;

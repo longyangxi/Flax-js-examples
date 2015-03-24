@@ -27,19 +27,19 @@ var UIBmFont = BaseScene.extend({
 
         //设置文本值
         //Set the text value
-        panel.scoreTxt0.text = 6666;
+        panel['scoreTxt0'].text = 6666;
 
-        panel.scoreTxt1.text = 6666;
+        panel['scoreTxt1'].text = 6666;
         //调整字符间距，spaceGap用于调整空格字符长度
         //Adjust the gap between the chars, spaceGap is used for adjusting the width of the space char
-        panel.scoreTxt1.gap = 5;
+        panel['scoreTxt1'].gap = 5;
 
         //如果字符过多，文本将会自动缩放到文本框的矩形范围内
         //If the chars are too much for the text, it will auto scale down to fit in the rect
-        panel.scoreTxt2.text = 9999999;
+        panel['scoreTxt2'].text = 9999999;
 
         //5秒内从0跳到66666, 5秒的时间不精准
         //Tween the value from 0 to 66666 in 5 seconds, the time is not very accurate
-        panel.scoreTxt3.tweenInt(0, 66666, 5);
+        panel['scoreTxt3'].tweenInt(0, 66666, 5);
     }
 })

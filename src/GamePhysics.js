@@ -9,9 +9,9 @@ var GamePhysics = BaseScene.extend({
     {
         this._super();
         this.ui = flax.assetsManager.createDisplay(res.physics, "gameUI", {parent:this});
-        this.gun = this.ui.gun;
+        this.gun = this.ui['gun'];
         this.initPhysics(this.ui);
-        flax.inputManager.addListener(this.ui.back, this.onClick, InputType.click, this);
+        flax.inputManager.addListener(this.ui['back'], this.onClick, InputType.click, this);
     },
     initPhysics:function(ui){
         flax.createPhysicsWorld(theGravity);

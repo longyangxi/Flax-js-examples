@@ -17,18 +17,18 @@ var BaseScene = cc.Scene.extend({
         var nav = flax.assetsManager.createDisplay(res.sceneNav, "SceneNav", {parent: this, zIndex: 9999});
         //场景导航按钮事件
         //Navigation button event
-        flax.inputManager.addListener(nav.leftBtn, this._showPrevScene, InputType.click, this);
-        flax.inputManager.addListener(nav.rightBtn, this._showNextScene, InputType.click, this);
+        flax.inputManager.addListener(nav["leftBtn"], this._showPrevScene, InputType.click, this);
+        flax.inputManager.addListener(nav["rightBtn"], this._showNextScene, InputType.click, this);
 
         //侦听按键事件
         //Listening the keyboard event
         flax.inputManager.addListener(this, this._onKeyDown, InputType.keyPress);
 
         var info = Global.scenesList[currentSceneIndex];
-        nav.navTxt.text = (currentSceneIndex + 1) + "/" + Global.scenesList.length;
-        nav.titleTxt.text = flax.getLanguageStr(info.name);
+        nav["navTxt"].text = (currentSceneIndex + 1) + "/" + Global.scenesList.length;
+        nav["titleTxt"].text = flax.getLanguageStr(info.name);
 
-        flax.inputManager.addListener(nav.logoBtn, function(touch, event){
+        flax.inputManager.addListener(nav["logoBtn"], function(touch, event){
             flax.goHomeUrl();
         });
     },
@@ -80,22 +80,22 @@ var TopBar = flax.MovieClip.extend({
         this._super();
         //初始化暂停按钮和声音按钮
         //Initial the pause button and the sound button
-        this.pauseBtn.selected = true;
-        this.soundBtn.selected = !flax.getSoundEnabled();
+        this["pauseBtn"].selected = true;
+        this["soundBtn"].selected = !flax.getSoundEnabled();
         //侦听暂停和声音按钮事件
         //Listening the pause and sound button click event
-        flax.inputManager.addListener(this.pauseBtn, this._onPauseChange, InputType.click, this);
-        flax.inputManager.addListener(this.soundBtn, this._onSoundChange, InputType.click, this);
+        flax.inputManager.addListener(this["pauseBtn"], this._onPauseChange, InputType.click, this);
+        flax.inputManager.addListener(this["soundBtn"], this._onSoundChange, InputType.click, this);
         //多语言切换按钮事件
         //Language switch button event
-        flax.inputManager.addListener(this.zhBtn, this._updateLanguage);
-        flax.inputManager.addListener(this.enBtn, this._updateLanguage);
+        flax.inputManager.addListener(this["zhBtn"], this._updateLanguage);
+        flax.inputManager.addListener(this["enBtn"], this._updateLanguage);
     },
     _onPauseChange:function(touch, event)
     {
         //选取状态则暂停游戏
         //Pause the game if the pauseBtn is selected
-        if(!this.pauseBtn.selected){
+        if(!this["pauseBtn"].selected){
             //暂停游戏
             //Pause the game
             cc.director.pause();
@@ -107,7 +107,7 @@ var TopBar = flax.MovieClip.extend({
             flax.inputManager.addMask(cover);
             //点击cover的继续按钮，则游戏继续
             //Click the resumeBtn in the cover to resume the game
-            flax.inputManager.addListener(cover.resumeBtn, function(){
+            flax.inputManager.addListener(cover["resumeBtn"], function(){
                 //销毁cover
                 //Destroy the cover
                 cover.destroy();
@@ -116,7 +116,7 @@ var TopBar = flax.MovieClip.extend({
                 cc.director.resume();
                 //恢复按钮状态
                 //Recover the state of the pauseBtn
-                this.pauseBtn.selected = true;
+                this["pauseBtn"].selected = true;
             },InputType.click, this);
         }
     },
@@ -124,7 +124,7 @@ var TopBar = flax.MovieClip.extend({
     {
         //根据声音按钮是否选取状态来开关游戏声音
         //Enable or disable the game sound according to the sound button state,
-        flax.setSoundEnabled(!this.soundBtn.selected);
+        flax.setSoundEnabled(!this["soundBtn"].selected);
     },
     /**
      * 更新当前语言, 语言的配置在res/locale的json中
@@ -141,3 +141,5 @@ var TopBar = flax.MovieClip.extend({
         flax.refreshScene();
     }
 })
+//Avoid TopBar to be obscured in advanced compiled mode
+window['TopBar'] = TopBar;

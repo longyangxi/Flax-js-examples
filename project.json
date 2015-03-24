@@ -18,8 +18,8 @@
   "showFPS":true,
   "frameRate":60,
   "id":"gameCanvas",
-  "renderMode":2,
-  "engineDir":"../cocos2d-js-v3.2/frameworks/cocos2d-html5",
+  "renderMode":0,
+  "engineDir":"frameworks/cocos2d-html5",
   "modules":[
     "cocos2d",
     "box2d",
@@ -35,6 +35,7 @@
       "src/flax/core/FlaxLoader.js",
       "src/flax/core/AssetsManager.js",
       "src/flax/core/Physics.js",
+      "src/flax/module/TileMapModule.js",
       "src/flax/core/FlaxSprite.js",
       "src/flax/core/Animator.js",
       "src/flax/core/Image.js",

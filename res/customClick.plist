@@ -61,7 +61,7 @@
         <real>0.5</real>
         <key>children</key>
         <dict>
-          <key>instance6234</key>
+          <key>instance2148</key>
           <dict>
             <key>class</key>
             <string>asset13</string>
@@ -91,7 +91,7 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance6260</key>
+          <key>instance2174</key>
           <dict>
             <key>class</key>
             <string>asset13</string>
@@ -121,7 +121,7 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance6287</key>
+          <key>instance2201</key>
           <dict>
             <key>class</key>
             <string>asset13</string>
@@ -151,7 +151,7 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance6314</key>
+          <key>instance2228</key>
           <dict>
             <key>class</key>
             <string>asset13</string>
@@ -169,60 +169,21 @@
         <key>totalFrames</key>
         <integer>1</integer>
         <key>rect</key>
-        <string>0,0,547.35,764.30</string>
+        <string>0,0,580.95,764.30</string>
         <key>anchorX</key>
         <real>0</real>
         <key>anchorY</key>
         <real>0.0013083867591259977</real>
         <key>children</key>
         <dict>
-          <key>ncTxt</key>
+          <key>m0</key>
           <dict>
             <key>class</key>
-            <string>noCollider</string>
+            <string>asset12</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>109.30,511.80,0.00,1,1,1.00,4,0,0,Arial,22,#FFFFFF,center,191,29</string>
-            <key>text</key>
-            <string>test</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>m1</key>
-          <dict>
-            <key>class</key>
-            <string>asset14</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>433.70,581.10,0.00,1,1,1.00,1,0,0</string>
-          </dict>
-          <key>rcTxt</key>
-          <dict>
-            <key>class</key>
-            <string>rectCollider</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>356.30,511.80,0.00,1,1,1.00,5,0,0,Arial,22,#FFFFFF,center,191,29</string>
-            <key>text</key>
-            <string>test</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>pcTxt</key>
-          <dict>
-            <key>class</key>
-            <string>polyCollider</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>356.30,223.40,0.00,1,1,1.00,7,0,0,Arial,22,#FFFFFF,center,191,29</string>
-            <key>text</key>
-            <string>test</string>
-            <key>input</key>
-            <false/>
+            <string>182.50,581.10,0.00,1,1,1.00,0,0,0</string>
           </dict>
           <key>ccTxt</key>
           <dict>
@@ -237,14 +198,31 @@
             <key>input</key>
             <false/>
           </dict>
-          <key>m0</key>
+          <key>pcTxt</key>
           <dict>
             <key>class</key>
-            <string>asset12</string>
+            <string>polyCollider</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>182.50,581.10,0.00,1,1,1.00,0,0,0</string>
+            <string>316.95,223.40,0.00,1,1,1.00,7,0,0,Arial,22,#FFFFFF,center,264,29</string>
+            <key>text</key>
+            <string>test</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>rcTxt</key>
+          <dict>
+            <key>class</key>
+            <string>rectCollider</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>329.95,511.80,0.00,1,1,1.00,5,0,0,Arial,22,#FFFFFF,center,251,29</string>
+            <key>text</key>
+            <string>test</string>
+            <key>input</key>
+            <false/>
           </dict>
           <key>m2</key>
           <dict>
@@ -254,6 +232,37 @@
             <integer>2</integer>
             <key>frames</key>
             <string>182.50,292.20,0.00,1,1,1.00,2,0,0</string>
+          </dict>
+          <key>m1</key>
+          <dict>
+            <key>class</key>
+            <string>asset14</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>433.70,581.10,0.00,1,1,1.00,1,0,0</string>
+          </dict>
+          <key>m3</key>
+          <dict>
+            <key>class</key>
+            <string>asset18</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>433.70,292.20,0.00,1,1,1.00,3,0,0</string>
+          </dict>
+          <key>ncTxt</key>
+          <dict>
+            <key>class</key>
+            <string>noCollider</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>109.30,511.80,0.00,1,1,1.00,4,0,0,Arial,22,#FFFFFF,center,191,29</string>
+            <key>text</key>
+            <string>test</string>
+            <key>input</key>
+            <false/>
           </dict>
           <key>infoTxt</key>
           <dict>
@@ -267,15 +276,6 @@
             <string>txt</string>
             <key>input</key>
             <false/>
-          </dict>
-          <key>m3</key>
-          <dict>
-            <key>class</key>
-            <string>asset18</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>433.70,292.20,0.00,1,1,1.00,3,0,0</string>
           </dict>
         </dict>
       </dict>
