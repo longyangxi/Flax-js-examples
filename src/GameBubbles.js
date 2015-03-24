@@ -21,9 +21,9 @@ var GameBubbles = BaseScene.extend({
         this.tileMap.offsetY = 180;
 
         //Initialize the whole map
-        for(var i = 0; i < this.tileMap.getMapSize().width; i++)
+        for(var i = 0; i < this.tileMap.mapSize.width; i++)
         {
-            for(var j = 0; j < this.tileMap.getMapSize().height; j++)
+            for(var j = 0; j < this.tileMap.mapSize.height; j++)
             {
                 var bubble = flax.assetsManager.createDisplay(res.bubbles, "b" + flax.randInt(0, 4), {parent: this}, true);
                 this.tileMap.snapToTile(bubble, i, j, true);
