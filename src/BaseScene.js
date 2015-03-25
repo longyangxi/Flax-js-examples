@@ -10,7 +10,6 @@ var BaseScene = cc.Scene.extend({
     onEnter:function()
     {
         this._super();
-
 //        flax.createBGLayer(this, cc.color(102, 102, 102));
         flax.createBGLayer(this, cc.color(51, 51, 51));
 
