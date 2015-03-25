@@ -127,7 +127,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -146,7 +146,7 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5002269288956127</real>
+        <real>0.50023</real>
         <key>anchorY</key>
         <real>0.50125</real>
         <key>start</key>
@@ -159,9 +159,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.49615384615384617</real>
+        <real>0.49615</real>
         <key>anchorY</key>
-        <real>0.49994413407821225</real>
+        <real>0.49994</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -172,9 +172,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.049214659685863874</real>
+        <real>0.04921</real>
         <key>anchorY</key>
-        <real>0.7462616822429906</real>
+        <real>0.74626</real>
         <key>start</key>
         <integer>2</integer>
         <key>end</key>
@@ -185,9 +185,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4997737556561086</real>
+        <real>0.49977</real>
         <key>anchorY</key>
-        <real>0.44892086330935255</real>
+        <real>0.44892</real>
         <key>start</key>
         <integer>3</integer>
         <key>end</key>
@@ -198,9 +198,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5079439252336448</real>
+        <real>0.50794</real>
         <key>anchorY</key>
-        <real>0.45074626865671646</real>
+        <real>0.45075</real>
         <key>start</key>
         <integer>4</integer>
         <key>end</key>
@@ -216,9 +216,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.23020833333333335</real>
+        <real>0.23021</real>
         <key>anchorY</key>
-        <real>0.7697916666666668</real>
+        <real>0.76979</real>
         <key>start</key>
         <integer>5</integer>
         <key>end</key>
@@ -229,9 +229,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5046296296296297</real>
+        <real>0.50463</real>
         <key>anchorY</key>
-        <real>0.5092592592592593</real>
+        <real>0.50926</real>
         <key>start</key>
         <integer>6</integer>
         <key>end</key>
@@ -247,9 +247,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5138888888888888</real>
+        <real>0.51389</real>
         <key>anchorY</key>
-        <real>0.5092592592592593</real>
+        <real>0.50926</real>
         <key>start</key>
         <integer>7</integer>
         <key>end</key>
@@ -265,9 +265,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4916666666666667</real>
+        <real>0.49167</real>
         <key>anchorY</key>
-        <real>0.49907407407407406</real>
+        <real>0.49907</real>
         <key>start</key>
         <integer>8</integer>
         <key>end</key>
@@ -283,9 +283,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5046296296296297</real>
+        <real>0.50463</real>
         <key>anchorY</key>
-        <real>0.4888888888888889</real>
+        <real>0.48889</real>
         <key>start</key>
         <integer>9</integer>
         <key>end</key>
@@ -301,9 +301,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5055555555555555</real>
+        <real>0.50556</real>
         <key>anchorY</key>
-        <real>0.4898148148148148</real>
+        <real>0.48981</real>
         <key>start</key>
         <integer>10</integer>
         <key>end</key>
@@ -319,9 +319,9 @@
         <key>type</key>
         <string>jpg</string>
         <key>anchorX</key>
-        <real>-0.0011664074650077762</real>
+        <real>-0.00117</real>
         <key>anchorY</key>
-        <real>0.9898089171974522</real>
+        <real>0.98981</real>
         <key>url</key>
         <string>gamePhysics.bg.jpg</string>
       </dict>
@@ -337,19 +337,19 @@
         <key>rect</key>
         <string>0,0,70.55,70.55</string>
         <key>anchorX</key>
-        <real>0.515946137491141</real>
+        <real>0.51595</real>
         <key>anchorY</key>
-        <real>0.4748405386250886</real>
+        <real>0.47484</real>
         <key>children</key>
         <dict>
-          <key>instance25939</key>
+          <key>instance24188</key>
           <dict>
             <key>class</key>
             <string>asset7</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>28.50,41.35,0.00,0.511962890625,0.511962890625,1.00,0,0,0|25.85,44.00,0.00,0.733978271484375,0.733978271484375,1.00,0,0,0|23.15,46.70,0.00,0.9559783935546875,0.9559783935546875,1.00,0,0,0|20.50,49.30,0.00,1.1779937744140625,1.1779937744140625,1.00,0,0,0|17.80,52.05,0.00,1.399993896484375,1.399993896484375,1.00,0,0,0|16.25,53.80,0.00,1.523529052734375,1.523529052734375,0.82,0,0,0|14.65,55.55,0.00,1.647064208984375,1.647064208984375,0.65,0,0,0|13.15,57.30,0.00,1.7705841064453125,1.7705841064453125,0.48,0,0,0|11.50,59.05,0.00,1.8940887451171875,1.8940887451171875,0.30,0,0,0</string>
+            <string>28.50,41.35,0.00,0.51196,0.51196,1.00,0,0.00,0.00|25.85,44.00,0.00,0.73398,0.73398,1.00,0,0.00,0.00|23.15,46.70,0.00,0.95598,0.95598,1.00,0,0.00,0.00|20.50,49.30,0.00,1.17799,1.17799,1.00,0,0.00,0.00|17.80,52.05,0.00,1.39999,1.39999,1.00,0,0.00,0.00|16.25,53.80,0.00,1.52353,1.52353,0.82,0,0.00,0.00|14.65,55.55,0.00,1.64706,1.64706,0.65,0,0.00,0.00|13.15,57.30,0.00,1.77058,1.77058,0.48,0,0.00,0.00|11.50,59.05,0.00,1.89409,1.89409,0.30,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -362,44 +362,26 @@
         <key>rect</key>
         <string>0,0,702.15,981.20</string>
         <key>anchorX</key>
-        <real>0.037741223385316526</real>
+        <real>0.03774</real>
         <key>anchorY</key>
-        <real>0.05055034651447209</real>
+        <real>0.05055</real>
         <key>colliders</key>
         <dict>
-          <key>rightEdge</key>
-          <string>Poly,540.80,119.80,251.00,201.40,0.00,659.55'221.39'647.63'220.66'641.30'219.91'623.50'217.38'615.80'215.98'596.63'212.08'590.30'210.41'573.75'205.81'567.58'203.89'549.80'197.73'541.78'194.46'520.10'184.92'511.45'180.54'490.11'169.06'483.26'164.74'467.20'154.25'462.80'151.01'449.85'140.98'443.80'135.92'428.81'122.98'423.93'118.41'415.05'110.09'415.71'70.05'416.61'27.86'416.92'25.25'417.49'20.50'541.89'20.50'666.30'20.50'666.30'121.00</string>
-          <key>leftEdge</key>
-          <string>Poly,172.25,129.43,249.50,169.45,0.00,59.31'215.14'52.62'215.15'52.12'210.90'50.67'172.68'49.52'131.15'47.45'53.51'47.47'50.90'47.50'46.15'172.50'46.15'297.50'46.15'297.50'76.09'297.50'106.02'286.25'116.01'271.40'128.89'267.00'132.43'253.67'142.68'247.16'147.35'229.84'159.18'223.16'163.25'204.25'174.06'196.00'178.22'175.15'188.10'168.00'190.90'150.72'197.37'145.50'199.06'129.93'203.68'122.50'205.57'103.38'209.95'96.50'211.08'79.95'213.58'75.00'214.13</string>
-          <key>topBar</key>
-          <string>Rect,345.40,894.55,648.00,32.00,0.00</string>
-          <key>leftBar</key>
-          <string>Rect,43.70,458.95,22.00,840.00,0.00</string>
-          <key>rightBar</key>
-          <string>Rect,650.50,458.95,22.00,840.00,0.00</string>
           <key>hole</key>
           <string>Poly,354.45,136.73,140.00,27.25,0.00,357.95'150.87'325.19'150.81'320.60'150.33'309.04'148.74'305.10'147.84'295.93'145.32'293.46'144.23'287.96'141.30'286.71'140.13'284.45'137.25'284.45'136.34'286.64'133.72'290.70'131.94'302.13'128.29'308.45'127.18'326.35'125.01'342.75'124.64'371.10'124.57'386.25'125.81'409.21'128.20'413.45'129.50'420.96'132.15'422.20'132.95'424.45'135.26'424.45'136.32'422.94'139.40'421.10'140.80'415.10'144.27'411.85'145.40'401.67'148.14'396.45'148.99</string>
+          <key>leftBar</key>
+          <string>Rect,43.70,458.95,22.00,840.00,0.00</string>
+          <key>rightEdge</key>
+          <string>Poly,540.80,119.80,251.00,201.40,0.00,659.55'221.39'647.63'220.66'641.30'219.91'623.50'217.38'615.80'215.98'596.63'212.08'590.30'210.41'573.75'205.81'567.58'203.89'549.80'197.73'541.78'194.46'520.10'184.92'511.45'180.54'490.11'169.06'483.26'164.74'467.20'154.25'462.80'151.01'449.85'140.98'443.80'135.92'428.81'122.98'423.93'118.41'415.05'110.09'415.71'70.05'416.61'27.86'416.92'25.25'417.49'20.50'541.89'20.50'666.30'20.50'666.30'121.00</string>
+          <key>topBar</key>
+          <string>Rect,345.40,894.55,648.00,32.00,0.00</string>
+          <key>rightBar</key>
+          <string>Rect,650.50,458.95,22.00,840.00,0.00</string>
+          <key>leftEdge</key>
+          <string>Poly,172.25,129.43,249.50,169.45,0.00,59.31'215.14'52.62'215.15'52.12'210.90'50.67'172.68'49.52'131.15'47.45'53.51'47.47'50.90'47.50'46.15'172.50'46.15'297.50'46.15'297.50'76.09'297.50'106.02'286.25'116.01'271.40'128.89'267.00'132.43'253.67'142.68'247.16'147.35'229.84'159.18'223.16'163.25'204.25'174.06'196.00'178.22'175.15'188.10'168.00'190.90'150.72'197.37'145.50'199.06'129.93'203.68'122.50'205.57'103.38'209.95'96.50'211.08'79.95'213.58'75.00'214.13</string>
         </dict>
         <key>children</key>
         <dict>
-          <key>rightEdge</key>
-          <dict>
-            <key>class</key>
-            <string>asset2</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>650.85,481.60,0.00,1,1,1.00,7,0,0</string>
-          </dict>
-          <key>instance25975</key>
-          <dict>
-            <key>class</key>
-            <string>asset4</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>138.45,110.35,23.00,1.0996337671098448,1.0996337671098448,1.00,4,23.001491938823875,23.001491938823875</string>
-          </dict>
           <key>leftEdge</key>
           <dict>
             <key>class</key>
@@ -407,25 +389,34 @@
             <key>zIndex</key>
             <integer>6</integer>
             <key>frames</key>
-            <string>42.65,481.60,0.00,1,1,1.00,6,0,0</string>
+            <string>42.65,481.60,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
           </dict>
-          <key>back</key>
+          <key>instance24224</key>
           <dict>
             <key>class</key>
-            <string>bg</string>
+            <string>asset4</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>25.55,971.60,0.00,1,1,1.00,0,0,0</string>
+            <string>138.45,110.35,23.00,1.09963,1.09963,1.00,4,23.00,23.00</string>
           </dict>
-          <key>gun</key>
+          <key>instance24227</key>
           <dict>
             <key>class</key>
-            <string>asset6</string>
+            <string>asset1</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>355.55,162.40,0.00,0.9999847412109375,0.9999847412109375,1.00,1,0,0</string>
+            <string>346.10,895.40,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+          </dict>
+          <key>instance24221</key>
+          <dict>
+            <key>class</key>
+            <string>asset4</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>563.40,110.20,-23.00,1.09962,1.09962,1.00,3,-23.00,-23.00</string>
           </dict>
           <key>con</key>
           <dict>
@@ -434,25 +425,34 @@
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>258.45,129.75,0.00,1.0996551514730528,1.0996551514730528,1.00,2,0.0007950348912734681,0.0007950348912734681</string>
+            <string>258.45,129.75,0.00,1.09966,1.09966,1.00,2,0.00,0.00</string>
           </dict>
-          <key>instance25972</key>
+          <key>rightEdge</key>
           <dict>
             <key>class</key>
-            <string>asset4</string>
+            <string>asset2</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>563.40,110.20,-23.00,1.0996218425694397,1.0996218425694397,1.00,3,-23.000028243714222,-23.000028243714222</string>
+            <string>650.85,481.60,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
           </dict>
-          <key>instance25978</key>
+          <key>gun</key>
           <dict>
             <key>class</key>
-            <string>asset1</string>
+            <string>asset6</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>346.10,895.40,0.00,1,1,1.00,5,0,0</string>
+            <string>355.55,162.40,0.00,0.99998,0.99998,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>back</key>
+          <dict>
+            <key>class</key>
+            <string>bg</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>25.55,971.60,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

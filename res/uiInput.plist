@@ -50,7 +50,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -69,9 +69,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.49954954954954955</real>
+        <real>0.49955</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -82,9 +82,9 @@
         <key>type</key>
         <string>input</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>1.0759013282732448</real>
+        <real>1.07590</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -95,9 +95,9 @@
         <key>type</key>
         <string>input</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>1</real>
+        <real>1.00000</real>
         <key>start</key>
         <integer>2</integer>
         <key>end</key>
@@ -108,9 +108,9 @@
         <key>type</key>
         <string>input</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>1</real>
+        <real>1.00000</real>
         <key>start</key>
         <integer>3</integer>
         <key>end</key>
@@ -121,9 +121,9 @@
         <key>type</key>
         <string>share</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>url</key>
         <string>uiPanel</string>
       </dict>
@@ -139,11 +139,103 @@
         <key>rect</key>
         <string>0,0,640.00,881.00</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0.0011350737797956867</real>
+        <real>0.00114</real>
         <key>children</key>
         <dict>
+          <key>instance4829</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>10</integer>
+            <key>frames</key>
+            <string>205.00,492.65,0.00,1.00000,1.00000,1.00,10,0.00,0.00,AntsyPants,22,#FFFFFF,right,81,27</string>
+            <key>text</key>
+            <string>Psw:</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>instance4820</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol 1</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>377.40,395.50,0.00,1.09998,1.09998,1.00,5,0.00,0.00</string>
+          </dict>
+          <key>telTxt</key>
+          <dict>
+            <key>class</key>
+            <string>InputText2</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>325.95,337.15,0.00,1.00000,1.00000,1.00,8,0.00,0.00,Arial,20,#FFCC00,left,104,26</string>
+            <key>text</key>
+            <string>Tel</string>
+            <key>input</key>
+            <true/>
+          </dict>
+          <key>instance4816</key>
+          <dict>
+            <key>class</key>
+            <string>Symbol 1</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>377.10,475.90,0.00,1.09998,1.09998,1.00,3,0.00,0.00</string>
+          </dict>
+          <key>emailTxt</key>
+          <dict>
+            <key>class</key>
+            <string>InputText1</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>325.95,409.10,0.00,1.00000,1.00000,1.00,6,0.00,0.00,Arial,20,#00FF00,left,104,26</string>
+            <key>text</key>
+            <string>Email</string>
+            <key>input</key>
+            <true/>
+          </dict>
+          <key>instance4831</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>12</integer>
+            <key>frames</key>
+            <string>185.00,336.70,0.00,1.00000,1.00000,1.00,12,0.00,0.00,AntsyPants,22,#FFFFFF,right,101,27</string>
+            <key>text</key>
+            <string>Tel:</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>instance4830</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>11</integer>
+            <key>frames</key>
+            <string>185.00,413.65,0.00,1.00000,1.00000,1.00,11,0.00,0.00,AntsyPants,22,#FFFFFF,right,101,27</string>
+            <key>text</key>
+            <string>Email:</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>instance4803</key>
+          <dict>
+            <key>class</key>
+            <string>PanelBack</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>0.00,1.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
+          </dict>
           <key>nameTxt</key>
           <dict>
             <key>class</key>
@@ -151,22 +243,22 @@
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>324.95,558.10,0.00,1,1,1.00,2,0,0,Arial,20,#FFFFFF,left,104,26</string>
+            <string>324.95,558.10,0.00,1.00000,1.00000,1.00,2,0.00,0.00,Arial,20,#FFFFFF,left,104,26</string>
             <key>text</key>
             <string/>
             <key>input</key>
             <true/>
           </dict>
-          <key>instance3904</key>
+          <key>instance4828</key>
           <dict>
             <key>class</key>
             <string>null</string>
             <key>zIndex</key>
-            <integer>12</integer>
+            <integer>9</integer>
             <key>frames</key>
-            <string>185.00,336.70,0.00,1,1,1.00,12,0,0,AntsyPants,22,#FFFFFF,right,101,27</string>
+            <string>185.00,557.65,0.00,1.00000,1.00000,1.00,9,0.00,0.00,AntsyPants,22,#FFFFFF,right,104,27</string>
             <key>text</key>
-            <string>Tel:</string>
+            <string>Name:</string>
             <key>input</key>
             <false/>
           </dict>
@@ -177,121 +269,29 @@
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>325.60,490.70,0.00,1,1,1.00,4,0,0,Arial,20,#FFFFFF,left,104,26</string>
+            <string>325.60,490.70,0.00,1.00000,1.00000,1.00,4,0.00,0.00,Arial,20,#FFFFFF,left,104,26</string>
             <key>text</key>
             <string/>
             <key>input</key>
             <true/>
           </dict>
-          <key>instance3897</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol 1</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>377.40,323.95,0.00,1.0999755859375,1.0999755859375,1.00,7,0,0</string>
-          </dict>
-          <key>instance3876</key>
-          <dict>
-            <key>class</key>
-            <string>PanelBack</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
-          </dict>
-          <key>emailTxt</key>
-          <dict>
-            <key>class</key>
-            <string>InputText1</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>325.95,409.10,0.00,1,1,1.00,6,0,0,Arial,20,#00FF00,left,104,26</string>
-            <key>text</key>
-            <string>Email</string>
-            <key>input</key>
-            <true/>
-          </dict>
-          <key>telTxt</key>
-          <dict>
-            <key>class</key>
-            <string>InputText2</string>
-            <key>zIndex</key>
-            <integer>8</integer>
-            <key>frames</key>
-            <string>325.95,337.15,0.00,1,1,1.00,8,0,0,Arial,20,#FFCC00,left,104,26</string>
-            <key>text</key>
-            <string>Tel</string>
-            <key>input</key>
-            <true/>
-          </dict>
-          <key>instance3885</key>
+          <key>instance4812</key>
           <dict>
             <key>class</key>
             <string>Symbol 1</string>
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>377.10,542.50,0.00,1.0999755859375,1.0999755859375,1.00,1,0,0</string>
+            <string>377.10,542.50,0.00,1.09998,1.09998,1.00,1,0.00,0.00</string>
           </dict>
-          <key>instance3893</key>
+          <key>instance4824</key>
           <dict>
             <key>class</key>
             <string>Symbol 1</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>377.40,395.50,0.00,1.0999755859375,1.0999755859375,1.00,5,0,0</string>
-          </dict>
-          <key>instance3889</key>
-          <dict>
-            <key>class</key>
-            <string>Symbol 1</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>377.10,475.90,0.00,1.0999755859375,1.0999755859375,1.00,3,0,0</string>
-          </dict>
-          <key>instance3902</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>205.00,492.65,0.00,1,1,1.00,10,0,0,AntsyPants,22,#FFFFFF,right,81,27</string>
-            <key>text</key>
-            <string>Psw:</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>instance3901</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>9</integer>
-            <key>frames</key>
-            <string>185.00,557.65,0.00,1,1,1.00,9,0,0,AntsyPants,22,#FFFFFF,right,104,27</string>
-            <key>text</key>
-            <string>Name:</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>instance3903</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>185.00,413.65,0.00,1,1,1.00,11,0,0,AntsyPants,22,#FFFFFF,right,101,27</string>
-            <key>text</key>
-            <string>Email:</string>
-            <key>input</key>
-            <false/>
+            <string>377.40,323.95,0.00,1.09998,1.09998,1.00,7,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

@@ -160,7 +160,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -179,9 +179,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>-1.9000000000000001</real>
+        <real>-1.90000</real>
         <key>anchorY</key>
-        <real>-0.8136363636363636</real>
+        <real>-0.81364</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -192,9 +192,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5515350877192983</real>
+        <real>0.55154</real>
         <key>anchorY</key>
-        <real>0.13551566349876804</real>
+        <real>0.13552</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -212,24 +212,11 @@
         <key>rect</key>
         <string>0,0,568.95,770.75</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0.0012974375608173856</real>
+        <real>0.00130</real>
         <key>children</key>
         <dict>
-          <key>tipTxt</key>
-          <dict>
-            <key>class</key>
-            <string>animClickTip</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>70.00,190.75,0.00,1,1,1.00,1,0,0,Arial,28,#F4DC95,center,499,35</string>
-            <key>text</key>
-            <string>tips</string>
-            <key>input</key>
-            <false/>
-          </dict>
           <key>fpsTxt</key>
           <dict>
             <key>class</key>
@@ -237,9 +224,22 @@
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>220.00,770.75,0.00,1,1,1.00,0,0,0,Arial,32,#F4DC95,center,235,40</string>
+            <string>220.00,770.75,0.00,1.00000,1.00000,1.00,0,0.00,0.00,Arial,32,#F4DC95,center,235,40</string>
             <key>text</key>
             <string>FPS:</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>tipTxt</key>
+          <dict>
+            <key>class</key>
+            <string>animClickTip</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>70.00,190.75,0.00,1.00000,1.00000,1.00,1,0.00,0.00,Arial,28,#F4DC95,center,499,35</string>
+            <key>text</key>
+            <string>tips</string>
             <key>input</key>
             <false/>
           </dict>

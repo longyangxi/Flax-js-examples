@@ -72,7 +72,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.22</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -91,9 +91,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -104,9 +104,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -117,9 +117,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5079365079365079</real>
+        <real>0.50794</real>
         <key>start</key>
         <integer>2</integer>
         <key>end</key>
@@ -130,9 +130,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>start</key>
         <integer>3</integer>
         <key>end</key>
@@ -143,9 +143,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>start</key>
         <integer>4</integer>
         <key>end</key>
@@ -156,9 +156,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.49206349206349204</real>
+        <real>0.49206</real>
         <key>start</key>
         <integer>5</integer>
         <key>end</key>
@@ -169,9 +169,9 @@
         <key>type</key>
         <string>jpg</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>url</key>
         <string>gamePopStars.bg.jpg</string>
       </dict>

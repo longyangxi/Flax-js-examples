@@ -17,7 +17,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -36,9 +36,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.26333333333333336</real>
+        <real>0.26333</real>
         <key>anchorY</key>
-        <real>0.5414634146341464</real>
+        <real>0.54146</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -49,9 +49,9 @@
         <key>type</key>
         <string>jpg</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>url</key>
         <string>scrollingBG.bg.jpg</string>
       </dict>
@@ -67,11 +67,20 @@
         <key>rect</key>
         <string>0,0,70.00,45.25</string>
         <key>anchorX</key>
-        <real>0.6242857142857143</real>
+        <real>0.62429</real>
         <key>anchorY</key>
-        <real>0.5160220994475139</real>
+        <real>0.51602</real>
         <key>children</key>
         <dict>
+          <key>instance11944</key>
+          <dict>
+            <key>class</key>
+            <string>asset3</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>20.60,20.85,0.00,1.30356,1.30029,1.00,0,0.00,0.00</string>
+          </dict>
           <key>label</key>
           <dict>
             <key>class</key>
@@ -79,20 +88,11 @@
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>6.75,37.35,0.00,1,1,1.00,1,0,0,Arial,14,#F4DC95,center,58,30</string>
+            <string>6.75,37.35,0.00,1.00000,1.00000,1.00,1,0.00,0.00,Arial,14,#F4DC95,center,58,30</string>
             <key>text</key>
             <string>Button</string>
             <key>input</key>
             <false/>
-          </dict>
-          <key>instance10549</key>
-          <dict>
-            <key>class</key>
-            <string>asset3</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>20.60,20.85,0.00,1.303558349609375,1.30029296875,1.00,0,0,0</string>
           </dict>
         </dict>
       </dict>
@@ -105,20 +105,11 @@
         <key>rect</key>
         <string>0,0,640.00,961.00</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0.001040582726326743</real>
+        <real>0.00104</real>
         <key>children</key>
         <dict>
-          <key>resetBtn</key>
-          <dict>
-            <key>class</key>
-            <string>mcBtn</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>168.65,792.25,0.00,1,1,1.00,5,0,0</string>
-          </dict>
           <key>resumeBtn</key>
           <dict>
             <key>class</key>
@@ -126,7 +117,7 @@
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>482.65,792.25,0.00,1,1,1.00,4,0,0</string>
+            <string>482.65,792.25,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
           <key>startxBtn</key>
           <dict>
@@ -135,7 +126,7 @@
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>248.65,792.25,0.00,1,1,1.00,1,0,0</string>
+            <string>248.65,792.25,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
           <key>bg</key>
           <dict>
@@ -144,16 +135,16 @@
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+            <string>0.00,1.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
-          <key>pauseBtn</key>
+          <key>resetBtn</key>
           <dict>
             <key>class</key>
             <string>mcBtn</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>404.65,792.25,0.00,1,1,1.00,3,0,0</string>
+            <string>168.65,792.25,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
           <key>startyBtn</key>
           <dict>
@@ -162,7 +153,16 @@
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>327.65,792.25,0.00,1,1,1.00,2,0,0</string>
+            <string>327.65,792.25,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
+          </dict>
+          <key>pauseBtn</key>
+          <dict>
+            <key>class</key>
+            <string>mcBtn</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>404.65,792.25,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

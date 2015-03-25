@@ -72,7 +72,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -91,9 +91,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5048387096774194</real>
+        <real>0.50484</real>
         <key>anchorY</key>
-        <real>0.49677419354838714</real>
+        <real>0.49677</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -104,9 +104,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5048387096774194</real>
+        <real>0.50484</real>
         <key>anchorY</key>
-        <real>0.49677419354838714</real>
+        <real>0.49677</real>
         <key>start</key>
         <integer>5</integer>
         <key>end</key>

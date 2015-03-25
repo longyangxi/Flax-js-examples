@@ -1381,7 +1381,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.22</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -1400,9 +1400,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505625</real>
+        <real>0.50562</real>
         <key>anchorY</key>
-        <real>0.12894736842105264</real>
+        <real>0.12895</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -1413,9 +1413,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.46315789473684216</real>
+        <real>0.46316</real>
         <key>anchorY</key>
-        <real>0.4742424242424242</real>
+        <real>0.47424</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -1426,7 +1426,7 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.38461538461538464</real>
+        <real>0.38462</real>
         <key>anchorY</key>
         <real>0.62625</real>
         <key>start</key>
@@ -1439,9 +1439,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.525</real>
+        <real>0.52500</real>
         <key>anchorY</key>
-        <real>0.490625</real>
+        <real>0.49062</real>
         <key>start</key>
         <integer>6</integer>
         <key>end</key>
@@ -1452,9 +1452,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505</real>
+        <real>0.50500</real>
         <key>anchorY</key>
-        <real>0.4</real>
+        <real>0.40000</real>
         <key>start</key>
         <integer>7</integer>
         <key>end</key>
@@ -1465,9 +1465,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4375</real>
+        <real>0.43750</real>
         <key>anchorY</key>
-        <real>0.33632998413537807</real>
+        <real>0.33633</real>
         <key>start</key>
         <integer>8</integer>
         <key>end</key>
@@ -1478,9 +1478,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505</real>
+        <real>0.50500</real>
         <key>anchorY</key>
-        <real>0.4530769230769231</real>
+        <real>0.45308</real>
         <key>start</key>
         <integer>24</integer>
         <key>end</key>
@@ -1491,9 +1491,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5121951219512195</real>
+        <real>0.51220</real>
         <key>anchorY</key>
-        <real>0.012658227848101266</real>
+        <real>0.01266</real>
         <key>start</key>
         <integer>28</integer>
         <key>end</key>
@@ -1504,9 +1504,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505625</real>
+        <real>0.50562</real>
         <key>anchorY</key>
-        <real>0.12894736842105264</real>
+        <real>0.12895</real>
         <key>start</key>
         <integer>52</integer>
         <key>end</key>
@@ -1517,9 +1517,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.49653579676674364</real>
+        <real>0.49654</real>
         <key>anchorY</key>
-        <real>0.49058577405857734</real>
+        <real>0.49059</real>
         <key>start</key>
         <integer>53</integer>
         <key>end</key>
@@ -1530,9 +1530,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505625</real>
+        <real>0.50562</real>
         <key>anchorY</key>
-        <real>0.12894736842105264</real>
+        <real>0.12895</real>
         <key>start</key>
         <integer>60</integer>
         <key>end</key>
@@ -1543,19 +1543,19 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4916666666666667</real>
+        <real>0.49167</real>
         <key>anchorY</key>
-        <real>0.19315068493150686</real>
+        <real>0.19315</real>
         <key>start</key>
         <integer>61</integer>
         <key>end</key>
         <integer>65</integer>
         <key>anchors</key>
         <dict>
-          <key>weapon1</key>
-          <string>35.75,76,8,0.00||||</string>
           <key>weapon0</key>
           <string>10.75,76.5,7,0.00||||</string>
+          <key>weapon1</key>
+          <string>35.75,76,8,0.00||||</string>
         </dict>
       </dict>
       <key>SpeedProp</key>
@@ -1563,9 +1563,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.505625</real>
+        <real>0.50562</real>
         <key>anchorY</key>
-        <real>0.12894736842105264</real>
+        <real>0.12895</real>
         <key>start</key>
         <integer>66</integer>
         <key>end</key>
@@ -1576,9 +1576,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5072765072765073</real>
+        <real>0.50728</real>
         <key>anchorY</key>
-        <real>0.24299999999999997</real>
+        <real>0.24300</real>
         <key>start</key>
         <integer>67</integer>
         <key>end</key>
@@ -1589,9 +1589,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.518</real>
+        <real>0.51800</real>
         <key>anchorY</key>
-        <real>0.23846153846153845</real>
+        <real>0.23846</real>
         <key>start</key>
         <integer>75</integer>
         <key>end</key>
@@ -1602,9 +1602,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5625</real>
+        <real>0.56250</real>
         <key>anchorY</key>
-        <real>0.5096262740656852</real>
+        <real>0.50963</real>
         <key>start</key>
         <integer>83</integer>
         <key>end</key>
@@ -1615,9 +1615,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5028776978417266</real>
+        <real>0.50288</real>
         <key>anchorY</key>
-        <real>0.5007246376811594</real>
+        <real>0.50072</real>
         <key>start</key>
         <integer>91</integer>
         <key>end</key>
@@ -1628,9 +1628,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>1</real>
+        <real>1.00000</real>
         <key>start</key>
         <integer>92</integer>
         <key>end</key>
@@ -1641,9 +1641,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5625</real>
+        <real>0.56250</real>
         <key>anchorY</key>
-        <real>0.544689800210305</real>
+        <real>0.54469</real>
         <key>start</key>
         <integer>93</integer>
         <key>end</key>
@@ -1654,9 +1654,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.46551724137931033</real>
+        <real>0.46552</real>
         <key>anchorY</key>
-        <real>0.5140291806958474</real>
+        <real>0.51403</real>
         <key>start</key>
         <integer>101</integer>
         <key>end</key>
@@ -1667,9 +1667,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.3384615384615384</real>
+        <real>0.33846</real>
         <key>anchorY</key>
-        <real>0.5149501661129569</real>
+        <real>0.51495</real>
         <key>start</key>
         <integer>109</integer>
         <key>end</key>
@@ -1680,9 +1680,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.38065522620904835</real>
+        <real>0.38066</real>
         <key>anchorY</key>
-        <real>0.2552521008403361</real>
+        <real>0.25525</real>
         <key>start</key>
         <integer>117</integer>
         <key>end</key>
@@ -1693,9 +1693,9 @@
         <key>type</key>
         <string>share</string>
         <key>anchorX</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>anchorY</key>
-        <real>0.5</real>
+        <real>0.50000</real>
         <key>url</key>
         <string>scrollingBG</string>
       </dict>
@@ -1711,28 +1711,55 @@
         <key>rect</key>
         <string>0,0,640.00,961.00</string>
         <key>anchorX</key>
-        <real>0</real>
+        <real>0.00000</real>
         <key>anchorY</key>
-        <real>0.001040582726326743</real>
+        <real>0.00104</real>
         <key>children</key>
         <dict>
-          <key>instance1323285</key>
+          <key>instance18996</key>
           <dict>
             <key>class</key>
-            <string>HealProp</string>
+            <string>Enemy</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>7</integer>
             <key>frames</key>
-            <string>188.95,655.00,0.00,1,1,1.00,3,0,0</string>
+            <string>435.75,335.80,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
           </dict>
-          <key>instance1323393</key>
+          <key>instance19017</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>511.80,618.75,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
+          </dict>
+          <key>instance19038</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>9</integer>
+            <key>frames</key>
+            <string>348.40,519.85,0.00,1.00000,1.00000,1.00,9,0.00,0.00</string>
+          </dict>
+          <key>instance19059</key>
           <dict>
             <key>class</key>
             <string>Enemy</string>
             <key>zIndex</key>
             <integer>10</integer>
             <key>frames</key>
-            <string>101.95,743.95,0.00,1,1,1.00,10,0,0</string>
+            <string>101.95,743.95,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
+          </dict>
+          <key>instance19080</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>11</integer>
+            <key>frames</key>
+            <string>354.90,783.95,0.00,1.00000,1.00000,1.00,11,0.00,0.00</string>
           </dict>
           <key>bg</key>
           <dict>
@@ -1741,7 +1768,16 @@
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>0.00,1.00,0.00,1,1,1.00,0,0,0</string>
+            <string>0.00,1.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
+          </dict>
+          <key>instance18951</key>
+          <dict>
+            <key>class</key>
+            <string>HealProp</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>188.95,655.00,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
           <key>player</key>
           <dict>
@@ -1750,79 +1786,43 @@
             <key>zIndex</key>
             <integer>1</integer>
             <key>frames</key>
-            <string>312.00,81.50,0.00,1,1,1.00,1,0,0</string>
+            <string>312.00,81.50,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
-          <key>instance1323309</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>156.50,497.10,0.00,1,1,1.00,6,0,0</string>
-          </dict>
-          <key>instance1323277</key>
+          <key>instance18943</key>
           <dict>
             <key>class</key>
             <string>ArmorProp</string>
             <key>zIndex</key>
             <integer>2</integer>
             <key>frames</key>
-            <string>495.35,718.65,0.00,1,1,1.00,2,0,0</string>
+            <string>495.35,718.65,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
-          <key>instance1323330</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>435.75,335.80,0.00,1,1,1.00,7,0,0</string>
-          </dict>
-          <key>instance1323351</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>8</integer>
-            <key>frames</key>
-            <string>511.80,618.75,0.00,1,1,1.00,8,0,0</string>
-          </dict>
-          <key>instance1323372</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>9</integer>
-            <key>frames</key>
-            <string>348.40,519.85,0.00,1,1,1.00,9,0,0</string>
-          </dict>
-          <key>instance1323293</key>
+          <key>instance18959</key>
           <dict>
             <key>class</key>
             <string>SpeedProp</string>
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>177.40,362.85,0.00,1,1,1.00,4,0,0</string>
+            <string>177.40,362.85,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
-          <key>instance1323414</key>
-          <dict>
-            <key>class</key>
-            <string>Enemy</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>354.90,783.95,0.00,1,1,1.00,11,0,0</string>
-          </dict>
-          <key>instance1323301</key>
+          <key>instance18967</key>
           <dict>
             <key>class</key>
             <string>MultiProp</string>
             <key>zIndex</key>
             <integer>5</integer>
             <key>frames</key>
-            <string>463.65,472.90,0.00,1,1,1.00,5,0,0</string>
+            <string>463.65,472.90,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+          </dict>
+          <key>instance18975</key>
+          <dict>
+            <key>class</key>
+            <string>Enemy</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>156.50,497.10,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -1835,9 +1835,9 @@
         <key>rect</key>
         <string>0,0,97.50,95.50</string>
         <key>anchorX</key>
-        <real>0.5128205128205128</real>
+        <real>0.51282</real>
         <key>anchorY</key>
-        <real>0.24083769633507854</real>
+        <real>0.24084</real>
         <key>labels</key>
         <dict>
           <key>0</key>
@@ -1909,77 +1909,77 @@
         </dict>
         <key>children</key>
         <dict>
-          <key>instance1323459</key>
-          <dict>
-            <key>class</key>
-            <string>asset6</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||||||</string>
-          </dict>
-          <key>instance1323676</key>
+          <key>instance19342</key>
           <dict>
             <key>class</key>
             <string>asset12</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||||||||||||||||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0|||</string>
+            <string>null||||||||||||||||||||||||||||50.35,45.10,0.00,1.33873,1.33873,1.00,0,0.00,0.00|||</string>
           </dict>
-          <key>instance1323573</key>
+          <key>instance19322</key>
           <dict>
             <key>class</key>
             <string>asset8</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||50.55,46.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||</string>
+            <string>null||||||||||||||||||||||||47.40,45.10,180.00,1.33873,1.33873,1.00,0,0.00,180.00||||null|||</string>
           </dict>
-          <key>instance1323614</key>
+          <key>instance19280</key>
           <dict>
             <key>class</key>
             <string>asset10</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||</string>
+            <string>null||||||||||||||||48.95,30.05,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||||||</string>
           </dict>
-          <key>instance1323555</key>
+          <key>instance19125</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>asset6</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||50.35,45.10,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||||||||||</string>
+            <string>50.35,45.10,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||||||||||||||||||||||</string>
           </dict>
-          <key>instance1323656</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||||||||47.40,45.10,180.00,1.3387298583984375,1.3387298583984375,1.00,0,0,180||||null|||</string>
-          </dict>
-          <key>instance1323593</key>
+          <key>instance19259</key>
           <dict>
             <key>class</key>
             <string>asset9</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||||||||||</string>
+            <string>null||||||||||||48.95,30.05,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||||||||||</string>
           </dict>
-          <key>instance1323635</key>
+          <key>instance19301</key>
           <dict>
             <key>class</key>
             <string>asset11</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||||||||||48.95,30.05,0.00,1.3387298583984375,1.3387298583984375,1.00,0,0,0||||null|||||||</string>
+            <string>null||||||||||||||||||||48.95,30.05,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||</string>
+          </dict>
+          <key>instance19239</key>
+          <dict>
+            <key>class</key>
+            <string>asset8</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||50.55,46.10,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||||||||||||||</string>
+          </dict>
+          <key>instance19221</key>
+          <dict>
+            <key>class</key>
+            <string>asset7</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||50.35,45.10,0.00,1.33873,1.33873,1.00,0,0.00,0.00||||null|||||||||||||||||||||||</string>
           </dict>
         </dict>
       </dict>
@@ -1992,19 +1992,19 @@
         <key>rect</key>
         <string>0,0,178.35,178.40</string>
         <key>anchorX</key>
-        <real>0.5001401738155312</real>
+        <real>0.50014</real>
         <key>anchorY</key>
-        <real>0.5000000000000001</real>
+        <real>0.50000</real>
         <key>children</key>
         <dict>
-          <key>instance1323503</key>
+          <key>instance19169</key>
           <dict>
             <key>class</key>
             <string>asset4</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>89.20,89.20,0.00,1,1,1.00,0,0,0|89.20,89.20,71.98,0.9990371137300046,0.9990371137300046,1.00,0,71.98181487325881,71.98181487325881|89.20,89.20,143.93,0.9984442537757261,0.9984442537757261,1.00,0,143.93412896378368,143.93412896378368|89.20,89.20,-143.93,0.9984442537757261,0.9984442537757261,1.00,0,-143.93412896378368,-143.93412896378368|89.20,89.20,-71.98,0.9990371137300046,0.9990371137300046,1.00,0,-71.98181487325881,-71.98181487325881|89.20,89.20,0.00,1,1,1.00,0,0,0</string>
+            <string>89.20,89.20,0.00,1.00000,1.00000,1.00,0,0.00,0.00|89.20,89.20,71.98,0.99904,0.99904,1.00,0,71.98,71.98|89.20,89.20,143.93,0.99844,0.99844,1.00,0,143.93,143.93|89.20,89.20,-143.93,0.99844,0.99844,1.00,0,-143.93,-143.93|89.20,89.20,-71.98,0.99904,0.99904,1.00,0,-71.98,-71.98|89.20,89.20,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

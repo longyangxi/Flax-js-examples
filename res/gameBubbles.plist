@@ -50,7 +50,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.21</real>
+      <real>2.23</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -69,9 +69,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5046296296296297</real>
+        <real>0.50463</real>
         <key>anchorY</key>
-        <real>0.5092592592592593</real>
+        <real>0.50926</real>
         <key>start</key>
         <integer>0</integer>
         <key>end</key>
@@ -82,9 +82,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5138888888888888</real>
+        <real>0.51389</real>
         <key>anchorY</key>
-        <real>0.5092592592592593</real>
+        <real>0.50926</real>
         <key>start</key>
         <integer>1</integer>
         <key>end</key>
@@ -95,9 +95,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.4916666666666667</real>
+        <real>0.49167</real>
         <key>anchorY</key>
-        <real>0.5083333333333333</real>
+        <real>0.50833</real>
         <key>start</key>
         <integer>2</integer>
         <key>end</key>
@@ -108,9 +108,9 @@
         <key>type</key>
         <string>null</string>
         <key>anchorX</key>
-        <real>0.5138888888888888</real>
+        <real>0.51389</real>
         <key>anchorY</key>
-        <real>0.5074074074074074</real>
+        <real>0.50741</real>
         <key>start</key>
         <integer>3</integer>
         <key>end</key>
@@ -121,9 +121,9 @@
         <key>type</key>
         <string>jpg</string>
         <key>anchorX</key>
-        <real>0.00038880248833592535</real>
+        <real>0.00039</real>
         <key>anchorY</key>
-        <real>0.04501061571125263</real>
+        <real>0.04501</real>
         <key>url</key>
         <string>gameBubbles.bg.jpg</string>
       </dict>
