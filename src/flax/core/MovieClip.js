@@ -141,7 +141,7 @@ flax._movieClip = {
         }
         this._namedChildren = {};
         this.totalFrames = this.define['totalFrames'];
-        this._theRect = this._strToRect(this.define['rect']);
+        this._theRect = flax._strToRect(this.define['rect']);
         this.setContentSize(this._theRect.width, this._theRect.height);
         this._initFrameDatas();
     },
@@ -198,7 +198,6 @@ flax._movieClip = {
                 frameData.setForChild(child);
                 //all children use the same fps with this
                 if(this.sameFpsForChildren) child.fps = this.fps;
-                child.visible = true;
                 child.autoPlayChildren = this.autoPlayChildren;
                 if(this.autoPlayChildren && flax.isFlaxSprite(child)) {
                     this.playing ? child.play() : child.stop();
@@ -253,7 +252,7 @@ flax._movieClip = {
         if(define == null) throw "There is no MovieClip named: " + this.assetID + " in assets: " + this.assetsFile + ", or make sure this class extends from the proper class!";
         return define;
     },
-    findChildByName:function(name, nest)
+    getChild:function(name, nest)
     {
         if(nest === undefined) nest = true;
         var child = this._namedChildren[name];
@@ -261,11 +260,12 @@ flax._movieClip = {
         if(!nest) return null;
         for(var key in this._namedChildren) {
             child = this._namedChildren[key];
-            if(child.findChildByName) {
-                child = child.findChildByName(name, nest);
+            if(child.getChild) {
+                child = child.getChild(name, nest);
                 if(child) return child;
             }
         }
+        return null;
     },
     getChildByAssetID:function(id)
     {
@@ -280,13 +280,13 @@ flax._movieClip = {
     },
     getLabelText:function(labelName, ifNest)
     {
-        var label = this.findChildByName(labelName, ifNest === undefined ? true : ifNest);
+        var label = this.getChild(labelName, ifNest === undefined ? true : ifNest);
         if(label && (label instanceof flax.Label)) return label.getString();
         return null;
     },
     setLabelText:function(labelName, text, ifNest)
     {
-        var label = this.findChildByName(labelName, ifNest === undefined ? true : ifNest);
+        var label = this.getChild(labelName, ifNest === undefined ? true : ifNest);
         if(label && (label instanceof flax.Label)) {
             label.setString(text);
             return label;
@@ -330,13 +330,8 @@ flax._movieClip = {
             }
         }
 
-    },
-    _strToRect:function(str)
-    {
-        var arr = str.split(",");
-        return cc.rect(parseFloat(arr[0]), parseFloat(arr[1]), parseFloat(arr[2]), parseFloat(arr[3]));
     }
-}
+};
 
 flax.MovieClip = flax.FlaxSprite.extend(flax._movieClip);
 flax.MovieClip.create = function(assetsFile, assetID)

@@ -87,7 +87,9 @@ var res_button = [
     res.sceneNav,
     res.sceneNav_png,
     res.uiButton,
-    res.uiButton_png
+    res.uiButton_png,
+    'res/uiButton.asset3.png',
+    'res/uiButton.asset1.png'
 ]
 
 var res_progress = [

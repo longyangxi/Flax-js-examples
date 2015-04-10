@@ -34,7 +34,7 @@ flax.GunParam.create = function(param)
     if(param.speed == 0) param.speed = 0.001;
     flax.copyProperties(param, gp);
     return gp;
-}
+};
 
 flax.Gun = cc.Node.extend({
     owner:null,
@@ -146,7 +146,7 @@ flax.BulletCanvas = cc.SpriteBatchNode.extend({
     },
     addBullet:function(rotation, position, param, owner){
         if(this.parent == null) {
-//            cc.log("Please init the bullet canvas: flax.BulletCanvas.create('"+this.assetsFile+"', container);");
+            cc.log("Please create a bullet canvas: flax.BulletCanvas.create('"+this.assetsFile+"', container, zIndex);");
             return;
         }
         if(!(param instanceof flax.GunParam)) param = flax.GunParam.create(param);
@@ -324,7 +324,7 @@ flax.BulletCanvas.create = function(assetsFile, container, zIndex) {
         canvas.removeFromParent();
         container.addChild(canvas, zIndex || 999);
     }
-}
+};
 flax.BulletCanvas.fetch = function (assetsFile) {
     if(flax._bulletCanvases[assetsFile]) return flax._bulletCanvases[assetsFile];
     var texturePath = cc.path.changeBasename(assetsFile, ".png");
@@ -336,7 +336,7 @@ flax.BulletCanvas.fetch = function (assetsFile) {
 flax._bulletCanvases = {};
 flax.BulletCanvas.release = function(){
     flax._bulletCanvases = {};
-}
+};
 
 flax.Gun.create = function(param)
 {

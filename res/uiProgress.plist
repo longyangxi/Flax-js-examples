@@ -190,7 +190,7 @@
             <key>frames</key>
             <string>52.90,51.60,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
-          <key>instance3834</key>
+          <key>instance15329</key>
           <dict>
             <key>class</key>
             <string>Symbol 1</string>
@@ -199,7 +199,7 @@
             <key>frames</key>
             <string>53.20,51.60,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
-          <key>instance3840</key>
+          <key>instance15335</key>
           <dict>
             <key>class</key>
             <string>random_xx</string>
@@ -233,7 +233,7 @@
             <key>frames</key>
             <string>16.00,26.20,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
-          <key>instance3867</key>
+          <key>instance15362</key>
           <dict>
             <key>class</key>
             <string>Symbol8</string>
@@ -258,14 +258,14 @@
         <real>0.00128</real>
         <key>children</key>
         <dict>
-          <key>p4</key>
+          <key>p6</key>
           <dict>
             <key>class</key>
-            <string>energyBarcopy</string>
+            <string>RandomButton</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>6</integer>
             <key>frames</key>
-            <string>326.95,390.90,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+            <string>214.50,162.20,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
           </dict>
           <key>p7</key>
           <dict>
@@ -276,23 +276,23 @@
             <key>frames</key>
             <string>327.00,162.20,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
           </dict>
-          <key>p2</key>
+          <key>p0</key>
           <dict>
             <key>class</key>
             <string>EnergyBar</string>
             <key>zIndex</key>
-            <integer>2</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>327.95,590.90,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
+            <string>327.95,752.90,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
-          <key>p6</key>
+          <key>p4</key>
           <dict>
             <key>class</key>
-            <string>RandomButton</string>
+            <string>energyBarcopy</string>
             <key>zIndex</key>
-            <integer>6</integer>
+            <integer>4</integer>
             <key>frames</key>
-            <string>214.50,162.20,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
+            <string>326.95,390.90,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
           <key>p8</key>
           <dict>
@@ -303,14 +303,23 @@
             <key>frames</key>
             <string>439.50,162.20,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
           </dict>
-          <key>p5</key>
+          <key>p1</key>
           <dict>
             <key>class</key>
-            <string>energyBarcopy</string>
+            <string>EnergyBar</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>437.95,390.90,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+            <string>328.45,671.90,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>p2</key>
+          <dict>
+            <key>class</key>
+            <string>EnergyBar</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>327.95,590.90,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
           <key>p3</key>
           <dict>
@@ -321,23 +330,14 @@
             <key>frames</key>
             <string>213.95,390.90,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
-          <key>p0</key>
+          <key>p5</key>
           <dict>
             <key>class</key>
-            <string>EnergyBar</string>
+            <string>energyBarcopy</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>327.95,752.90,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
-          </dict>
-          <key>p1</key>
-          <dict>
-            <key>class</key>
-            <string>EnergyBar</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>328.45,671.90,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+            <string>437.95,390.90,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -364,7 +364,7 @@
             <key>frames</key>
             <string>11.35,12.95,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
-          <key>instance3963</key>
+          <key>instance15458</key>
           <dict>
             <key>class</key>
             <string>Symbol8</string>

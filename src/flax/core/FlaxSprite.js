@@ -27,7 +27,6 @@ flax._sprite = {
     autoRecycle:false,
     currentFrame:0,
     currentAnim:null,
-    prevFrame:-1,
     totalFrames:0,
     frameInterval:0,
     ignoreBodyRotation:false,
@@ -37,6 +36,7 @@ flax._sprite = {
     assetID:null,
     clsName:"flax.FlaxSprite",
     playing:false,
+    _prevFrame:-1,
     _labelFrames:null,
     _labelSounds:null,
     _loopStart:0,
@@ -71,7 +71,7 @@ flax._sprite = {
         if(this.clsName == "flax.FlaxSprite") throw  "flax.FlaxSprite is an abstract class, please use flax.Animator or flax.MovieClip!";
         if(this instanceof cc.SpriteBatchNode) cc.SpriteBatchNode.prototype.ctor.call(this, cc.path.changeExtname(assetsFile, ".png"));
         else cc.Sprite.prototype.ctor.call(this);
-        if(!assetsFile || !assetID) throw "Please set assetsFile and assetID to me!"
+        if(!assetsFile || !assetID) throw "Please set assetsFile and assetID to me!";
         this.__instanceId = ClassManager.getNewInstanceId();
         this._anchorBindings = [];
         this._animSequence = [];
@@ -88,7 +88,7 @@ flax._sprite = {
     setSource:function(assetsFile, assetID)
     {
         if(assetsFile == null || assetID == null){
-            throw 'assetsFile and assetID can not be null!'
+            throw 'assetsFile and assetID can not be null!';
             return;
         }
         if(this.assetsFile == assetsFile && (this.assetID == assetID || this._baseAssetID == assetID)) return;
@@ -209,7 +209,7 @@ flax._sprite = {
         this.removePhysicsShape();
     },
     addPhysicsShape:function(name, density, friction,restitution, isSensor, catBits, maskBits){
-        if(this._physicsBody == null) throw "Please createPhysics firstly!"
+        if(this._physicsBody == null) throw "Please createPhysics firstly!";
         var collider = this.getCollider(name);
         if(collider == null) {
             cc.log("There is no collider named: "+name);
@@ -288,7 +288,11 @@ flax._sprite = {
         if(this.define['anchors']){
             var an = this.define['anchors'][name];
             if(an != null) {
-                return new flax.Anchor(an[this.currentFrame]);
+                if(!(an instanceof flax.Anchor)){
+                    an = new flax.Anchor(an[this.currentFrame]);
+                    this.define['anchors'][name] = an;
+                }
+                return an;
             }
         }
         return null;
@@ -303,7 +307,7 @@ flax._sprite = {
             cc.log(this.assetID+": there is no anchor named "+anchorName);
             return false;
         }
-        if(node == null) throw "Node can't be null!"
+        if(node == null) throw "Node can't be null!";
         if(this._anchorBindings.indexOf(node) > -1) {
             cc.log(this.assetID+": anchor has been bound, "+anchorName);
             return false;
@@ -548,8 +552,8 @@ flax._sprite = {
     },
     renderFrame:function(frame, forceUpdate)
     {
-        if(this.prevFrame == frame && forceUpdate != true) return;
-        if(this.prevFrame != frame) this.prevFrame = frame;
+        if(this._prevFrame == frame && forceUpdate != true) return;
+        if(this._prevFrame != frame) this._prevFrame = frame;
         this._handleAnchorBindings();
         this._updateCollider();
         this.doRenderFrame(frame);
@@ -841,7 +845,7 @@ flax._sprite = {
     {
 
     }
-}
+};
 /////////////////////////////////////////////////////////////
 flax.FlaxSprite = cc.Sprite.extend(flax._sprite);
 flax.FlaxSprite.create = function(assetsFile, assetID)
@@ -861,7 +865,7 @@ flax.FlaxSpriteBatch.create = function(assetsFile, assetID)
     var tl = new flax.FlaxSpriteBatch(assetsFile, assetID);
     tl.clsName = "flax.FlaxSpriteBatch";
     return tl;
-}
+};
 flax.addModule(flax.FlaxSpriteBatch, flax.TileMapModule);
 //Avoid to advanced compile mode
 window['flax']['FlaxSpriteBatch'] = flax.FlaxSpriteBatch;
