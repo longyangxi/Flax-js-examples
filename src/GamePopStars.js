@@ -17,10 +17,9 @@ var GamePopStars = BaseScene.extend({
 
         //create a new TileMap
         this.tileMap = new flax.TileMap();
-        this.tileMap.setTileSize(TILE_SIZE, TILE_SIZE);
-        this.tileMap.setMapSize(ROWS, COLS)
-        this.tileMap.offsetX = 64;
-        this.tileMap.offsetY = 180;
+        this.tileMap.init(TILE_SIZE, TILE_SIZE);
+        this.tileMap.setMapSize(ROWS, COLS);
+        this.tileMap.setPosition(64, 180);
         //this.tileMap.showDebugGrid();
 
         //Initialize the whole map

@@ -87,7 +87,7 @@ var SkeletonAndControl = BaseScene.extend({
         //autoHideWhenOver: 动画完毕时自动隐藏 (Hide itself when animation is over)
         infoAnim.autoDestroyWhenOver = true;
         //开始播放 (Start play animation)
-        infoAnim.play();
+        infoAnim.gotoAndPlay(0);
     }
 })
 //Avoid the properties or methods to be obscured in advanced compiled mode

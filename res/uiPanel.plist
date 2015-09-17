@@ -138,7 +138,7 @@
     <key>metadata</key>
     <dict>
       <key>flaxVersion</key>
-      <real>2.23</real>
+      <real>2.3</real>
       <key>fps</key>
       <integer>24</integer>
       <key>format</key>
@@ -274,7 +274,7 @@
         <key>type</key>
         <string>jpg</string>
         <key>anchorX</key>
-        <real>0.00039</real>
+        <real>0.00000</real>
         <key>anchorY</key>
         <real>0.00000</real>
         <key>url</key>
@@ -297,15 +297,6 @@
         <real>0.50015</real>
         <key>children</key>
         <dict>
-          <key>instance10762</key>
-          <dict>
-            <key>class</key>
-            <string>asset4</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>40.50,27.50,0.00,0.76160,0.76160,1.00,1,0.00,0.00</string>
-          </dict>
           <key>priceTxt</key>
           <dict>
             <key>class</key>
@@ -332,6 +323,15 @@
             <key>input</key>
             <false/>
           </dict>
+          <key>instance2412</key>
+          <dict>
+            <key>class</key>
+            <string>asset11</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>-0.80,164.25,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
+          </dict>
           <key>icon</key>
           <dict>
             <key>class</key>
@@ -341,7 +341,16 @@
             <key>frames</key>
             <string>81.20,104.50,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
-          <key>instance10764</key>
+          <key>instance2414</key>
+          <dict>
+            <key>class</key>
+            <string>asset4</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>40.50,27.50,0.00,0.76160,0.76160,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>instance2416</key>
           <dict>
             <key>class</key>
             <string>asset12</string>
@@ -349,15 +358,6 @@
             <integer>2</integer>
             <key>frames</key>
             <string>138.35,141.60,0.00,1.69165,1.69135,1.00,2,0.00,0.00</string>
-          </dict>
-          <key>instance10760</key>
-          <dict>
-            <key>class</key>
-            <string>asset11</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>-0.80,164.25,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -400,24 +400,6 @@
         <real>0.00114</real>
         <key>children</key>
         <dict>
-          <key>closeBtn</key>
-          <dict>
-            <key>class</key>
-            <string>asset8</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>577.80,731.90,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
-          </dict>
-          <key>instance10863</key>
-          <dict>
-            <key>class</key>
-            <string>asset5</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>278.85,863.30,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
-          </dict>
           <key>coinsTxt</key>
           <dict>
             <key>class</key>
@@ -430,46 +412,6 @@
             <string>99999</string>
             <key>input</key>
             <false/>
-          </dict>
-          <key>energyTxt</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>338.15,861.95,0.00,1.00000,1.00000,1.00,7,0.00,0.00,Rockwell Bold,35,#FFFFFF,left,117,51</string>
-            <key>text</key>
-            <string>99999</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>instance10865</key>
-          <dict>
-            <key>class</key>
-            <string>asset6</string>
-            <key>zIndex</key>
-            <integer>8</integer>
-            <key>frames</key>
-            <string>311.05,835.50,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
-          </dict>
-          <key>playBtn</key>
-          <dict>
-            <key>class</key>
-            <string>asset2</string>
-            <key>zIndex</key>
-            <integer>13</integer>
-            <key>frames</key>
-            <string>231.30,178.90,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
-          </dict>
-          <key>bg</key>
-          <dict>
-            <key>class</key>
-            <string>PanelBack</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>0.00,1.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
           <key>p0</key>
           <dict>
@@ -489,14 +431,32 @@
             <key>frames</key>
             <string>418.75,551.80,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
-          <key>p2</key>
+          <key>playBtn</key>
           <dict>
             <key>class</key>
-            <string>asset7</string>
+            <string>asset2</string>
             <key>zIndex</key>
-            <integer>4</integer>
+            <integer>13</integer>
             <key>frames</key>
-            <string>208.80,337.90,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+            <string>231.30,178.90,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
+          </dict>
+          <key>closeBtn</key>
+          <dict>
+            <key>class</key>
+            <string>asset8</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>577.80,731.90,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>instance2517</key>
+          <dict>
+            <key>class</key>
+            <string>asset6</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>311.05,835.50,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
           </dict>
           <key>p3</key>
           <dict>
@@ -507,7 +467,7 @@
             <key>frames</key>
             <string>416.75,333.90,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
-          <key>instance10867</key>
+          <key>instance2519</key>
           <dict>
             <key>class</key>
             <string>asset5</string>
@@ -516,7 +476,7 @@
             <key>frames</key>
             <string>3.35,863.30,0.00,1.00000,1.00000,1.00,9,0.00,0.00</string>
           </dict>
-          <key>instance10869</key>
+          <key>instance2521</key>
           <dict>
             <key>class</key>
             <string>asset4</string>
@@ -525,7 +485,7 @@
             <key>frames</key>
             <string>46.40,841.85,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
           </dict>
-          <key>instance10871</key>
+          <key>instance2523</key>
           <dict>
             <key>class</key>
             <string>asset3</string>
@@ -533,6 +493,46 @@
             <integer>11</integer>
             <key>frames</key>
             <string>227.20,841.35,0.00,1.00000,1.00000,1.00,11,0.00,0.00</string>
+          </dict>
+          <key>p2</key>
+          <dict>
+            <key>class</key>
+            <string>asset7</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>208.80,337.90,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+          </dict>
+          <key>energyTxt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>338.15,861.95,0.00,1.00000,1.00000,1.00,7,0.00,0.00,Rockwell Bold,35,#FFFFFF,left,117,51</string>
+            <key>text</key>
+            <string>99999</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>instance2515</key>
+          <dict>
+            <key>class</key>
+            <string>asset5</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>278.85,863.30,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
+          </dict>
+          <key>bg</key>
+          <dict>
+            <key>class</key>
+            <string>PanelBack</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>0.00,1.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

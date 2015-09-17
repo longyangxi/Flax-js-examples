@@ -19,7 +19,12 @@ flax._image = {
     ctor:function(assetsFile, assetID){
         if(this instanceof cc.Sprite) cc.Sprite.prototype.ctor.call(this);
         else {
-            cc.Scale9Sprite.prototype.ctor.call(this);
+            //todo, not good solution for cc.Scale9Sprite error in JSB
+            this.define = flax.assetsManager.getDisplayDefine(assetsFile, assetID);
+            //get the resource folder
+            var dir = assetsFile.slice(0, assetsFile.lastIndexOf("/"));
+            this._imgFile = dir + "/" + this.define['url'];
+            cc.Scale9Sprite.prototype.ctor.call(this, this._imgFile, cc.rect(), this.define['scale9']);
             this.clsName = "flax.Scale9Image";
         }
         if(!assetsFile || !assetID) throw "Please set assetsFile and assetID to me!";
@@ -44,8 +49,10 @@ flax._image = {
         //get the resource folder
         var dir = this.assetsFile.slice(0, this.assetsFile.lastIndexOf("/"));
         this._imgFile = dir + "/" + this.define['url'];
-        if(this instanceof flax.Scale9Image) this.initWithFile(this._imgFile, cc.rect(), this.define['scale9']);
+        if(flax.Scale9Image && this instanceof flax.Scale9Image) this.initWithFile(this._imgFile, cc.rect(), this.define['scale9']);
         else this.initWithFile(this._imgFile);
+        if(!cc.sys.isNative) this.addEventListener("load", this.onImgLoaded, this);
+        else this.onImgLoaded();
         //set the anchor
         var anchorX = this.define['anchorX'];
         var anchorY = this.define['anchorY'];
@@ -54,6 +61,15 @@ flax._image = {
         }
         this.onNewSource();
         if(this.__pool__id__ == null) this.__pool__id__ = this.assetID;
+    },
+    onImgLoaded:function()
+    {
+        var temp = new cc.Sprite(this._imgFile);
+        this._imgSize = temp.getContentSize();
+        //to fix the bug... not scaled properly
+        this.scheduleOnce(function(){
+            this._updateSize(this._sx, this._sy);
+        },0.01)
     },
     destroy:function()
     {
@@ -145,7 +161,7 @@ flax._image = {
     //todo, setScale has issue in JSB
 //    setScale:function(sx, sy)
 //    {
-//        if(this instanceof flax.Scale9Image){
+//        if(flax.Scale9Image && target instanceof flax.Scale9Image){
 //            if(sy == null){
 //                this._sx = sx.x;
 //                this._sy = sx.y;
@@ -160,28 +176,25 @@ flax._image = {
 //    },
     setScaleX:function(sx)
     {
-        if(this instanceof flax.Scale9Image){
+        if(flax.Scale9Image && this instanceof flax.Scale9Image){
             this._sx = sx;
             this._updateSize(sx, this._sy);
         }else{
-            this._super(sx);
+            cc.Node.prototype.setScaleX.call(this, sx);
         }
     },
     setScaleY:function(sy)
     {
-        if(this instanceof flax.Scale9Image){
+        if(flax.Scale9Image && this instanceof flax.Scale9Image){
             this._sy = sy;
             this._updateSize(this._sx, sy);
         }else{
-            this._super(sy);
+            cc.Node.prototype.setScaleY.call(this, sy);
         }
     },
     _updateSize:function(sx, sy)
     {
-        if(this._imgSize == null){
-            var temp = new cc.Sprite(this._imgFile);
-            this._imgSize = temp.getContentSize();
-        }
+        if(this._imgSize == null) return;
         this.width = this._imgSize.width*sx;
         this.height = this._imgSize.height*sy;
     },
@@ -192,26 +205,30 @@ flax._image = {
 };
 
 flax.Image = cc.Sprite.extend(flax._image);
-flax.Scale9Image = cc.Scale9Sprite.extend(flax._image);
 
-var _p = flax.Image.prototype;
-//cc.defineGetterSetter(_p, "scale", _p.getScale, _p.setScale);
-cc.defineGetterSetter(_p, "scaleX", _p.getScaleX, _p.setScaleX);
-cc.defineGetterSetter(_p, "scaleY", _p.getScaleY, _p.setScaleY);
+if(cc.Scale9Sprite) {
+    flax.Scale9Image = cc.Scale9Sprite.extend(flax._image);
 
-_p = flax.Scale9Image.prototype;
+    var _p = flax.Image.prototype;
 //cc.defineGetterSetter(_p, "scale", _p.getScale, _p.setScale);
-cc.defineGetterSetter(_p, "scaleX", _p.getScaleX, _p.setScaleX);
-cc.defineGetterSetter(_p, "scaleY", _p.getScaleY, _p.setScaleY);
+    cc.defineGetterSetter(_p, "scaleX", _p.getScaleX, _p.setScaleX);
+    cc.defineGetterSetter(_p, "scaleY", _p.getScaleY, _p.setScaleY);
+
+    _p = flax.Scale9Image.prototype;
+//cc.defineGetterSetter(_p, "scale", _p.getScale, _p.setScale);
+    cc.defineGetterSetter(_p, "scaleX", _p.getScaleX, _p.setScaleX);
+    cc.defineGetterSetter(_p, "scaleY", _p.getScaleY, _p.setScaleY);
 
 //Avoid to advanced compile mode
-window['flax']['Image'] = flax.Image;
-window['flax']['Scale9Image'] = flax.Scale9Image;
+    window['flax']['Image'] = flax.Image;
+    window['flax']['Scale9Image'] = flax.Scale9Image;
+}
 
 flax.Image.create = function(assetsFile, assetID)
 {
     var define = flax.assetsManager.getDisplayDefine(assetsFile, assetID);
     if(define['scale9']) {
+        if(flax.Scale9Image == null) throw "Please add module of 'gui' into project.json if you want to use Scale9Image!";
         var img = new flax.Scale9Image(assetsFile, assetID);
     }else{
         img = new flax.Image(assetsFile, assetID);

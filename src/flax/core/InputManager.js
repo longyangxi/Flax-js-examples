@@ -19,7 +19,8 @@ flax.InputManager = cc.Node.extend({
     _masks:[],
     _callbacks:{},
     _keyboardCallbacks:{},
-    _keyboardListenerCreated:false,
+    _keyboardListener:null,
+    _touchListeners:null,
 
     ctor:function()
     {
@@ -28,17 +29,45 @@ flax.InputManager = cc.Node.extend({
         this.inTouching = false;
         this._callbacks = {};
         this._keyboardCallbacks = {};
-        this._keyboardListenerCreated = false;
+        this._keyboardListener = null;
+        this._touchListeners = {};
     },
     onEnter:function()
     {
         this._super();
+
         var self = this;
-        var listener = cc.EventListener.create({
+
+        //listen the mouse move event on PC
+        if(!cc.sys.isMobile){
+            var mouseListener = cc.EventListener.create({
+                event: cc.EventListener.MOUSE,
+                onMouseMove:function(event){
+                    //event.getButton() == 0 means left mouse is in pressing
+                    self.inDragging = event.getButton() == 0;
+                    self.justDragged = self.inDragging;
+                    if(self.inDragging) {
+                        self.justDragDist += cc.pLength(event.getDelta());
+                    }
+                    //dispatch mouse hover event
+                    if(!self.inDragging){
+                        var evt = {target:self, currentTarget:self};
+                        self._dispatchOne(self, event, evt, InputType.move);
+                        //todo, dispatch for every single target
+//                        self._dispatch(self, event, evt, InputType.move);
+                    }
+                    flax.mousePos = event.getLocation();
+                }
+            })
+            cc.eventManager.addListener(mouseListener, this);
+        }
+
+        var touchListener = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: false,
             onTouchBegan:function(touch, event)
             {
+                flax.mousePos = touch.getLocation();
                 if (!self.enabled) return false;
                 self.inDragging = false;
                 self.justDragged = false;
@@ -56,17 +85,21 @@ flax.InputManager = cc.Node.extend({
             },
             onTouchMoved:function(touch, event)
             {
+                flax.mousePos = touch.getLocation();
                 self.inDragging = true;
                 self.justDragged = true;
-                self.justDragDist += cc.pDistance(cc.p(), touch.getDelta());
+                self.justDragDist += cc.pLength(touch.getDelta());
                 self._dispatchOne(self, touch, event, InputType.move);
             }
         });
-        cc.eventManager.addListener(listener, this);
+        cc.eventManager.addListener(touchListener, this);
     },
     onExit:function(){
         this._super();
-        cc.eventManager.removeAllListeners();
+        this.removeAllTouchListeners();
+        this.removeAllKeyboardListeners();
+        this.removeAllMasks();
+//        cc.eventManager.removeAllListeners();
     },
     /**
      * Add a Sprite node which will permitted the lower sprite to get touch event callback
@@ -82,6 +115,14 @@ flax.InputManager = cc.Node.extend({
             this._masks.splice(i, 1);
             mask.__isInputMask = false;
         }
+    },
+    removeAllMasks:function(){
+        var i = this._masks.length;
+        while(i--){
+            this._masks[i].__isInputMask = false;
+            this._masks.splice(i, 1);
+        }
+        this._masks.length = 0;
     },
     _compareRealZIndex:function(node0, node1){
         if(!node0.parent || !node1.parent) return 1;
@@ -123,6 +164,8 @@ flax.InputManager = cc.Node.extend({
      *                       for keyboard event: func(key){};
      * @param{string} type event type as InputType said
      * @param{cc.Node} context the callback context of "THIS", if null, use target as the context
+     * Note: If the target is null, then listen the global event, in this instance, be sure to REMOVE the listener manually
+     * on the sprite exit, otherwise, a new sprite will not receive the event again!
      * */
     addListener:function(target, func, type, context)
     {
@@ -149,7 +192,9 @@ flax.InputManager = cc.Node.extend({
                 if(arr[i].func == func)  return;
             }
             arr.push({func:func, context:context || target});
-            if(!this._keyboardListenerCreated) this._createKeyboardListener();
+            if(!this._keyboardListener) {
+                this._createKeyboardListener();
+            }
             return;
         }
 
@@ -160,7 +205,8 @@ flax.InputManager = cc.Node.extend({
             arr = [];
             this._callbacks[target.__instanceId] = arr;
             if(target != this) {
-                this._createListener(target, true);
+                var listener =  this._createListener(target, true);
+                this._touchListeners[target.__instanceId] = listener;
             }
         }
         //Make sure no duplicated listener
@@ -182,13 +228,19 @@ flax.InputManager = cc.Node.extend({
                 if(func || type) {
                     while(i--){
                         call = calls[i];
-                        if((type && call.type == type) || (func && call.func == func)) {
+                        if((!type || call.type == type) && (!func || call.func == func)) {
                             calls.splice(i, 1);
                         }
                     }
                 }
                 if(calls.length == 0 || (!func && !type)){
                     delete this._callbacks[target.__instanceId];
+                    var listener = this._touchListeners[target.__instanceId];
+                    if(listener){
+                        //todo,3.5 cause Invalid native object error!
+//                        cc.eventManager.removeListener(listener);
+                        delete this._touchListeners[target.__instanceId];
+                    }
                 }
 //            },0.01);
         }
@@ -214,10 +266,21 @@ flax.InputManager = cc.Node.extend({
     removeAllTouchListeners:function()
     {
         this._callbacks = {};
+        for(var id in this._touchListeners){
+            var listener = this._touchListeners[id];
+            cc.eventManager.removeListener(listener);
+            delete this._touchListeners[id];
+
+        }
     },
     removeAllKeyboardListeners:function()
     {
         this._keyboardCallbacks = {};
+        if(this._keyboardListener) {
+            //todo,3.5 cause Invalid native object error!
+//            cc.eventManager.removeListener(this._keyboardListener);
+            this._keyboardListener = null;
+        }
     },
     handleTouchBegan:function(touch, event)
     {
@@ -282,11 +345,12 @@ flax.InputManager = cc.Node.extend({
             }
         });
         cc.eventManager.addListener(listener, target);
+        return listener;
     },
     _createKeyboardListener:function()
     {
         var self = this;
-        cc.eventManager.addListener({
+        this._keyboardListener = {
             event: cc.EventListener.KEYBOARD,
             onKeyPressed:  function(keyCode, event){
                 self._dispatchKeyboardEvent(keyCode, InputType.keyPress);
@@ -294,8 +358,8 @@ flax.InputManager = cc.Node.extend({
             onKeyReleased: function(keyCode, event){
                 self._dispatchKeyboardEvent(keyCode, InputType.keyUp);
             }
-        }, this);
-        this._keyboardListenerCreated = true;
+        };
+        cc.eventManager.addListener(this._keyboardListener, this);
     },
     _ifNotMasked:function(target, pos)
     {
@@ -353,11 +417,20 @@ flax.InputManager = cc.Node.extend({
         return true;
     },
     _dispatch:function(target, touch, event, type){
+        //If the target is button, then don't handle its parent's event
+//        if(target.__isButton) {
+//            this._dispatchOne(target, touch, event, type);
+//            return;
+//        }
         var p = target;
         //if the child triggered some event, then its parent should also be informed
         var ps = [];
         while(p){
-            ps.push(p);
+            //Fixed the bug when addListener on the callback
+            var calls = this._callbacks[p.__instanceId];
+            if(calls && calls.length){
+                ps.push(p);
+            }
             p = p.parent;
         }
         for(var i = 0; i < ps.length; i++){
@@ -370,6 +443,7 @@ flax.InputManager = cc.Node.extend({
         var calls = this._callbacks[target.__instanceId];
         if(!calls || !calls.length) return;
         event.currentTarget = target;
+        event.inputType = type;
         var call = null;
         var dispatches = [];
         var i = calls.length;
@@ -406,10 +480,10 @@ flax.InputManager = cc.Node.extend({
         }
     },
     _getNativeKeyName:function(keyCode) {
-        var allCode = Object.getOwnPropertyNames(cc.KEY);
+        var allCode = Object.getOwnPropertyNames(flax.KEY);
         var keyName = "";
         for(var x in allCode){
-            if(cc.KEY[allCode[x]] == keyCode){
+            if(flax.KEY[allCode[x]] == keyCode){
                 keyName = allCode[x];
                 break;
             }
@@ -417,3 +491,129 @@ flax.InputManager = cc.Node.extend({
         return keyName;
     }
 });
+//Fixed bug in advanced mode compile when use cc.KEY
+flax.KEY = {
+    'none':0,
+
+    // android
+    'back':6,
+    'menu':18,
+
+    'backspace':8,
+    'tab':9,
+
+    'enter':13,
+
+    'shift':16, //should use shiftkey instead
+    'ctrl':17, //should use ctrlkey
+    'alt':18, //should use altkey
+    'pause':19,
+    'capslock':20,
+
+    'escape':27,
+    'space':32,
+    'pageup':33,
+    'pagedown':34,
+    'end':35,
+    'home':36,
+    'left':37,
+    'up':38,
+    'right':39,
+    'down':40,
+    'select':41,
+
+    'insert':45,
+    'Delete':46,
+    '0':48,
+    '1':49,
+    '2':50,
+    '3':51,
+    '4':52,
+    '5':53,
+    '6':54,
+    '7':55,
+    '8':56,
+    '9':57,
+    'a':65,
+    'b':66,
+    'c':67,
+    'd':68,
+    'e':69,
+    'f':70,
+    'g':71,
+    'h':72,
+    'i':73,
+    'j':74,
+    'k':75,
+    'l':76,
+    'm':77,
+    'n':78,
+    'o':79,
+    'p':80,
+    'q':81,
+    'r':82,
+    's':83,
+    't':84,
+    'u':85,
+    'v':86,
+    'w':87,
+    'x':88,
+    'y':89,
+    'z':90,
+    //todo for advanced cimpile
+    num0:96,
+    num1:97,
+    num2:98,
+    num3:99,
+    num4:100,
+    num5:101,
+    num6:102,
+    num7:103,
+    num8:104,
+    num9:105,
+    '*':106,
+    '+':107,
+    '-':109,
+    'numdel':110,
+    '/':111,
+    f1:112, //f1-f12 dont work on ie
+    f2:113,
+    f3:114,
+    f4:115,
+    f5:116,
+    f6:117,
+    f7:118,
+    f8:119,
+    f9:120,
+    f10:121,
+    f11:122,
+    f12:123,
+
+    numlock:144,
+    scrolllock:145,
+
+    ';':186,
+    semicolon:186,
+    equal:187,
+    '=':187,
+    ',':188,
+    comma:188,
+    dash:189,
+    '.':190,
+    period:190,
+    forwardslash:191,
+    grave:192,
+    '[':219,
+    openbracket:219,
+    backslash:220,
+    ']':221,
+    closebracket:221,
+    quote:222,
+
+    // gamepad controll
+    dpadLeft:1000,
+    dpadRight:1001,
+    dpadUp:1003,
+    dpadDown:1004,
+    dpadCenter:1005
+}

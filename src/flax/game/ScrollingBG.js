@@ -58,16 +58,17 @@ flax.ScrollingBG = cc.Node.extend({
         }else if(bgData.source){
             //if it's a FlaxSprite
             if(flax.isFlaxDisplay(bgData.source)){
+                //todo, JSB Invalid native object error!
                 if(bgData.source.parent) bgData.source.parent.addChild(this, bgData.source.zIndex);
                 this.name = bgData.source.name;
                 if(this.parent) this.parent[this.name] = this;
                 this.setPosition(bgData.source.getPosition());
                 bg = flax.assetsManager.cloneDisplay(bgData.source);
-                bgData.source.destroy();
+                bgData.source.removeFromParent();
             }
             //If it's a image
             else if(flax.isImageFile(bgData.source)){
-                bg = cc.Sprite.create(bgData.source);
+                bg = new cc.Sprite(bgData.source);
             }else {
                 throw "Not supported source type!";
             }

@@ -76,7 +76,7 @@ var Player = flax.Gunner.extend({
         this.health = this.maxHealth = 1000;
         this.setGunParam(PlayerGunParam, ["weapon0", "weapon1"]);
         this.autoShoot();
-        this.play();
+        this.gotoAndPlay(0);
         flax.inputManager.addListener(this, this.onDrag, InputType.move, this)
     },
     onDrag:function(touch, event)
@@ -98,7 +98,7 @@ var Player = flax.Gunner.extend({
                         this.hurtable = false;
                         var armor = flax.assetsManager.createDisplay(res.shooters, "HealCircle", {parent: this}, true);
                         armor.setPosition(cc.pAdd(this.getAnchorPointInPoints(),cc.p(0, 35)))
-                        armor.play();
+                        armor.gotoAndPlay(0);
                         this.scheduleOnce(function(){
                             armor.destroy();
                             this.hurtable = true;
@@ -107,7 +107,7 @@ var Player = flax.Gunner.extend({
                     case "HealProp":
                         var healAnim = flax.assetsManager.createDisplay(res.shooters, "HealEffect",{parent: this, autoDestroyWhenOver: true}, true);
                         healAnim.setPosition(this.getAnchorPointInPoints());
-                        healAnim.play();
+                        healAnim.gotoAndPlay(0);
                         this.health = Math.min(this.maxHealth, this.health + 100);
                         break;
                 }
@@ -151,7 +151,7 @@ var Enemy = flax.MCGunner.extend({
             var newEnemy = flax.assetsManager.createDisplay(res.shooters, "Enemy", {parent: anim.parent, x: anim.x, y: anim.y, zIndex: anim.zIndex}, true);
             targets.push(newEnemy);
         }, this);
-        dieAnim.play();
+        dieAnim.gotoAndPlay(0);
 
         var i = targets.indexOf(this);
         if(i > -1) targets.splice(i, 1);

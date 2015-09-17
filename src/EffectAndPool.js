@@ -23,6 +23,6 @@ var EffectAndPool = BaseScene.extend({
         //第四个参数为true, 表示动画将由对象池来处理
         //The forth param(fromPool) = true, means the animation will handled by the ObjectPool
         var effect = flax.assetsManager.createDisplay(res.effect, "effect", {parent:this,x:pos.x, y:pos.y, autoDestroyWhenOver:true},true);
-        effect.play();
+        effect.gotoAndPlay(0);
     }
 })

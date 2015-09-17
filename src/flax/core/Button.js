@@ -9,7 +9,8 @@ var ButtonState = {
     SELECTED:"selected",
     SELECTED_OVER:"selected_over",
     SELECTED_DOWN:"selected_down",
-    DISABLED:"disabled"
+    DISABLED:"disabled",
+    LOCKED:"locked"
 };
 
 MOUSE_DOWN_SCALE = 0.95;
@@ -19,54 +20,95 @@ flax._buttonDefine = {
     group:null,//the button group it belongs to
     _playChildrenOnState:false,//If auto play children's animation when change state
     _state:null,
-    _initScale:null,
+    _initScaleX:1.0,
+    _initScaleY:1.0,
+    _inScaleDown:false,
+    _inDisabledGray:true,
     __isButton:true,
 
     onEnter:function(){
         this._super();
-        this._initScale = {x: this.scaleX, y : this.scaleY};
+//        this._state = null
+        this._initScaleX = this.scaleX;
+        this._initScaleY = this.scaleY;
         flax.inputManager.addListener(this, this._onPress, InputType.press);
         flax.inputManager.addListener(this, this._onClick, InputType.click);
+        //listen the mouse drag event on PC and mobile
         flax.inputManager.addListener(this, this._onMove, InputType.move);
+        //listen the mouse move event on PC
+        if(!cc.sys.isMobile){
+            var self = this;
+            var mouseListener = cc.EventListener.create({
+                event: cc.EventListener.MOUSE,
+                onMouseMove:function(event){
+                    if(event.getButton() != 0){
+                        var evt = {target:self, currentTarget:self};
+                        if(self.isMouseEnabled()) self._onMove(event, evt);
+                    }
+                }
+            })
+            cc.eventManager.addListener(mouseListener, this);
+        }
     },
     onExit:function(){
         if(this.group){
             this.group.removeButton(this);
             this.group = null;
         }
+        cc.eventManager.removeListener(this);
         this._super();
     },
     onRecycle:function(){
         this._super();
         this._playChildrenOnState = false;
         this._state = null;
+        this._inScaleDown = false;
+        if(this._inDisabledGray) {
+//            this.setColor(COLOR_WHITE);
+        }
+        if(this['disabledCover']) this['disabledCover'].visible = true;
+        this._inDisabledGray = true;
     },
     setState:function(state)
     {
-        if(this._state == state) return;
+//        if(this._state == state) return;
         var oldSelected = this.isSelected();
         this._state = state;
         if(!this.gotoAndStop(this._state))
         {
             var optionState = this.isSelected() ? ButtonState.SELECTED : ButtonState.UP;
             if(!this.gotoAndStop(optionState)){
-                //if there is only one frame, we auto implement the button down effect
-                if(this.totalFrames == 1 && this._initScale){
-                    if(this._state.indexOf("down") > -1) {
-                        this.scaleX = this._initScale.x*MOUSE_DOWN_SCALE;
-                        this.scaleY = this._initScale.y*MOUSE_DOWN_SCALE;
-                    } else {
-                        this.scaleX = this._initScale.x;
-                        this.scaleY = this._initScale.y;
-                    }
-                }
                 this.gotoAndStop(0);
+                if(this._state.indexOf("down") > -1) {
+                    this._inScaleDown = true;
+                    this.setScale(this._initScaleX*MOUSE_DOWN_SCALE, this._initScaleY*MOUSE_DOWN_SCALE);
+                }
+                if(this._state == ButtonState.DISABLED){
+                    this._inDisabledGray = true;
+//                    this.setColor(COLOR_GRAY);
+                    if(this['disabledCover']) this['disabledCover'].visible = true;
+                }
             }
+        }
+        if(this._state.indexOf("down") == -1 && this._inScaleDown)
+        {
+            this.setScale(this._initScaleX, this._initScaleY);
+        }
+        if(this._state != ButtonState.DISABLED && this._inDisabledGray)
+        {
+            this._inDisabledGray = false;
+            if(this['disabledCover']) this['disabledCover'].visible = false;
+//            this.setColor(COLOR_WHITE);
         }
         this._playOrPauseChildren();
         if(this.isSelected() && !oldSelected && this.group){
             this.group.updateButtons(this);
         }
+        this.handleStateChange();
+    },
+    handleStateChange:function()
+    {
+        //to be override
     },
     getState:function()
     {
@@ -78,7 +120,7 @@ flax._buttonDefine = {
     },
     setSelected:function(value)
     {
-        if(this.isSelected() == value || !this.isSelectable() || !this.isMouseEnabled()) return;
+        if(this.isSelected() == value || !this.isSelectable() || !this.isMouseEnabled() || this.isLocked()) return;
         this.setState(value ? ButtonState.SELECTED : ButtonState.UP);
     },
     isSelectable:function()
@@ -87,13 +129,22 @@ flax._buttonDefine = {
     },
     setMouseEnabled:function(enable)
     {
-        if(this.isMouseEnabled() == enable) return false;
+//        if(this.isMouseEnabled() == enable) return false;
         this.setState(enable ? ButtonState.UP : ButtonState.DISABLED);
         return true;
     },
     isMouseEnabled:function()
     {
         return this._state != ButtonState.DISABLED;
+    },
+    setLocked:function(locked)
+    {
+//        if(this.isLocked() == locked) return;
+        this.setState(locked ? ButtonState.LOCKED : ButtonState.UP);
+    },
+    isLocked:function()
+    {
+        return this._state == ButtonState.LOCKED;
     },
     setPlayChildrenOnState:function(play)
     {
@@ -107,12 +158,14 @@ flax._buttonDefine = {
     },
     _onPress:function(touch, event)
     {
+        if(this._state == ButtonState.LOCKED  || this._state == ButtonState.DISABLED) return;
         var sound = this.clickSound || flax.buttonSound;
         if(sound) flax.playSound(sound);
         this._toSetState(ButtonState.DOWN);
     },
     _onClick:function(touch, event)
     {
+        if(this._state == ButtonState.LOCKED || this._state == ButtonState.DISABLED) return;
         if(this.isSelectable())
         {
             if (!this.isSelected() || this.group){
@@ -126,8 +179,9 @@ flax._buttonDefine = {
     },
     _onMove:function(touch, event)
     {
+        if(this._state == ButtonState.DISABLED || this._state == ButtonState.LOCKED) return;
         if(flax.ifTouched(this, touch.getLocation())){
-            this._toSetState(ButtonState.DOWN);
+            this._toSetState(cc.sys.isMobile ? ButtonState.DOWN : ButtonState.OVER);
         }else{
             this._toSetState(ButtonState.UP);
         }
@@ -211,7 +265,7 @@ flax.ButtonGroup = cc.Class.extend({
     buttons:null,
     selectedButton:null,
     onSelected:null,
-    ctor:function(name)
+    ctor:function()
     {
         this.buttons = [];
         this.onSelected = new signals.Signal();
@@ -222,6 +276,7 @@ flax.ButtonGroup = cc.Class.extend({
             buttons = Array.prototype.slice.call(arguments);
         }
         for(var i = 0; i < buttons.length; i++){
+            var btn = buttons[i];
             var btn = buttons[i];
             if(!flax.isButton(btn)) continue;
             if(this.buttons.indexOf(btn) > -1) continue;
@@ -236,8 +291,8 @@ flax.ButtonGroup = cc.Class.extend({
             this.buttons.splice(i, 1);
             button.group = null;
             if(this.selectedButton == button){
-                this.selectedButton = this.buttons[0];
-                if(this.selectedButton) this.selectedButton.setState(ButtonState.SELECTED);
+//                this.selectedButton = this.buttons[0];
+//                if(this.selectedButton) this.selectedButton.setState(ButtonState.SELECTED);
             }
         }
         if(this.buttons.length == 0){
@@ -249,11 +304,13 @@ flax.ButtonGroup = cc.Class.extend({
     {
         for(var i = 0; i < this.buttons.length; i++){
             var btn = this.buttons[i];
-            if(btn != newSelected){
+            if(btn != newSelected && btn.isMouseEnabled() && !btn.isLocked()){
                btn.setState(ButtonState.UP);
             }
         }
         this.selectedButton = newSelected;
-        this.onSelected.dispatch(newSelected);
+        //If touched or just call setSelected
+        var ifTouch = flax.mousePos && flax.ifTouched(newSelected, flax.mousePos);
+        this.onSelected.dispatch(newSelected, ifTouch);
     }
 });

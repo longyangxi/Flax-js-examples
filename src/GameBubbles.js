@@ -15,10 +15,9 @@ var GameBubbles = BaseScene.extend({
         //create a new TileMap
         this.tileMap = new flax.TileMap();
         this.tileMap.isHexagon = true;
-        this.tileMap.setTileSize(52, 48);
-        this.tileMap.setMapSize(10, 12)
-        this.tileMap.offsetX = 56;
-        this.tileMap.offsetY = 180;
+        this.tileMap.init(52, 48);
+        this.tileMap.setMapSize(10, 12);
+        this.tileMap.setPosition(56, 180);
 
         //Initialize the whole map
         for(var i = 0; i < this.tileMap.mapSize.width; i++)

@@ -123,7 +123,7 @@ flax.Label = cc.Sprite.extend({
                 continue;
             }
 
-            sprite = cc.Sprite.create(cc.spriteFrameCache.getSpriteFrame(this.frames[charIndex]));
+            sprite = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame(this.frames[charIndex]));
             sprite.anchorX = this._fontDefine.anchorX;
             sprite.anchorY = this._fontDefine.anchorY;
             // calculate the position of the sprite;
@@ -162,17 +162,18 @@ flax.Label = cc.Sprite.extend({
         this._charCanvas.setContentSize(this.mlWidth, this.mlHeight);
         this.setContentSize(this.mlWidth, this.mlHeight);
     },
-    getRect:function(global)
+    getRect:function(coordinate)
     {
-        global = (global !== false);
+        if(coordinate == null) coordinate = true;
         var border = 2;
         var rect = cc.rect(0.5*this.width/this._str.length, -this.params.textHeight, this.width, this.height + border);
         rect.y += (this.params.textHeight - this.height)/2 - border/2;
-        if(!global) return rect;
+        if(!coordinate) return rect;
         var w = rect.width;
         var h = rect.height;
         var origin = cc.p(rect.x, rect.y);
         origin = this.convertToWorldSpace(origin);
+        if(coordinate instanceof cc.Node) origin = coordinate.convertToNodeSpace(origin);
         return cc.rect(origin.x, origin.y, w, h);
     },
     destroy:function()
@@ -236,6 +237,7 @@ flax.Label.create = function(assetsFile, data, define)
     }
     //If it is ttf label(has font and the bitmap font is null, other wise use bitmap label
     else if(data.font && bmpFontName == null){
+        //todo, if setFontSize bug occur in JSB, pls don't use cc.FontDefinition to create labelTTF
         var labelDef = new cc.FontDefinition();
         labelDef.fontName = data.font;
         labelDef.fontSize = data.fontSize;
@@ -245,6 +247,7 @@ flax.Label.create = function(assetsFile, data, define)
         labelDef.fontDimensions = true;
         labelDef.boundingWidth = data.textWidth;
         labelDef.boundingHeight = data.textHeight;
+        //text, fontName, fontSize, dimensions, hAlignment, vAlignment
         if(txtCls == "null") {
             lbl = new cc.LabelTTF(define.text, labelDef);
         }else{

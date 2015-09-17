@@ -49,16 +49,16 @@ flax.FrameData = cc.Class.extend({
     },
     setForChild:function(child)
     {
-        if(!this._hasSkew && this.rotation != child.rotation) child.rotation = this.rotation;
-        if(this.scaleX != child.scaleX) child.scaleX = this.scaleX;
-        if(this.scaleY != child.scaleY) child.scaleY = this.scaleY;
+        if(!this._hasSkew) child.setRotation(this.rotation);
+        child.setScaleX(this.scaleX);
+        child.setScaleY(this.scaleY);
 
         if(this._hasSkew){
-            child.rotationX = this.skewX;
-            child.rotationY = this.skewY;
+            child.setRotationX(this.skewX);
+            child.setRotationY(this.skewY);
         }
 
-        if(child.setOpacity && this.opacity != child.opacity) child.opacity = this.opacity;
+        if(child.setOpacity) child.setOpacity(this.opacity);
 
         var x = this.x;
         var y = this.y;
@@ -77,8 +77,8 @@ flax.FrameData = cc.Class.extend({
             y -= this.textHeight/2;
         }
 
-        if(x != child.x) child.x = x;
-        if(y != child.y) child.y = y;
+        child.setPositionX(x);
+        child.setPositionY(y);
     },
     clone:function(){
         return new flax.FrameData(this._data);
@@ -87,9 +87,11 @@ flax.FrameData = cc.Class.extend({
 
 flax._movieClip = {
     clsName:"flax.MovieClip",
-    autoPlayChildren:false,//auto play children when play
     sameFpsForChildren:true,//all children use the same fps with this
-    _namedChildren:null,
+    createChildFromPool:true,
+    _autoPlayChildren:false,//auto play children when play
+    namedChildren:null,
+//    _stoppingChildren:null,
     _theRect:null,
     _frameDatas:null,
     __isMovieClip:true,
@@ -106,7 +108,7 @@ flax._movieClip = {
             cc.log("There is no child with named: "+childName +"  in MovieClip: "+this.assetID);
             return;
         }
-        var child = this._namedChildren[childName];
+        var child = this.namedChildren[childName];
         if(child)
         {
             if(!assetsFile) assetsFile = this.assetsFile;
@@ -117,11 +119,13 @@ flax._movieClip = {
             if(flax.assetsManager.getAssetType(child.assetsFile, child.assetID) == assetType){
                 child.setSource(assetsFile, assetID);
             } else {
+                var autoPlay = child._autoPlayChildren;
                 child.destroy();
-                child = flax.assetsManager.createDisplay(assetsFile, assetID, null, true);
+                child = flax.assetsManager.createDisplay(assetsFile, assetID, null, this.createChildFromPool);
                 child.name = childName;
-                this._namedChildren[childName] = child;
-                if(this.autoPlayChildren && flax.isFlaxSprite(child)) {
+                this.namedChildren[childName] = child;
+                if(child.__isMovieClip === true && !autoPlay) child.autoPlayChildren = this._autoPlayChildren;
+                if(this._autoPlayChildren && child.__isFlaxSprite === true) {
                     this.playing ? child.gotoAndPlay(0) : child.gotoAndStop(0);
                 }
                 this[childName] = child;
@@ -132,14 +136,73 @@ flax._movieClip = {
             childDefine.assetsFile = assetsFile;
         }
     },
+    getFrameData:function(childName, frame)
+    {
+        if(this._frameDatas[childName] == null) return null;
+        var frameData = this._frameDatas[childName][frame];
+        return frameData;
+    },
+    setOpacity: function (opacity) {
+        cc.Node.prototype.setOpacity.call(this, opacity);
+        for(var k in this.namedChildren){
+            var child = this.namedChildren[k];
+            if(child.setOpacity) child.setOpacity(opacity);
+        }
+    },
+    setColor: function (color) {
+        cc.Node.prototype.setColor.call(this, color);
+        for(var k in this.namedChildren){
+            var child = this.namedChildren[k];
+            if(child.setColor) child.setColor(color);
+        }
+    },
+    /**
+     * Stop the child with name at some frame or label on all frames, if just child.gotAndStop(frameOrLabel), it maybe
+     * only take effect on some frames instead all frames especially in $ animation
+     * @param {String|Sprite} nameOrInstance The child or its name
+     * @param {String|Integer} frameOrLabel The frame or label to stop, if null, set random frame
+     * */
+//    stopChildAt:function(nameOrInstance, frameOrLabel)
+//    {
+//        var child = null;
+//        if(typeof nameOrInstance === "string") {
+//            child = this.namedChildren[nameOrInstance];
+//            if(child == null){
+//                cc.log("***Warning--There is no child with name: " + nameOrInstance);
+//                return;
+//            }
+//        }else if(nameOrInstance.__isFlaxSprite === true) {
+//            child = nameOrInstance;
+//            if(child.parent != this){
+//                cc.log("***Warning--The target is not a child of this!");
+//                return;
+//            }
+//        }else throw 'Invalid child name of instance!'
+//        if(frameOrLabel == null) frameOrLabel = flax.randInt(0, child.totalFrames);
+//        if(child.gotoAndStop(frameOrLabel)){
+//            if(this._stoppingChildren == null) this._stoppingChildren = {};
+//            this._stoppingChildren[child.name] = frameOrLabel;
+//        }
+//    },
+//    updateStoppingChildren:function()
+//    {
+//        if(this._stoppingChildren){
+//            for(var childName in this._stoppingChildren){
+//                var child = this.namedChildren[childName];
+//                if(child){
+//                    child.gotoAndStop(this._stoppingChildren[childName]);
+//                }
+//            }
+//        }
+//    },
     onNewSource:function()
     {
-        for(var childName in this._namedChildren){
-            this._namedChildren[childName].destroy();
-            delete this._namedChildren[childName];
+        for(var childName in this.namedChildren){
+            this.namedChildren[childName].destroy();
+            delete this.namedChildren[childName];
             delete this[childName];
         }
-        this._namedChildren = {};
+        this.namedChildren = {};
         this.totalFrames = this.define['totalFrames'];
         this._theRect = flax._strToRect(this.define['rect']);
         this.setContentSize(this._theRect.width, this._theRect.height);
@@ -177,31 +240,28 @@ flax._movieClip = {
         {
             childDefine = this.define['children'][childName];
             frameData = this._frameDatas[childName][frame];
-            child = this._namedChildren[childName];
+            child = this.namedChildren[childName];
             if(frameData) {
                 if(child == null){
                     //hadle the label text
                     if(childDefine.text != null){
                         child = flax.Label.create(this.assetsFile, frameData, childDefine);
                     }else{
-                        child = flax.assetsManager.createDisplay(childDefine.assetsFile || this.assetsFile, childDefine["class"], null, true);
+                        child = flax.assetsManager.createDisplay(childDefine.assetsFile || this.assetsFile, childDefine["class"], null, this.createChildFromPool);
                     }
 
                     child.name = childName;
-                    this._namedChildren[childName] = child;
-                    if(this.autoPlayChildren && flax.isFlaxSprite(child)) {
-                        this.playing ? child.gotoAndPlay(0) : child.gotoAndStop(0);
-                    }
+                    this.namedChildren[childName] = child;
                     this[childName] = child;
                     this.onNewChild(child);
                 }
                 frameData.setForChild(child);
                 //all children use the same fps with this
                 if(this.sameFpsForChildren) child.fps = this.fps;
-                child.autoPlayChildren = this.autoPlayChildren;
-                if(this.autoPlayChildren && flax.isFlaxSprite(child)) {
-                    this.playing ? child.play() : child.stop();
-                }
+//                if(child.__isMovieClip === true && !child.getAutoPlayChildren()) child._autoPlayChildren = this._autoPlayChildren;
+//                if(this._autoPlayChildren && flax.isFlaxSprite(child)) {
+//                    this.playing ? child.play() : child.stop();
+//                }
                 //To fix the zIndex bug when use the old version tool
                 var zIndex = (frameData.zIndex == -1) ? childDefine['zIndex'] : frameData.zIndex;
                 if(child.parent != this){
@@ -213,7 +273,7 @@ flax._movieClip = {
             }else if(child) {
                 if(child.destroy) child.destroy();
                 else child.removeFromParent(true);
-                delete this._namedChildren[childName];
+                delete this.namedChildren[childName];
                 delete this[childName];
             }
         }
@@ -221,10 +281,10 @@ flax._movieClip = {
     stop:function()
     {
         this._super();
-        if(this.autoPlayChildren) {
-            for(var key in this._namedChildren) {
-                var child = this._namedChildren[key];
-                if(flax.isFlaxSprite(child)) {
+        if(this._autoPlayChildren) {
+            for(var key in this.namedChildren) {
+                var child = this.namedChildren[key];
+                if(child.__isFlaxSprite === true) {
                     child.stop();
                 }
             }
@@ -233,18 +293,44 @@ flax._movieClip = {
     play:function()
     {
         this._super();
-        if(this.autoPlayChildren) {
-            for(var key in this._namedChildren) {
-                var child = this._namedChildren[key];
-                if(flax.isFlaxSprite(child)) {
+        if(this._autoPlayChildren) {
+            for(var key in this.namedChildren) {
+                var child = this.namedChildren[key];
+                if(child.__isFlaxSprite === true) {
                     child.play();
                 }
             }
         }
     },
+    getAutoPlayChildren:function()
+    {
+        return this._autoPlayChildren;
+    },
+    setAutoPlayChildren:function(v)
+    {
+        if(this._autoPlayChildren == v) return;
+        this._autoPlayChildren = v;
+        for(var key in this.namedChildren) {
+            var child = this.namedChildren[key];
+            if(child.__isMovieClip === true) {
+                child.setAutoPlayChildren(v);
+                v ? child.play() : child.stop();
+            }
+        }
+    },
     onNewChild:function(child)
     {
-
+        if(child.__isMovieClip === true) child.autoPlayChildren = this._autoPlayChildren;
+        if(this._autoPlayChildren && child.__isFlaxSprite === true) {
+            this.playing ? child.gotoAndPlay(0) : child.gotoAndStop(0);
+        }
+//        if(this._stoppingChildren && child.__isFlaxSprite === true){
+//            var frameOrLabel = this._stoppingChildren[child.name];
+//            if(frameOrLabel != null) child.gotoAndStop(frameOrLabel);
+//        }
+//        if(child.__isMovieClip === true && child._stoppingChildren){
+//            child.updateStoppingChildren();
+//        }
     },
     getDefine:function()
     {
@@ -255,11 +341,11 @@ flax._movieClip = {
     getChild:function(name, nest)
     {
         if(nest === undefined) nest = true;
-        var child = this._namedChildren[name];
+        var child = this.namedChildren[name];
         if(child) return child;
         if(!nest) return null;
-        for(var key in this._namedChildren) {
-            child = this._namedChildren[key];
+        for(var key in this.namedChildren) {
+            child = this.namedChildren[key];
             if(child.getChild) {
                 child = child.getChild(name, nest);
                 if(child) return child;
@@ -270,8 +356,8 @@ flax._movieClip = {
     getChildByAssetID:function(id)
     {
         var child = null;
-        for(var key in this._namedChildren) {
-            child = this._namedChildren[key];
+        for(var key in this.namedChildren) {
+            child = this.namedChildren[key];
             if(child.assetID == id){
                 return child;
             }
@@ -281,32 +367,18 @@ flax._movieClip = {
     getLabelText:function(labelName, ifNest)
     {
         var label = this.getChild(labelName, ifNest === undefined ? true : ifNest);
-        if(label && (label instanceof flax.Label)) return label.getString();
+        if(label && (label instanceof flax.Label || label instanceof cc.LabelTTF)) return label.getString();
         return null;
     },
     setLabelText:function(labelName, text, ifNest)
     {
         var label = this.getChild(labelName, ifNest === undefined ? true : ifNest);
-        if(label && (label instanceof flax.Label)) {
+        if(label && (label instanceof flax.Label || label instanceof cc.LabelTTF)) {
             label.setString(text);
             return label;
         }
         return null;
     },
-//    addChildrenPhysics:function(name, type, density, friction,restitution, isSensor, fixedRotation, catBits, maskBits, bullet){
-//        var child = null;
-//        for(var key in this._namedChildren) {
-//            child = this._namedChildren[key];
-//            child.addPhysics(name, type, density, friction, restitution, isSensor, fixedRotation, catBits, maskBits, bullet);
-//        }
-//    },
-//    removeChildrenPhysics:function(name){
-//        var child = null;
-//        for(var key in this._namedChildren) {
-//            child = this._namedChildren[key];
-//            child.removePhysics(name);
-//        }
-//    },
     setFPS:function(f)
     {
         if(this._fps == f)  return;
@@ -314,22 +386,35 @@ flax._movieClip = {
         this.updateSchedule();
         if(!this.sameFpsForChildren) return;
         var child = null;
-        for(var key in this._namedChildren) {
-            child = this._namedChildren[key];
+        for(var key in this.namedChildren) {
+            child = this.namedChildren[key];
             child.fps = this._fps;
         }
     },
+    //todo, not verified yet
+//    getRect:function(coordinate)
+//    {
+//        var rect = null;
+//        for (var i = 0; i < this.children.length; i++) {
+//            var child = this.children[i];
+//            var r = flax.getRect(child, coordinate);
+//            if(rect) rect = cc.rectUnion(r, rect);
+//            else rect = r;
+//        }
+//        return rect;
+//    },
     onRecycle:function()
     {
         this._super();
-        this.autoPlayChildren = false;
-        for(var key in this._namedChildren) {
-            var child = this._namedChildren[key];
-            if(flax.isFlaxSprite(child)) {
-                child.gotoAndStop(0);
+        this._autoPlayChildren = false;
+        if(RESET_FRAME_ON_RECYCLE){
+            for(var key in this.namedChildren) {
+                var child = this.namedChildren[key];
+                if(child.__isFlaxSprite === true) {
+                    child.gotoAndStop(0);
+                }
             }
         }
-
     }
 };
 
@@ -341,6 +426,12 @@ flax.MovieClip.create = function(assetsFile, assetID)
     return mc;
 };
 
+var _p = flax.MovieClip.prototype;
+/** @expose */
+_p.autoPlayChildren;
+cc.defineGetterSetter(_p, "autoPlayChildren", _p.getAutoPlayChildren, _p.setAutoPlayChildren);
+cc.defineGetterSetter(_p, "opacity", _p.getOpacity, _p.setOpacity);
+
 //Avoid to advanced compile mode
 window['flax']['MovieClip'] = flax.MovieClip;
 
@@ -351,6 +442,12 @@ flax.MovieClipBatch.create = function(assetsFile, assetID)
     mc.clsName = "flax.MovieClipBatch";
     return mc;
 };
+
+_p = flax.MovieClipBatch.prototype;
+/** @expose */
+_p.autoPlayChildren;
+cc.defineGetterSetter(_p, "autoPlayChildren", _p.getAutoPlayChildren, _p.setAutoPlayChildren);
+cc.defineGetterSetter(_p, "opacity", _p.getOpacity, _p.setOpacity);
 
 //Avoid to advanced compile mode
 window['flax']['MovieClipBatch'] = flax.MovieClipBatch;

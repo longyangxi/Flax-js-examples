@@ -18,7 +18,7 @@ var UIInput = BaseScene.extend({
         cc.log(editBox.name + " DidBegin!");
     },
     editBoxEditingDidEnd: function (editBox) {
-        cc.log(editBox.name + " DidEnd!");
+        cc.log(editBox.name + " DidEnd: " + editBox.getString());
     },
     editBoxTextChanged: function (editBox, text) {
         cc.log(editBox.name + " , TextChanged, text: " + text);
